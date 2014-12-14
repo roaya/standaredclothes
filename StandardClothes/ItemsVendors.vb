@@ -50,10 +50,15 @@ Public Class ItemsVendors
             TabControl1.SelectTab(2)
             cls.HideAll(TabControl1.TabPages(1))
             Me.Cursor = Cursors.WaitCursor
+            cmd.CommandText = "ATTACH_VENDOR_ITEM"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@ITM_N", Nothing)
+            cmd.Parameters.AddWithValue("@VEN_ID", VendorID.SelectedValue)
             '  T.Start()
             For i As Integer = 0 To DestinationList.Items.Count - 1
                 DestinationList.SetSelected(i, True)
-                cmd.CommandText = "Exec ATTACH_VENDOR_ITEM N'" & DestinationList.SelectedItem & "' , " & VendorID.SelectedValue
+                cmd.Parameters(0).Value = DestinationList.SelectedItem
+                'cmd.CommandText = "Exec ATTACH_VENDOR_ITEM N'" & DestinationList.SelectedItem & "' , " & VendorID.SelectedValue
                 cmd.ExecuteNonQuery()
             Next
             ' T.Abort()
