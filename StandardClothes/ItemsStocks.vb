@@ -53,9 +53,14 @@ Public Class ItemsStocks
             Me.Cursor = Cursors.WaitCursor
             'T = New System.Threading.Thread(AddressOf RunWorker)
             'T.Start()
+            cmd.CommandText = "ATTACH_STOCK_ITEM"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@ITM_N", Nothing)
+            cmd.Parameters.AddWithValue("@STK_ID", StockID.SelectedValue)
             For i As Integer = 0 To DestinationList.Items.Count - 1
                 DestinationList.SetSelected(i, True)
-                cmd.CommandText = "Exec ATTACH_STOCK_ITEM N'" & DestinationList.SelectedItem & "' , " & StockID.SelectedValue
+                cmd.Parameters(0).Value = DestinationList.SelectedItem
+                'cmd.CommandText = "Exec ATTACH_STOCK_ITEM N'" & DestinationList.SelectedItem & "' , " & StockID.SelectedValue
                 cmd.ExecuteNonQuery()
             Next
             'T.Abort()
