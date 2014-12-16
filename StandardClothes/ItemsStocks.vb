@@ -67,6 +67,7 @@ Public Class ItemsStocks
             Button10.Enabled = True
             BarAfter.Visible = False
             TxtAfter.Visible = False
+            cmd.CommandType = CommandType.Text
             cls.MsgInfo(" „ —»ÿ »Ì«‰«  «·«’‰«› »«·„Õ· «·„Õœœ »‰Ã«Õ")
             Me.Cursor = Cursors.Default
         Catch ex As Exception

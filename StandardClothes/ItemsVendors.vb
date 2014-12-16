@@ -62,9 +62,9 @@ Public Class ItemsVendors
                 cmd.ExecuteNonQuery()
             Next
             ' T.Abort()
+            cmd.CommandType = CommandType.Text
             Me.Cursor = Cursors.Default
             cls.MsgInfo(" „ —»ÿ »Ì«‰«  «·«’‰«› »«·„Ê—œ «·„Õœœ »‰Ã«Õ")
-
             Button10.Enabled = True
             BarAfter.Visible = False
             TxtAfter.Visible = False
