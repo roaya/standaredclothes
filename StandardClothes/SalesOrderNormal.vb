@@ -1059,7 +1059,7 @@
     'End Sub
 
     Private Sub PayedValue_Validated(ByVal sender As Object, ByVal e As System.EventArgs) Handles PayedValue.Validated
-        CalculateTotalBill()
+        'CalculateTotalBill()
     End Sub
 
     Private Sub BtnSchedule_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSchedule.Click
@@ -1384,5 +1384,13 @@
             PayedValue.Value = CashValue.Value
             RemainingValue.Text = CreditValue.Value
         End If
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click, MenuTotal.Click
+        PayedValue.Focus()
+    End Sub
+
+    Private Sub PayedValue_ValueChanged(sender As Object, e As EventArgs) Handles PayedValue.ValueChanged
+        CalculateTotalBill()
     End Sub
 End Class

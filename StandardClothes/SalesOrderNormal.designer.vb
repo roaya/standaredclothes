@@ -24,10 +24,10 @@ Partial Class SalesOrderNormal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SalesOrderNormal))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.NavigationBar = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.OrderByCombo = New System.Windows.Forms.ToolStripComboBox()
@@ -120,6 +120,8 @@ Partial Class SalesOrderNormal
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnExit = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.MenuTotal = New System.Windows.Forms.ToolStripMenuItem()
         Me.NavigationBar.SuspendLayout()
         Me.ContentPanel.SuspendLayout()
         Me.GroupHeader.SuspendLayout()
@@ -156,7 +158,7 @@ Partial Class SalesOrderNormal
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(39, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(41, 22)
         Me.ToolStripLabel1.Text = "الترتيب"
         '
         'OrderByCombo
@@ -174,13 +176,13 @@ Partial Class SalesOrderNormal
         '
         Me.ToolStripLabel2.Image = Global.StandardClothes.My.Resources.Resources.rar_256
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(86, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(93, 22)
         Me.ToolStripLabel2.Text = "عدد السجلات :"
         '
         'CountRecords
         '
         Me.CountRecords.Name = "CountRecords"
-        Me.CountRecords.Size = New System.Drawing.Size(13, 22)
+        Me.CountRecords.Size = New System.Drawing.Size(12, 22)
         Me.CountRecords.Text = "0"
         '
         'ContentPanel
@@ -975,7 +977,7 @@ Partial Class SalesOrderNormal
         '
         'MenuAllCommands
         '
-        Me.MenuAllCommands.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuNew, Me.MenuSave, Me.SAvePrint, Me.MenuDelete, Me.MenuExit})
+        Me.MenuAllCommands.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuNew, Me.MenuSave, Me.SAvePrint, Me.MenuDelete, Me.MenuExit, Me.MenuTotal})
         Me.MenuAllCommands.Name = "MenuAllCommands"
         Me.MenuAllCommands.Size = New System.Drawing.Size(84, 20)
         Me.MenuAllCommands.Text = "AllComands"
@@ -984,35 +986,35 @@ Partial Class SalesOrderNormal
         '
         Me.MenuNew.Name = "MenuNew"
         Me.MenuNew.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.MenuNew.Size = New System.Drawing.Size(126, 22)
+        Me.MenuNew.Size = New System.Drawing.Size(151, 22)
         Me.MenuNew.Text = "New"
         '
         'MenuSave
         '
         Me.MenuSave.Name = "MenuSave"
         Me.MenuSave.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.MenuSave.Size = New System.Drawing.Size(126, 22)
+        Me.MenuSave.Size = New System.Drawing.Size(151, 22)
         Me.MenuSave.Text = "Save"
         '
         'SAvePrint
         '
         Me.SAvePrint.Name = "SAvePrint"
         Me.SAvePrint.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.SAvePrint.Size = New System.Drawing.Size(126, 22)
+        Me.SAvePrint.Size = New System.Drawing.Size(151, 22)
         Me.SAvePrint.Text = "Edit"
         '
         'MenuDelete
         '
         Me.MenuDelete.Name = "MenuDelete"
         Me.MenuDelete.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.MenuDelete.Size = New System.Drawing.Size(126, 22)
+        Me.MenuDelete.Size = New System.Drawing.Size(151, 22)
         Me.MenuDelete.Text = "Delete"
         '
         'MenuExit
         '
         Me.MenuExit.Name = "MenuExit"
         Me.MenuExit.ShortcutKeys = System.Windows.Forms.Keys.F6
-        Me.MenuExit.Size = New System.Drawing.Size(126, 22)
+        Me.MenuExit.Size = New System.Drawing.Size(151, 22)
         Me.MenuExit.Text = "Exit"
         '
         'GroupDetails
@@ -1039,34 +1041,34 @@ Partial Class SalesOrderNormal
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.AliceBlue
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Tahoma", 8.0!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Silver
         Me.DataGridView1.Size = New System.Drawing.Size(1116, 198)
         Me.DataGridView1.TabIndex = 0
@@ -1187,20 +1189,37 @@ Partial Class SalesOrderNormal
         Me.BtnExit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.Size = New System.Drawing.Size(150, 35)
-        Me.BtnExit.Text = "خروج"
+        Me.BtnExit.Text = "خروج F6"
         '
         'ToolStrip1
         '
         Me.ToolStrip1.AutoSize = False
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNew, Me.ToolStripSeparator2, Me.BtnSave, Me.ToolStripSeparator1, Me.BtnSavePrint, Me.ToolStripSeparator3, Me.BtnDelete, Me.ToolStripSeparator5, Me.BtnExit})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNew, Me.ToolStripSeparator2, Me.BtnSave, Me.ToolStripSeparator1, Me.BtnSavePrint, Me.ToolStripSeparator3, Me.BtnDelete, Me.ToolStripSeparator5, Me.BtnExit, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ToolStrip1.Size = New System.Drawing.Size(1162, 38)
         Me.ToolStrip1.TabIndex = 21
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.AutoSize = False
+        Me.ToolStripButton1.BackgroundImage = Global.StandardClothes.My.Resources.Resources.save_2_18
+        Me.ToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(150, 35)
+        Me.ToolStripButton1.Text = "الإجمالي F7"
+        '
+        'MenuTotal
+        '
+        Me.MenuTotal.Name = "MenuTotal"
+        Me.MenuTotal.ShortcutKeys = System.Windows.Forms.Keys.F7
+        Me.MenuTotal.Size = New System.Drawing.Size(151, 22)
+        Me.MenuTotal.Text = "MenuTotal"
         '
         'SalesOrderNormal
         '
@@ -1345,4 +1364,6 @@ Partial Class SalesOrderNormal
     Friend WithEvents SAvePrint As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuDelete As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuExit As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents MenuTotal As System.Windows.Forms.ToolStripMenuItem
 End Class
