@@ -44,7 +44,6 @@ Partial Class Main
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel10 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnEmp = New System.Windows.Forms.ToolStripButton()
         Me.BtnStock = New System.Windows.Forms.ToolStripButton()
@@ -243,6 +242,7 @@ Partial Class Main
         Me.GrdSearchDetails = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GrdSearch = New System.Windows.Forms.DataGridView()
+        Me.ToolStripStatusLabel10 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -355,29 +355,22 @@ Partial Class Main
         '
         Me.ToolStripStatusLabel1.Image = Global.StandardClothes.My.Resources.Resources.Calendar1
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(78, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(80, 17)
         Me.ToolStripStatusLabel1.Text = " «—ÌŒ «·ÌÊ„ :"
         '
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Image = Global.StandardClothes.My.Resources.Resources.xclock
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(72, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(80, 17)
         Me.ToolStripStatusLabel4.Text = "«·Êﬁ  «·¬‰ :"
         '
         'ToolStripStatusLabel7
         '
         Me.ToolStripStatusLabel7.Image = Global.StandardClothes.My.Resources.Resources.User_Accounts1
         Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
-        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(90, 17)
+        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(100, 17)
         Me.ToolStripStatusLabel7.Text = "«”„ «·„” Œœ„ :"
-        '
-        'ToolStripStatusLabel10
-        '
-        Me.ToolStripStatusLabel10.Image = Global.StandardClothes.My.Resources.Resources._0007
-        Me.ToolStripStatusLabel10.Name = "ToolStripStatusLabel10"
-        Me.ToolStripStatusLabel10.Size = New System.Drawing.Size(74, 17)
-        Me.ToolStripStatusLabel10.Text = "«”„ «·„Õ· :"
         '
         'ToolStrip1
         '
@@ -3838,6 +3831,13 @@ Partial Class Main
         Me.GrdSearch.TabIndex = 0
         Me.GrdSearch.TabStop = False
         '
+        'ToolStripStatusLabel10
+        '
+        Me.ToolStripStatusLabel10.Image = Global.StandardClothes.My.Resources.Resources._0007
+        Me.ToolStripStatusLabel10.Name = "ToolStripStatusLabel10"
+        Me.ToolStripStatusLabel10.Size = New System.Drawing.Size(81, 17)
+        Me.ToolStripStatusLabel10.Text = "«”„ «·„Õ· :"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
@@ -3922,7 +3922,6 @@ Partial Class Main
     Friend WithEvents ToolStripStatusLabel7 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents TxtUserName As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel9 As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel10 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents TxtStockName As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
@@ -4123,6 +4122,7 @@ Partial Class Main
     Friend WithEvents Item As System.Windows.Forms.ComboBox
     Friend WithEvents Quantity As System.Windows.Forms.NumericUpDown
     Friend WithEvents BtnAccounts As System.Windows.Forms.Button
+    Friend WithEvents ToolStripStatusLabel10 As System.Windows.Forms.ToolStripStatusLabel
 
 
 End Class

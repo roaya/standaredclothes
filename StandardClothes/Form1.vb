@@ -159,7 +159,7 @@ Public Class Main
             Try
                 cmd.CommandText = "select auto_shift from app_preferences"
                 If CurrentShiftID = 0 And cmd.ExecuteScalar = True Then
-                    cmd.CommandText = "insert into shifts_Details(shift_ID,Start_Money,Start_Date,Real_start_Time,Employee_ID) values(1,0,getdate(),getdate()," & EmpIDVar & ")"
+                    cmd.CommandText = "insert into shifts_Details(shift_ID,Start_Money,Start_Date,Real_start_Time,Employee_ID) values(1,0,getdate(),gettime()," & EmpIDVar & ")"
                     cmd.ExecuteNonQuery()
                     cmd.CommandText = "select max(shift_detail_id) from shifts_details"
                     CurrentShiftID = cmd.ExecuteScalar
@@ -771,10 +771,10 @@ Public Class Main
 
 
 
-    'Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-    '    TxtDateNow.Text = Now.ToString("MM/dd/yyyy")
-    '    TxtTimeNow.Text = Now.ToLongTimeString
-    'End Sub
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        TxtDateNow.Text = Now.ToString("yyyy/MM/dd")
+        TxtTimeNow.Text = Now.ToLongTimeString
+    End Sub
 
     Private Sub MenuSetDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
