@@ -249,12 +249,13 @@ l:
 
     Private Sub BtnSetDefault_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSetDefault.Click
         Try
-            If MasterField1.TextBox1.Text <> "" And Address.Enabled = False Then
+            If MasterField1.TextBox1.Text <> "" Then
                 ProjectSettings.CurrentStockID = BSourceStocks.Current("Stock_ID")
                 ProjectSettings.CurrentStockName = BSourceStocks.Current("Stock_Name")
+                My.Forms.Main.TxtStockName.Text = BSourceStocks.Current("Stock_Name")
                 My.Computer.FileSystem.WriteAllText(My.Application.Info.DirectoryPath & "\Stk.Conf.Oslp", BSourceStocks.Current("Stock_ID"), False)
                 'cls.MsgComplete()
-
+                cls.MsgInfo(" „  ⁄ÌÌ‰ «·„Õ· ﬂ≈› —«÷Ì")
             Else
                 cls.MsgExclamation("·« Ì„ﬂ‰  ⁄ÌÌ‰ Â–« «·„Õ· ﬂ«› —«÷Ì ›Ì «·Êﬁ  «·Õ«·Ì")
             End If
