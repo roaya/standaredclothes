@@ -285,7 +285,7 @@
                 Price.Value = 0
                 ItemName.Text = ""
             Else
-                ItemName.Items.Clear()
+                'ItemName.Items.Clear()
                 CustomerID.Enabled = True
                 OrderType.Enabled = True
                 BtnNewCustomer.Enabled = True
@@ -517,7 +517,7 @@
 
                 End If
 
-        
+
                 '''''''''''''''''''''''''''''''''''''''''''''''''
 
                 BDate = BillDate.Text
@@ -562,7 +562,7 @@
 
                     cls.Commit_Inv_Tran(BillID.Text, BDate, TotalBill.Text, DataGridView1.Rows(i).Cells("Item_ID").Value, DataGridView1.Rows(i).Cells("Quantity").Value, "فاتورة مبيعات", StockID.Tag)
 
-                 
+
                 Next
 
                 If MyDs.Tables("Sch_Payments").Rows.Count > 0 Then
@@ -625,14 +625,19 @@
             TblSalesDetails.Columns("Bill_ID").DefaultValue = BillID.Text
             ResetOrder(True)
             B_Edited = True
-            ItemName.Items.Clear()
+            'ItemName.Items.Clear()
             If B_EndLoad = True Then
                 cmd.CommandText = "select distinct item_name from Query_Items_Stocks where stock_id = " & ProjectSettings.CurrentStockID
-                dr = cmd.ExecuteReader
-                Do While Not dr.Read = False
-                    ItemName.Items.Add(dr("Item_Name"))
-                Loop
-                dr.Close()
+                Dim items As New DataTable()
+                da.SelectCommand = cmd
+                da.Fill(items)
+                ItemName.DataSource = items
+
+                'dr = cmd.ExecuteReader
+                'Do While Not dr.Read = False
+                '    ItemName.Items.Add(dr("Item_Name"))
+                'Loop
+                'dr.Close()
             End If
 
             If MyDs.Tables("App_Preferences").Rows(0).Item("Sal_Def_Sch") = "الاسم" Then
@@ -673,7 +678,7 @@
         End If
     End Sub
 
-    Private Sub BtnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDelete.Click, MenuSave.Click
+    Private Sub BtnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDelete.Click, MenuDelete.Click
         Delete_Form()
     End Sub
 
@@ -696,6 +701,7 @@
                 TotalBill.Text = 0
                 'TotalTemp.Text = 0
                 CountRecords.Text = 0
+                CashValue.Value = 0                
             Else
                 CalculateTotalBill()
                 CalcPayType()
@@ -1118,7 +1124,7 @@
                 cls.MsgExclamation("ادخل قيمة المدفوع")
             ElseIf CashValue.Value + CreditValue.Value <> TotalBill.Text Then
                 cls.MsgExclamation("يجب ان تتساوي قيمة المدفوع مع اجمالي الفاتورة")
-        
+
             ElseIf PayedValue.Value = 0 And PayType.Text <> "اجل" Then
                 cls.MsgExclamation("ادخل قيمة المدفوع")
             ElseIf PayedValue.Value < TotalBill.Text And PayType.Text <> "نقدي و اجل" Then
@@ -1219,7 +1225,7 @@
                 End If
 
 
-              
+
                 '''''''''''''''''''''''''''''''''''''''''''''''''
 
                 BDate = BillDate.Text
@@ -1298,7 +1304,7 @@
                         m.ShowDialog()
 
 
-                       
+
                     End If
 
                     Me.Cursor = Cursors.Default
@@ -1392,5 +1398,22 @@
 
     Private Sub PayedValue_ValueChanged(sender As Object, e As EventArgs) Handles PayedValue.ValueChanged
         CalculateTotalBill()
+    End Sub
+
+    Private Sub DataGridView1_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellEndEdit
+        If DataGridView1.Rows.Count <> 0 Then
+            Select Case DataGridView1.Rows(RowID).Cells("Discount_Type").Value
+                Case "مبلغ ثابت"
+                    DataGridView1.Rows(RowID).Cells("Price").Value = DataGridView1.Rows(RowID).Cells("Price").Value - DataGridView1.Rows(RowID).Cells("Discount_Value").Value
+                Case "نسبة مئوية"
+                    DataGridView1.Rows(RowID).Cells("Price").Value = (DataGridView1.Rows(RowID).Cells("Price").Value - (DataGridView1.Rows(RowID).Cells("Price").Value * (DataGridView1.Rows(RowID).Cells("Discount_Value").Value / 100)))
+                Case "لا يوجد"
+                    DataGridView1.Rows(RowID).Cells("Price").Value = DataGridView1.Rows(RowID).Cells("Price").Value
+            End Select
+            DataGridView1.Rows(RowID).Cells("Total_Item").Value = DataGridView1.Rows(RowID).Cells("Price").Value * DataGridView1.Rows(RowID).Cells("Quantity").Value
+
+        End If
+        CalculateTotalBill()
+        CashValue.Value = Convert.ToDecimal(TotalBill.Text)
     End Sub
 End Class

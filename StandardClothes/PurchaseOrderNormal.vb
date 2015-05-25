@@ -492,6 +492,7 @@ Public Class PurchaseOrderNormal
             CreditValue.Enabled = False
             tblPurchase.Columns("Bill_ID").DefaultValue = BillID.Text
             ResetOrder(True)
+            Fill_Items()
             B_Edited = True
 
             StockID.SelectedValue = MyDs.Tables("App_Preferences").Rows(0).Item("Pur_Stk_ID")
@@ -704,6 +705,9 @@ Public Class PurchaseOrderNormal
     End Sub
 
     Private Sub VendorID_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendorID.SelectedIndexChanged
+        Fill_Items()        
+    End Sub
+    Private Sub Fill_Items()
         Try
             ItemName.Items.Clear()
             If B_EndLoad = True And IsVendorAdded = True Then
@@ -796,7 +800,6 @@ Public Class PurchaseOrderNormal
             cmdPro.Parameters.Add(CurID)
             cmdPro.CommandText = "UPDATE_SEQ"
 
-
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
         End Try
@@ -816,7 +819,7 @@ Public Class PurchaseOrderNormal
         m.ShowDialog()
     End Sub
 
-    
+
     Private Sub DiscountTypeItem_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DiscountTypeItem.TextChanged
         DiscountChangeTypes(False)
     End Sub
@@ -992,5 +995,5 @@ TotalBill.Text & ",N'" & DiscountType.Text & "'," & DiscountValue.Value & "," & 
         CalculateTotalBill()
     End Sub
 
-    
+
 End Class

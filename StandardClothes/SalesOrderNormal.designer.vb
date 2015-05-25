@@ -23,11 +23,11 @@ Partial Class SalesOrderNormal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SalesOrderNormal))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.NavigationBar = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.OrderByCombo = New System.Windows.Forms.ToolStripComboBox()
@@ -39,36 +39,15 @@ Partial Class SalesOrderNormal
         Me.card = New System.Windows.Forms.TextBox()
         Me.EmployeeID = New System.Windows.Forms.ComboBox()
         Me.BtnSchedule = New System.Windows.Forms.Button()
-        Me.GeneralLabel24 = New StandardClothes.GeneralLabel()
         Me.RemainingValue = New System.Windows.Forms.Label()
-        Me.GeneralLabel22 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel23 = New StandardClothes.GeneralLabel()
         Me.PayedValue = New System.Windows.Forms.NumericUpDown()
         Me.CardValue = New System.Windows.Forms.Label()
-        Me.GeneralLabel21 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel20 = New StandardClothes.GeneralLabel()
         Me.StockID = New System.Windows.Forms.Label()
-        Me.GeneralLabel19 = New StandardClothes.GeneralLabel()
         Me.OrderType = New System.Windows.Forms.ComboBox()
         Me.PeriodID = New System.Windows.Forms.Label()
-        Me.GeneralLabel18 = New StandardClothes.GeneralLabel()
         Me.BtnNewCustomer = New System.Windows.Forms.Button()
-        Me.GeneralLabel17 = New StandardClothes.GeneralLabel()
         Me.BillID = New System.Windows.Forms.Label()
         Me.TotalBill = New System.Windows.Forms.Label()
-        Me.GeneralLabel10 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel11 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel12 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel7 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel8 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel9 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel6 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel5 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel4 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel3 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel2 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel1 = New StandardClothes.GeneralLabel()
-        Me.Comments = New StandardClothes.GeneralTextBox()
         Me.CustomerID = New System.Windows.Forms.ComboBox()
         Me.DiscountValue = New System.Windows.Forms.NumericUpDown()
         Me.CreditValue = New System.Windows.Forms.NumericUpDown()
@@ -80,12 +59,8 @@ Partial Class SalesOrderNormal
         Me.GroupItems = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.DiscountTypeItem = New System.Windows.Forms.ComboBox()
-        Me.GeneralLabel15 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel16 = New StandardClothes.GeneralLabel()
         Me.DiscountValueItem = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GeneralLabel13 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel14 = New StandardClothes.GeneralLabel()
         Me.Quantity = New System.Windows.Forms.NumericUpDown()
         Me.Price = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -100,6 +75,7 @@ Partial Class SalesOrderNormal
         Me.SAvePrint = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuTotal = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupDetails = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -121,7 +97,31 @@ Partial Class SalesOrderNormal
         Me.BtnExit = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.MenuTotal = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GeneralLabel24 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel22 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel23 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel21 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel20 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel19 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel18 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel17 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel10 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel11 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel12 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel7 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel8 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel9 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel6 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel5 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel4 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel3 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel2 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel1 = New StandardClothes.GeneralLabel()
+        Me.Comments = New StandardClothes.GeneralTextBox()
+        Me.GeneralLabel15 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel16 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel13 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel14 = New StandardClothes.GeneralLabel()
         Me.NavigationBar.SuspendLayout()
         Me.ContentPanel.SuspendLayout()
         Me.GroupHeader.SuspendLayout()
@@ -279,6 +279,576 @@ Partial Class SalesOrderNormal
         Me.BtnSchedule.Text = "جدولة مواعيد السداد"
         Me.BtnSchedule.UseVisualStyleBackColor = True
         '
+        'RemainingValue
+        '
+        Me.RemainingValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RemainingValue.ForeColor = System.Drawing.Color.Black
+        Me.RemainingValue.Location = New System.Drawing.Point(19, 156)
+        Me.RemainingValue.Name = "RemainingValue"
+        Me.RemainingValue.Size = New System.Drawing.Size(128, 25)
+        Me.RemainingValue.TabIndex = 118
+        Me.RemainingValue.Text = "0"
+        Me.RemainingValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PayedValue
+        '
+        Me.PayedValue.DecimalPlaces = 2
+        Me.PayedValue.Location = New System.Drawing.Point(19, 123)
+        Me.PayedValue.Maximum = New Decimal(New Integer() {1410065408, 2, 0, 0})
+        Me.PayedValue.Name = "PayedValue"
+        Me.PayedValue.Size = New System.Drawing.Size(128, 26)
+        Me.PayedValue.TabIndex = 114
+        Me.PayedValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'CardValue
+        '
+        Me.CardValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CardValue.ForeColor = System.Drawing.Color.Black
+        Me.CardValue.Location = New System.Drawing.Point(293, 124)
+        Me.CardValue.Name = "CardValue"
+        Me.CardValue.Size = New System.Drawing.Size(123, 25)
+        Me.CardValue.TabIndex = 113
+        Me.CardValue.Text = "0"
+        Me.CardValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'StockID
+        '
+        Me.StockID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.StockID.ForeColor = System.Drawing.Color.Black
+        Me.StockID.Location = New System.Drawing.Point(835, 124)
+        Me.StockID.Name = "StockID"
+        Me.StockID.Size = New System.Drawing.Size(146, 25)
+        Me.StockID.TabIndex = 108
+        Me.StockID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.StockID.Visible = False
+        '
+        'OrderType
+        '
+        Me.OrderType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.OrderType.FormattingEnabled = True
+        Me.OrderType.Items.AddRange(New Object() {"جملة", "قطاعي"})
+        Me.OrderType.Location = New System.Drawing.Point(835, 90)
+        Me.OrderType.Name = "OrderType"
+        Me.OrderType.Size = New System.Drawing.Size(146, 26)
+        Me.OrderType.TabIndex = 106
+        '
+        'PeriodID
+        '
+        Me.PeriodID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PeriodID.ForeColor = System.Drawing.Color.Black
+        Me.PeriodID.Location = New System.Drawing.Point(835, 124)
+        Me.PeriodID.Name = "PeriodID"
+        Me.PeriodID.Size = New System.Drawing.Size(146, 25)
+        Me.PeriodID.TabIndex = 105
+        Me.PeriodID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.PeriodID.Visible = False
+        '
+        'BtnNewCustomer
+        '
+        Me.BtnNewCustomer.BackgroundImage = Global.StandardClothes.My.Resources.Resources.group_add_256
+        Me.BtnNewCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnNewCustomer.Location = New System.Drawing.Point(559, 28)
+        Me.BtnNewCustomer.Name = "BtnNewCustomer"
+        Me.BtnNewCustomer.Size = New System.Drawing.Size(27, 26)
+        Me.BtnNewCustomer.TabIndex = 21
+        Me.BtnNewCustomer.UseVisualStyleBackColor = True
+        '
+        'BillID
+        '
+        Me.BillID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BillID.Location = New System.Drawing.Point(835, 27)
+        Me.BillID.Name = "BillID"
+        Me.BillID.Size = New System.Drawing.Size(146, 25)
+        Me.BillID.TabIndex = 101
+        Me.BillID.Text = "0"
+        Me.BillID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TotalBill
+        '
+        Me.TotalBill.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TotalBill.ForeColor = System.Drawing.Color.Black
+        Me.TotalBill.Location = New System.Drawing.Point(293, 27)
+        Me.TotalBill.Name = "TotalBill"
+        Me.TotalBill.Size = New System.Drawing.Size(123, 25)
+        Me.TotalBill.TabIndex = 100
+        Me.TotalBill.Text = "0"
+        Me.TotalBill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CustomerID
+        '
+        Me.CustomerID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CustomerID.FormattingEnabled = True
+        Me.CustomerID.Location = New System.Drawing.Point(587, 28)
+        Me.CustomerID.Name = "CustomerID"
+        Me.CustomerID.Size = New System.Drawing.Size(123, 26)
+        Me.CustomerID.TabIndex = 81
+        '
+        'DiscountValue
+        '
+        Me.DiscountValue.DecimalPlaces = 2
+        Me.DiscountValue.Location = New System.Drawing.Point(559, 59)
+        Me.DiscountValue.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
+        Me.DiscountValue.Name = "DiscountValue"
+        Me.DiscountValue.Size = New System.Drawing.Size(152, 26)
+        Me.DiscountValue.TabIndex = 82
+        Me.DiscountValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'CreditValue
+        '
+        Me.CreditValue.DecimalPlaces = 2
+        Me.CreditValue.Location = New System.Drawing.Point(19, 91)
+        Me.CreditValue.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
+        Me.CreditValue.Name = "CreditValue"
+        Me.CreditValue.Size = New System.Drawing.Size(128, 26)
+        Me.CreditValue.TabIndex = 85
+        Me.CreditValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'CashValue
+        '
+        Me.CashValue.DecimalPlaces = 2
+        Me.CashValue.Location = New System.Drawing.Point(19, 58)
+        Me.CashValue.Maximum = New Decimal(New Integer() {1410065408, 2, 0, 0})
+        Me.CashValue.Name = "CashValue"
+        Me.CashValue.Size = New System.Drawing.Size(128, 26)
+        Me.CashValue.TabIndex = 84
+        Me.CashValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'DiscountType
+        '
+        Me.DiscountType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.DiscountType.FormattingEnabled = True
+        Me.DiscountType.Items.AddRange(New Object() {"نسبة مئوية", "مبلغ ثابت", "لا يوجد"})
+        Me.DiscountType.Location = New System.Drawing.Point(559, 92)
+        Me.DiscountType.Name = "DiscountType"
+        Me.DiscountType.Size = New System.Drawing.Size(152, 26)
+        Me.DiscountType.TabIndex = 79
+        '
+        'PayType
+        '
+        Me.PayType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PayType.FormattingEnabled = True
+        Me.PayType.Items.AddRange(New Object() {"نقدي", "اجل", "بشيك", "نقدي و اجل", "شيك و اجل"})
+        Me.PayType.Location = New System.Drawing.Point(19, 26)
+        Me.PayType.Name = "PayType"
+        Me.PayType.Size = New System.Drawing.Size(128, 26)
+        Me.PayType.TabIndex = 83
+        '
+        'BillDate
+        '
+        Me.BillDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.BillDate.Location = New System.Drawing.Point(835, 59)
+        Me.BillDate.Name = "BillDate"
+        Me.BillDate.RightToLeftLayout = True
+        Me.BillDate.Size = New System.Drawing.Size(146, 26)
+        Me.BillDate.TabIndex = 77
+        '
+        'BillTime
+        '
+        Me.BillTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BillTime.ForeColor = System.Drawing.Color.Black
+        Me.BillTime.Location = New System.Drawing.Point(835, 123)
+        Me.BillTime.Name = "BillTime"
+        Me.BillTime.Size = New System.Drawing.Size(146, 25)
+        Me.BillTime.TabIndex = 78
+        Me.BillTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BillTime.Visible = False
+        '
+        'GroupItems
+        '
+        Me.GroupItems.BackColor = System.Drawing.Color.Transparent
+        Me.GroupItems.Controls.Add(Me.GroupBox4)
+        Me.GroupItems.Controls.Add(Me.GroupBox3)
+        Me.GroupItems.Controls.Add(Me.GroupBox2)
+        Me.GroupItems.Controls.Add(Me.MenuStrip2)
+        Me.GroupItems.Enabled = False
+        Me.GroupItems.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupItems.Location = New System.Drawing.Point(19, 196)
+        Me.GroupItems.Name = "GroupItems"
+        Me.GroupItems.Size = New System.Drawing.Size(1122, 142)
+        Me.GroupItems.TabIndex = 78
+        Me.GroupItems.TabStop = False
+        Me.GroupItems.Text = "البيانات العامة للأصناف"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.DiscountTypeItem)
+        Me.GroupBox4.Controls.Add(Me.GeneralLabel15)
+        Me.GroupBox4.Controls.Add(Me.GeneralLabel16)
+        Me.GroupBox4.Controls.Add(Me.DiscountValueItem)
+        Me.GroupBox4.Location = New System.Drawing.Point(47, 21)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(324, 110)
+        Me.GroupBox4.TabIndex = 2
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "بيانات الخصم"
+        '
+        'DiscountTypeItem
+        '
+        Me.DiscountTypeItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.DiscountTypeItem.FormattingEnabled = True
+        Me.DiscountTypeItem.Items.AddRange(New Object() {"نسبة مئوية", "مبلغ ثابت", "لا يوجد"})
+        Me.DiscountTypeItem.Location = New System.Drawing.Point(24, 66)
+        Me.DiscountTypeItem.Name = "DiscountTypeItem"
+        Me.DiscountTypeItem.Size = New System.Drawing.Size(144, 26)
+        Me.DiscountTypeItem.TabIndex = 74
+        '
+        'DiscountValueItem
+        '
+        Me.DiscountValueItem.DecimalPlaces = 2
+        Me.DiscountValueItem.Location = New System.Drawing.Point(24, 35)
+        Me.DiscountValueItem.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
+        Me.DiscountValueItem.Name = "DiscountValueItem"
+        Me.DiscountValueItem.Size = New System.Drawing.Size(144, 26)
+        Me.DiscountValueItem.TabIndex = 71
+        Me.DiscountValueItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.GeneralLabel13)
+        Me.GroupBox3.Controls.Add(Me.GeneralLabel14)
+        Me.GroupBox3.Controls.Add(Me.Quantity)
+        Me.GroupBox3.Controls.Add(Me.Price)
+        Me.GroupBox3.Location = New System.Drawing.Point(381, 21)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(293, 110)
+        Me.GroupBox3.TabIndex = 1
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "بيانات الأصناف المشتراة"
+        '
+        'Quantity
+        '
+        Me.Quantity.DecimalPlaces = 5
+        Me.Quantity.Location = New System.Drawing.Point(22, 65)
+        Me.Quantity.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
+        Me.Quantity.Name = "Quantity"
+        Me.Quantity.Size = New System.Drawing.Size(129, 26)
+        Me.Quantity.TabIndex = 60
+        Me.Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Price
+        '
+        Me.Price.DecimalPlaces = 2
+        Me.Price.Location = New System.Drawing.Point(22, 34)
+        Me.Price.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
+        Me.Price.Name = "Price"
+        Me.Price.Size = New System.Drawing.Size(129, 26)
+        Me.Price.TabIndex = 59
+        Me.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.ItemName)
+        Me.GroupBox2.Controls.Add(Me.BarCode)
+        Me.GroupBox2.Controls.Add(Me.RadioBarcode)
+        Me.GroupBox2.Controls.Add(Me.RadioItemName)
+        Me.GroupBox2.Location = New System.Drawing.Point(684, 21)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(392, 110)
+        Me.GroupBox2.TabIndex = 0
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "الأصناف المختارة"
+        '
+        'ItemName
+        '
+        Me.ItemName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ItemName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ItemName.DisplayMember = "item_name"
+        Me.ItemName.Enabled = False
+        Me.ItemName.FormattingEnabled = True
+        Me.ItemName.Location = New System.Drawing.Point(17, 35)
+        Me.ItemName.Name = "ItemName"
+        Me.ItemName.Size = New System.Drawing.Size(237, 26)
+        Me.ItemName.TabIndex = 4
+        Me.ItemName.ValueMember = "item_name"
+        '
+        'BarCode
+        '
+        Me.BarCode.Location = New System.Drawing.Point(17, 68)
+        Me.BarCode.Name = "BarCode"
+        Me.BarCode.Size = New System.Drawing.Size(237, 26)
+        Me.BarCode.TabIndex = 3
+        '
+        'RadioBarcode
+        '
+        Me.RadioBarcode.AutoSize = True
+        Me.RadioBarcode.Checked = True
+        Me.RadioBarcode.Font = New System.Drawing.Font("Tahoma", 11.0!)
+        Me.RadioBarcode.Location = New System.Drawing.Point(269, 70)
+        Me.RadioBarcode.Name = "RadioBarcode"
+        Me.RadioBarcode.Size = New System.Drawing.Size(106, 22)
+        Me.RadioBarcode.TabIndex = 1
+        Me.RadioBarcode.TabStop = True
+        Me.RadioBarcode.Text = "بحث بالباركود"
+        Me.RadioBarcode.UseVisualStyleBackColor = True
+        '
+        'RadioItemName
+        '
+        Me.RadioItemName.AutoSize = True
+        Me.RadioItemName.Font = New System.Drawing.Font("Tahoma", 11.0!)
+        Me.RadioItemName.Location = New System.Drawing.Point(274, 34)
+        Me.RadioItemName.Name = "RadioItemName"
+        Me.RadioItemName.Size = New System.Drawing.Size(101, 22)
+        Me.RadioItemName.TabIndex = 0
+        Me.RadioItemName.Text = "بحث بالاسم"
+        Me.RadioItemName.UseVisualStyleBackColor = True
+        '
+        'MenuStrip2
+        '
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuAllCommands})
+        Me.MenuStrip2.Location = New System.Drawing.Point(3, 22)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Size = New System.Drawing.Size(1116, 24)
+        Me.MenuStrip2.TabIndex = 125
+        Me.MenuStrip2.Text = "MenuStrip2"
+        Me.MenuStrip2.Visible = False
+        '
+        'MenuAllCommands
+        '
+        Me.MenuAllCommands.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuNew, Me.MenuSave, Me.SAvePrint, Me.MenuDelete, Me.MenuExit, Me.MenuTotal})
+        Me.MenuAllCommands.Name = "MenuAllCommands"
+        Me.MenuAllCommands.Size = New System.Drawing.Size(84, 20)
+        Me.MenuAllCommands.Text = "AllComands"
+        '
+        'MenuNew
+        '
+        Me.MenuNew.Name = "MenuNew"
+        Me.MenuNew.ShortcutKeys = System.Windows.Forms.Keys.F2
+        Me.MenuNew.Size = New System.Drawing.Size(151, 22)
+        Me.MenuNew.Text = "New"
+        '
+        'MenuSave
+        '
+        Me.MenuSave.Name = "MenuSave"
+        Me.MenuSave.ShortcutKeys = System.Windows.Forms.Keys.F3
+        Me.MenuSave.Size = New System.Drawing.Size(151, 22)
+        Me.MenuSave.Text = "Save"
+        '
+        'SAvePrint
+        '
+        Me.SAvePrint.Name = "SAvePrint"
+        Me.SAvePrint.ShortcutKeys = System.Windows.Forms.Keys.F4
+        Me.SAvePrint.Size = New System.Drawing.Size(151, 22)
+        Me.SAvePrint.Text = "Edit"
+        '
+        'MenuDelete
+        '
+        Me.MenuDelete.Name = "MenuDelete"
+        Me.MenuDelete.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.MenuDelete.Size = New System.Drawing.Size(151, 22)
+        Me.MenuDelete.Text = "Delete"
+        '
+        'MenuExit
+        '
+        Me.MenuExit.Name = "MenuExit"
+        Me.MenuExit.ShortcutKeys = System.Windows.Forms.Keys.F6
+        Me.MenuExit.Size = New System.Drawing.Size(151, 22)
+        Me.MenuExit.Text = "Exit"
+        '
+        'MenuTotal
+        '
+        Me.MenuTotal.Name = "MenuTotal"
+        Me.MenuTotal.ShortcutKeys = System.Windows.Forms.Keys.F7
+        Me.MenuTotal.Size = New System.Drawing.Size(151, 22)
+        Me.MenuTotal.Text = "MenuTotal"
+        '
+        'GroupDetails
+        '
+        Me.GroupDetails.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.GroupDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.GroupDetails.Controls.Add(Me.Panel3)
+        Me.GroupDetails.Enabled = False
+        Me.GroupDetails.Location = New System.Drawing.Point(19, 346)
+        Me.GroupDetails.Name = "GroupDetails"
+        Me.GroupDetails.Size = New System.Drawing.Size(1122, 204)
+        Me.GroupDetails.TabIndex = 77
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.DataGridView1)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1118, 200)
+        Me.Panel3.TabIndex = 20
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Tahoma", 8.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Silver
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(1116, 198)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1162, 24)
+        Me.MenuStrip1.TabIndex = 24
+        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip1.Visible = False
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuBtnNew, Me.MenuBtnSave, Me.MenuBtnSavePrint, Me.MenuBtnExit})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(128, 20)
+        Me.ToolStripMenuItem1.Text = "ToolStripMenuItem1"
+        '
+        'MenuBtnNew
+        '
+        Me.MenuBtnNew.Name = "MenuBtnNew"
+        Me.MenuBtnNew.ShortcutKeys = System.Windows.Forms.Keys.F2
+        Me.MenuBtnNew.Size = New System.Drawing.Size(164, 22)
+        Me.MenuBtnNew.Text = "Test"
+        '
+        'MenuBtnSave
+        '
+        Me.MenuBtnSave.Name = "MenuBtnSave"
+        Me.MenuBtnSave.ShortcutKeys = System.Windows.Forms.Keys.F3
+        Me.MenuBtnSave.Size = New System.Drawing.Size(164, 22)
+        Me.MenuBtnSave.Text = "TestSave"
+        '
+        'MenuBtnSavePrint
+        '
+        Me.MenuBtnSavePrint.Name = "MenuBtnSavePrint"
+        Me.MenuBtnSavePrint.ShortcutKeys = System.Windows.Forms.Keys.F4
+        Me.MenuBtnSavePrint.Size = New System.Drawing.Size(164, 22)
+        Me.MenuBtnSavePrint.Text = "TestSavePrint"
+        '
+        'MenuBtnExit
+        '
+        Me.MenuBtnExit.Name = "MenuBtnExit"
+        Me.MenuBtnExit.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.MenuBtnExit.Size = New System.Drawing.Size(164, 22)
+        Me.MenuBtnExit.Text = "TestDelete"
+        '
+        'BtnNew
+        '
+        Me.BtnNew.AutoSize = False
+        Me.BtnNew.BackgroundImage = Global.StandardClothes.My.Resources.Resources.without_texte_2_16
+        Me.BtnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnNew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnNew.Name = "BtnNew"
+        Me.BtnNew.Size = New System.Drawing.Size(150, 35)
+        Me.BtnNew.Text = "جديد  F2"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
+        '
+        'BtnSave
+        '
+        Me.BtnSave.AutoSize = False
+        Me.BtnSave.BackgroundImage = Global.StandardClothes.My.Resources.Resources.save_2_18
+        Me.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSave.Enabled = False
+        Me.BtnSave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnSave.Name = "BtnSave"
+        Me.BtnSave.Size = New System.Drawing.Size(150, 35)
+        Me.BtnSave.Text = "حفظ  F3"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
+        '
+        'BtnSavePrint
+        '
+        Me.BtnSavePrint.AutoSize = False
+        Me.BtnSavePrint.BackgroundImage = Global.StandardClothes.My.Resources.Resources.enter
+        Me.BtnSavePrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSavePrint.Image = Global.StandardClothes.My.Resources.Resources.HP_Printer
+        Me.BtnSavePrint.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnSavePrint.Name = "BtnSavePrint"
+        Me.BtnSavePrint.Size = New System.Drawing.Size(150, 35)
+        Me.BtnSavePrint.Text = "حفظ و طباعة  F4"
+        Me.BtnSavePrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.AutoSize = False
+        Me.BtnDelete.BackgroundImage = Global.StandardClothes.My.Resources.Resources.delete_2_21
+        Me.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(150, 35)
+        Me.BtnDelete.Text = "حذف  F5"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 38)
+        '
+        'BtnExit
+        '
+        Me.BtnExit.AutoSize = False
+        Me.BtnExit.BackgroundImage = Global.StandardClothes.My.Resources.Resources.EXIT_2_22
+        Me.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnExit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.Size = New System.Drawing.Size(150, 35)
+        Me.BtnExit.Text = "خروج F6"
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.AutoSize = False
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNew, Me.ToolStripSeparator2, Me.BtnSave, Me.ToolStripSeparator1, Me.BtnSavePrint, Me.ToolStripSeparator3, Me.BtnDelete, Me.ToolStripSeparator5, Me.BtnExit, Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.ToolStrip1.Size = New System.Drawing.Size(1162, 38)
+        Me.ToolStrip1.TabIndex = 21
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.AutoSize = False
+        Me.ToolStripButton1.BackgroundImage = Global.StandardClothes.My.Resources.Resources.save_2_18
+        Me.ToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(150, 35)
+        Me.ToolStripButton1.Text = "الإجمالي F7"
+        '
         'GeneralLabel24
         '
         Me.GeneralLabel24.BackColor = System.Drawing.SystemColors.Control
@@ -293,17 +863,6 @@ Partial Class SalesOrderNormal
         Me.GeneralLabel24.SetLabelTxt = "تاريخ دفع الآجل :"
         Me.GeneralLabel24.Size = New System.Drawing.Size(129, 25)
         Me.GeneralLabel24.TabIndex = 120
-        '
-        'RemainingValue
-        '
-        Me.RemainingValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RemainingValue.ForeColor = System.Drawing.Color.Black
-        Me.RemainingValue.Location = New System.Drawing.Point(19, 156)
-        Me.RemainingValue.Name = "RemainingValue"
-        Me.RemainingValue.Size = New System.Drawing.Size(128, 25)
-        Me.RemainingValue.TabIndex = 118
-        Me.RemainingValue.Text = "0"
-        Me.RemainingValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GeneralLabel22
         '
@@ -335,27 +894,6 @@ Partial Class SalesOrderNormal
         Me.GeneralLabel23.Size = New System.Drawing.Size(132, 25)
         Me.GeneralLabel23.TabIndex = 116
         '
-        'PayedValue
-        '
-        Me.PayedValue.DecimalPlaces = 2
-        Me.PayedValue.Location = New System.Drawing.Point(19, 123)
-        Me.PayedValue.Maximum = New Decimal(New Integer() {1410065408, 2, 0, 0})
-        Me.PayedValue.Name = "PayedValue"
-        Me.PayedValue.Size = New System.Drawing.Size(128, 26)
-        Me.PayedValue.TabIndex = 114
-        Me.PayedValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'CardValue
-        '
-        Me.CardValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CardValue.ForeColor = System.Drawing.Color.Black
-        Me.CardValue.Location = New System.Drawing.Point(293, 124)
-        Me.CardValue.Name = "CardValue"
-        Me.CardValue.Size = New System.Drawing.Size(123, 25)
-        Me.CardValue.TabIndex = 113
-        Me.CardValue.Text = "0"
-        Me.CardValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'GeneralLabel21
         '
         Me.GeneralLabel21.BackColor = System.Drawing.SystemColors.Control
@@ -386,17 +924,6 @@ Partial Class SalesOrderNormal
         Me.GeneralLabel20.Size = New System.Drawing.Size(115, 25)
         Me.GeneralLabel20.TabIndex = 110
         '
-        'StockID
-        '
-        Me.StockID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.StockID.ForeColor = System.Drawing.Color.Black
-        Me.StockID.Location = New System.Drawing.Point(835, 124)
-        Me.StockID.Name = "StockID"
-        Me.StockID.Size = New System.Drawing.Size(146, 25)
-        Me.StockID.TabIndex = 108
-        Me.StockID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.StockID.Visible = False
-        '
         'GeneralLabel19
         '
         Me.GeneralLabel19.BackColor = System.Drawing.SystemColors.Control
@@ -411,27 +938,6 @@ Partial Class SalesOrderNormal
         Me.GeneralLabel19.SetLabelTxt = "نوع الفاتورة :"
         Me.GeneralLabel19.Size = New System.Drawing.Size(111, 25)
         Me.GeneralLabel19.TabIndex = 107
-        '
-        'OrderType
-        '
-        Me.OrderType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.OrderType.FormattingEnabled = True
-        Me.OrderType.Items.AddRange(New Object() {"جملة", "قطاعي"})
-        Me.OrderType.Location = New System.Drawing.Point(835, 90)
-        Me.OrderType.Name = "OrderType"
-        Me.OrderType.Size = New System.Drawing.Size(146, 26)
-        Me.OrderType.TabIndex = 106
-        '
-        'PeriodID
-        '
-        Me.PeriodID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PeriodID.ForeColor = System.Drawing.Color.Black
-        Me.PeriodID.Location = New System.Drawing.Point(835, 124)
-        Me.PeriodID.Name = "PeriodID"
-        Me.PeriodID.Size = New System.Drawing.Size(146, 25)
-        Me.PeriodID.TabIndex = 105
-        Me.PeriodID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.PeriodID.Visible = False
         '
         'GeneralLabel18
         '
@@ -449,16 +955,6 @@ Partial Class SalesOrderNormal
         Me.GeneralLabel18.TabIndex = 104
         Me.GeneralLabel18.Visible = False
         '
-        'BtnNewCustomer
-        '
-        Me.BtnNewCustomer.BackgroundImage = Global.StandardClothes.My.Resources.Resources.group_add_256
-        Me.BtnNewCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnNewCustomer.Location = New System.Drawing.Point(559, 28)
-        Me.BtnNewCustomer.Name = "BtnNewCustomer"
-        Me.BtnNewCustomer.Size = New System.Drawing.Size(27, 26)
-        Me.BtnNewCustomer.TabIndex = 21
-        Me.BtnNewCustomer.UseVisualStyleBackColor = True
-        '
         'GeneralLabel17
         '
         Me.GeneralLabel17.BackColor = System.Drawing.SystemColors.Control
@@ -474,27 +970,6 @@ Partial Class SalesOrderNormal
         Me.GeneralLabel17.Size = New System.Drawing.Size(111, 25)
         Me.GeneralLabel17.TabIndex = 103
         Me.GeneralLabel17.Visible = False
-        '
-        'BillID
-        '
-        Me.BillID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BillID.Location = New System.Drawing.Point(835, 27)
-        Me.BillID.Name = "BillID"
-        Me.BillID.Size = New System.Drawing.Size(146, 25)
-        Me.BillID.TabIndex = 101
-        Me.BillID.Text = "0"
-        Me.BillID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TotalBill
-        '
-        Me.TotalBill.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TotalBill.ForeColor = System.Drawing.Color.Black
-        Me.TotalBill.Location = New System.Drawing.Point(293, 27)
-        Me.TotalBill.Name = "TotalBill"
-        Me.TotalBill.Size = New System.Drawing.Size(123, 25)
-        Me.TotalBill.TabIndex = 100
-        Me.TotalBill.Text = "0"
-        Me.TotalBill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GeneralLabel10
         '
@@ -689,124 +1164,6 @@ Partial Class SalesOrderNormal
         Me.Comments.Size = New System.Drawing.Size(124, 25)
         Me.Comments.TabIndex = 87
         '
-        'CustomerID
-        '
-        Me.CustomerID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CustomerID.FormattingEnabled = True
-        Me.CustomerID.Location = New System.Drawing.Point(587, 28)
-        Me.CustomerID.Name = "CustomerID"
-        Me.CustomerID.Size = New System.Drawing.Size(123, 26)
-        Me.CustomerID.TabIndex = 81
-        '
-        'DiscountValue
-        '
-        Me.DiscountValue.DecimalPlaces = 2
-        Me.DiscountValue.Location = New System.Drawing.Point(559, 59)
-        Me.DiscountValue.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
-        Me.DiscountValue.Name = "DiscountValue"
-        Me.DiscountValue.Size = New System.Drawing.Size(152, 26)
-        Me.DiscountValue.TabIndex = 82
-        Me.DiscountValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'CreditValue
-        '
-        Me.CreditValue.DecimalPlaces = 2
-        Me.CreditValue.Location = New System.Drawing.Point(19, 91)
-        Me.CreditValue.Maximum = New Decimal(New Integer() {100000000, 0, 0, 0})
-        Me.CreditValue.Name = "CreditValue"
-        Me.CreditValue.Size = New System.Drawing.Size(128, 26)
-        Me.CreditValue.TabIndex = 85
-        Me.CreditValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'CashValue
-        '
-        Me.CashValue.DecimalPlaces = 2
-        Me.CashValue.Location = New System.Drawing.Point(19, 58)
-        Me.CashValue.Maximum = New Decimal(New Integer() {1410065408, 2, 0, 0})
-        Me.CashValue.Name = "CashValue"
-        Me.CashValue.Size = New System.Drawing.Size(128, 26)
-        Me.CashValue.TabIndex = 84
-        Me.CashValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'DiscountType
-        '
-        Me.DiscountType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.DiscountType.FormattingEnabled = True
-        Me.DiscountType.Items.AddRange(New Object() {"نسبة مئوية", "مبلغ ثابت", "لا يوجد"})
-        Me.DiscountType.Location = New System.Drawing.Point(559, 92)
-        Me.DiscountType.Name = "DiscountType"
-        Me.DiscountType.Size = New System.Drawing.Size(152, 26)
-        Me.DiscountType.TabIndex = 79
-        '
-        'PayType
-        '
-        Me.PayType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.PayType.FormattingEnabled = True
-        Me.PayType.Items.AddRange(New Object() {"نقدي", "اجل", "بشيك", "نقدي و اجل", "شيك و اجل"})
-        Me.PayType.Location = New System.Drawing.Point(19, 26)
-        Me.PayType.Name = "PayType"
-        Me.PayType.Size = New System.Drawing.Size(128, 26)
-        Me.PayType.TabIndex = 83
-        '
-        'BillDate
-        '
-        Me.BillDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.BillDate.Location = New System.Drawing.Point(835, 59)
-        Me.BillDate.Name = "BillDate"
-        Me.BillDate.RightToLeftLayout = True
-        Me.BillDate.Size = New System.Drawing.Size(146, 26)
-        Me.BillDate.TabIndex = 77
-        '
-        'BillTime
-        '
-        Me.BillTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BillTime.ForeColor = System.Drawing.Color.Black
-        Me.BillTime.Location = New System.Drawing.Point(835, 123)
-        Me.BillTime.Name = "BillTime"
-        Me.BillTime.Size = New System.Drawing.Size(146, 25)
-        Me.BillTime.TabIndex = 78
-        Me.BillTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BillTime.Visible = False
-        '
-        'GroupItems
-        '
-        Me.GroupItems.BackColor = System.Drawing.Color.Transparent
-        Me.GroupItems.Controls.Add(Me.GroupBox4)
-        Me.GroupItems.Controls.Add(Me.GroupBox3)
-        Me.GroupItems.Controls.Add(Me.GroupBox2)
-        Me.GroupItems.Controls.Add(Me.MenuStrip2)
-        Me.GroupItems.Enabled = False
-        Me.GroupItems.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupItems.Location = New System.Drawing.Point(19, 196)
-        Me.GroupItems.Name = "GroupItems"
-        Me.GroupItems.Size = New System.Drawing.Size(1122, 142)
-        Me.GroupItems.TabIndex = 78
-        Me.GroupItems.TabStop = False
-        Me.GroupItems.Text = "البيانات العامة للأصناف"
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.DiscountTypeItem)
-        Me.GroupBox4.Controls.Add(Me.GeneralLabel15)
-        Me.GroupBox4.Controls.Add(Me.GeneralLabel16)
-        Me.GroupBox4.Controls.Add(Me.DiscountValueItem)
-        Me.GroupBox4.Location = New System.Drawing.Point(47, 21)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(324, 110)
-        Me.GroupBox4.TabIndex = 2
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "بيانات الخصم"
-        '
-        'DiscountTypeItem
-        '
-        Me.DiscountTypeItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.DiscountTypeItem.FormattingEnabled = True
-        Me.DiscountTypeItem.Items.AddRange(New Object() {"نسبة مئوية", "مبلغ ثابت", "لا يوجد"})
-        Me.DiscountTypeItem.Location = New System.Drawing.Point(24, 66)
-        Me.DiscountTypeItem.Name = "DiscountTypeItem"
-        Me.DiscountTypeItem.Size = New System.Drawing.Size(144, 26)
-        Me.DiscountTypeItem.TabIndex = 74
-        '
         'GeneralLabel15
         '
         Me.GeneralLabel15.BackColor = System.Drawing.SystemColors.Control
@@ -837,29 +1194,6 @@ Partial Class SalesOrderNormal
         Me.GeneralLabel16.Size = New System.Drawing.Size(127, 26)
         Me.GeneralLabel16.TabIndex = 72
         '
-        'DiscountValueItem
-        '
-        Me.DiscountValueItem.DecimalPlaces = 2
-        Me.DiscountValueItem.Location = New System.Drawing.Point(24, 35)
-        Me.DiscountValueItem.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
-        Me.DiscountValueItem.Name = "DiscountValueItem"
-        Me.DiscountValueItem.Size = New System.Drawing.Size(144, 26)
-        Me.DiscountValueItem.TabIndex = 71
-        Me.DiscountValueItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.GeneralLabel13)
-        Me.GroupBox3.Controls.Add(Me.GeneralLabel14)
-        Me.GroupBox3.Controls.Add(Me.Quantity)
-        Me.GroupBox3.Controls.Add(Me.Price)
-        Me.GroupBox3.Location = New System.Drawing.Point(381, 21)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(293, 110)
-        Me.GroupBox3.TabIndex = 1
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "بيانات الأصناف المشتراة"
-        '
         'GeneralLabel13
         '
         Me.GeneralLabel13.BackColor = System.Drawing.SystemColors.Control
@@ -889,337 +1223,6 @@ Partial Class SalesOrderNormal
         Me.GeneralLabel14.SetLabelTxt = "سعر الصنف :"
         Me.GeneralLabel14.Size = New System.Drawing.Size(112, 26)
         Me.GeneralLabel14.TabIndex = 70
-        '
-        'Quantity
-        '
-        Me.Quantity.DecimalPlaces = 5
-        Me.Quantity.Location = New System.Drawing.Point(22, 65)
-        Me.Quantity.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
-        Me.Quantity.Name = "Quantity"
-        Me.Quantity.Size = New System.Drawing.Size(129, 26)
-        Me.Quantity.TabIndex = 60
-        Me.Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Price
-        '
-        Me.Price.DecimalPlaces = 2
-        Me.Price.Location = New System.Drawing.Point(22, 34)
-        Me.Price.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
-        Me.Price.Name = "Price"
-        Me.Price.Size = New System.Drawing.Size(129, 26)
-        Me.Price.TabIndex = 59
-        Me.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.ItemName)
-        Me.GroupBox2.Controls.Add(Me.BarCode)
-        Me.GroupBox2.Controls.Add(Me.RadioBarcode)
-        Me.GroupBox2.Controls.Add(Me.RadioItemName)
-        Me.GroupBox2.Location = New System.Drawing.Point(684, 21)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(392, 110)
-        Me.GroupBox2.TabIndex = 0
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "الأصناف المختارة"
-        '
-        'ItemName
-        '
-        Me.ItemName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.ItemName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ItemName.Enabled = False
-        Me.ItemName.FormattingEnabled = True
-        Me.ItemName.Location = New System.Drawing.Point(17, 35)
-        Me.ItemName.Name = "ItemName"
-        Me.ItemName.Size = New System.Drawing.Size(237, 26)
-        Me.ItemName.TabIndex = 4
-        '
-        'BarCode
-        '
-        Me.BarCode.Location = New System.Drawing.Point(17, 68)
-        Me.BarCode.Name = "BarCode"
-        Me.BarCode.Size = New System.Drawing.Size(237, 26)
-        Me.BarCode.TabIndex = 3
-        '
-        'RadioBarcode
-        '
-        Me.RadioBarcode.AutoSize = True
-        Me.RadioBarcode.Checked = True
-        Me.RadioBarcode.Font = New System.Drawing.Font("Tahoma", 11.0!)
-        Me.RadioBarcode.Location = New System.Drawing.Point(269, 70)
-        Me.RadioBarcode.Name = "RadioBarcode"
-        Me.RadioBarcode.Size = New System.Drawing.Size(106, 22)
-        Me.RadioBarcode.TabIndex = 1
-        Me.RadioBarcode.TabStop = True
-        Me.RadioBarcode.Text = "بحث بالباركود"
-        Me.RadioBarcode.UseVisualStyleBackColor = True
-        '
-        'RadioItemName
-        '
-        Me.RadioItemName.AutoSize = True
-        Me.RadioItemName.Font = New System.Drawing.Font("Tahoma", 11.0!)
-        Me.RadioItemName.Location = New System.Drawing.Point(274, 34)
-        Me.RadioItemName.Name = "RadioItemName"
-        Me.RadioItemName.Size = New System.Drawing.Size(101, 22)
-        Me.RadioItemName.TabIndex = 0
-        Me.RadioItemName.Text = "بحث بالاسم"
-        Me.RadioItemName.UseVisualStyleBackColor = True
-        '
-        'MenuStrip2
-        '
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuAllCommands})
-        Me.MenuStrip2.Location = New System.Drawing.Point(3, 22)
-        Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Size = New System.Drawing.Size(1116, 24)
-        Me.MenuStrip2.TabIndex = 125
-        Me.MenuStrip2.Text = "MenuStrip2"
-        Me.MenuStrip2.Visible = False
-        '
-        'MenuAllCommands
-        '
-        Me.MenuAllCommands.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuNew, Me.MenuSave, Me.SAvePrint, Me.MenuDelete, Me.MenuExit, Me.MenuTotal})
-        Me.MenuAllCommands.Name = "MenuAllCommands"
-        Me.MenuAllCommands.Size = New System.Drawing.Size(84, 20)
-        Me.MenuAllCommands.Text = "AllComands"
-        '
-        'MenuNew
-        '
-        Me.MenuNew.Name = "MenuNew"
-        Me.MenuNew.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.MenuNew.Size = New System.Drawing.Size(151, 22)
-        Me.MenuNew.Text = "New"
-        '
-        'MenuSave
-        '
-        Me.MenuSave.Name = "MenuSave"
-        Me.MenuSave.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.MenuSave.Size = New System.Drawing.Size(151, 22)
-        Me.MenuSave.Text = "Save"
-        '
-        'SAvePrint
-        '
-        Me.SAvePrint.Name = "SAvePrint"
-        Me.SAvePrint.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.SAvePrint.Size = New System.Drawing.Size(151, 22)
-        Me.SAvePrint.Text = "Edit"
-        '
-        'MenuDelete
-        '
-        Me.MenuDelete.Name = "MenuDelete"
-        Me.MenuDelete.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.MenuDelete.Size = New System.Drawing.Size(151, 22)
-        Me.MenuDelete.Text = "Delete"
-        '
-        'MenuExit
-        '
-        Me.MenuExit.Name = "MenuExit"
-        Me.MenuExit.ShortcutKeys = System.Windows.Forms.Keys.F6
-        Me.MenuExit.Size = New System.Drawing.Size(151, 22)
-        Me.MenuExit.Text = "Exit"
-        '
-        'GroupDetails
-        '
-        Me.GroupDetails.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.GroupDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.GroupDetails.Controls.Add(Me.Panel3)
-        Me.GroupDetails.Enabled = False
-        Me.GroupDetails.Location = New System.Drawing.Point(19, 346)
-        Me.GroupDetails.Name = "GroupDetails"
-        Me.GroupDetails.Size = New System.Drawing.Size(1122, 204)
-        Me.GroupDetails.TabIndex = 77
-        '
-        'Panel3
-        '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.DataGridView1)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1118, 200)
-        Me.Panel3.TabIndex = 20
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.AliceBlue
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Tahoma", 8.0!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle7
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Silver
-        Me.DataGridView1.Size = New System.Drawing.Size(1116, 198)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1162, 24)
-        Me.MenuStrip1.TabIndex = 24
-        Me.MenuStrip1.Text = "MenuStrip1"
-        Me.MenuStrip1.Visible = False
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuBtnNew, Me.MenuBtnSave, Me.MenuBtnSavePrint, Me.MenuBtnExit})
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(128, 20)
-        Me.ToolStripMenuItem1.Text = "ToolStripMenuItem1"
-        '
-        'MenuBtnNew
-        '
-        Me.MenuBtnNew.Name = "MenuBtnNew"
-        Me.MenuBtnNew.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.MenuBtnNew.Size = New System.Drawing.Size(164, 22)
-        Me.MenuBtnNew.Text = "Test"
-        '
-        'MenuBtnSave
-        '
-        Me.MenuBtnSave.Name = "MenuBtnSave"
-        Me.MenuBtnSave.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.MenuBtnSave.Size = New System.Drawing.Size(164, 22)
-        Me.MenuBtnSave.Text = "TestSave"
-        '
-        'MenuBtnSavePrint
-        '
-        Me.MenuBtnSavePrint.Name = "MenuBtnSavePrint"
-        Me.MenuBtnSavePrint.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.MenuBtnSavePrint.Size = New System.Drawing.Size(164, 22)
-        Me.MenuBtnSavePrint.Text = "TestSavePrint"
-        '
-        'MenuBtnExit
-        '
-        Me.MenuBtnExit.Name = "MenuBtnExit"
-        Me.MenuBtnExit.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.MenuBtnExit.Size = New System.Drawing.Size(164, 22)
-        Me.MenuBtnExit.Text = "TestDelete"
-        '
-        'BtnNew
-        '
-        Me.BtnNew.AutoSize = False
-        Me.BtnNew.BackgroundImage = Global.StandardClothes.My.Resources.Resources.without_texte_2_16
-        Me.BtnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnNew.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnNew.Name = "BtnNew"
-        Me.BtnNew.Size = New System.Drawing.Size(150, 35)
-        Me.BtnNew.Text = "جديد  F2"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
-        '
-        'BtnSave
-        '
-        Me.BtnSave.AutoSize = False
-        Me.BtnSave.BackgroundImage = Global.StandardClothes.My.Resources.Resources.save_2_18
-        Me.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnSave.Enabled = False
-        Me.BtnSave.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(150, 35)
-        Me.BtnSave.Text = "حفظ  F3"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
-        '
-        'BtnSavePrint
-        '
-        Me.BtnSavePrint.AutoSize = False
-        Me.BtnSavePrint.BackgroundImage = Global.StandardClothes.My.Resources.Resources.enter
-        Me.BtnSavePrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnSavePrint.Image = Global.StandardClothes.My.Resources.Resources.HP_Printer
-        Me.BtnSavePrint.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnSavePrint.Name = "BtnSavePrint"
-        Me.BtnSavePrint.Size = New System.Drawing.Size(150, 35)
-        Me.BtnSavePrint.Text = "حفظ و طباعة  F4"
-        Me.BtnSavePrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
-        '
-        'BtnDelete
-        '
-        Me.BtnDelete.AutoSize = False
-        Me.BtnDelete.BackgroundImage = Global.StandardClothes.My.Resources.Resources.delete_2_21
-        Me.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(150, 35)
-        Me.BtnDelete.Text = "حذف  F5"
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 38)
-        '
-        'BtnExit
-        '
-        Me.BtnExit.AutoSize = False
-        Me.BtnExit.BackgroundImage = Global.StandardClothes.My.Resources.Resources.EXIT_2_22
-        Me.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnExit.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.Size = New System.Drawing.Size(150, 35)
-        Me.BtnExit.Text = "خروج F6"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.AutoSize = False
-        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNew, Me.ToolStripSeparator2, Me.BtnSave, Me.ToolStripSeparator1, Me.BtnSavePrint, Me.ToolStripSeparator3, Me.BtnDelete, Me.ToolStripSeparator5, Me.BtnExit, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.Size = New System.Drawing.Size(1162, 38)
-        Me.ToolStrip1.TabIndex = 21
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.AutoSize = False
-        Me.ToolStripButton1.BackgroundImage = Global.StandardClothes.My.Resources.Resources.save_2_18
-        Me.ToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(150, 35)
-        Me.ToolStripButton1.Text = "الإجمالي F7"
-        '
-        'MenuTotal
-        '
-        Me.MenuTotal.Name = "MenuTotal"
-        Me.MenuTotal.ShortcutKeys = System.Windows.Forms.Keys.F7
-        Me.MenuTotal.Size = New System.Drawing.Size(151, 22)
-        Me.MenuTotal.Text = "MenuTotal"
         '
         'SalesOrderNormal
         '
