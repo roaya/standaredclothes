@@ -265,8 +265,7 @@ Public Class PurchaseOrderNormal
             BarCode.Text = ""
             ItemName.Text = ""
             B_EndLoad = False
-        Else
-            ItemName.Items.Clear()
+        Else            
             VendorID.Enabled = True
             BtnNewVendor.Enabled = True
             CashValue.Value = 0
@@ -708,15 +707,13 @@ Public Class PurchaseOrderNormal
         Fill_Items()        
     End Sub
     Private Sub Fill_Items()
-        Try
-            ItemName.Items.Clear()
+        Try          
             If B_EndLoad = True And IsVendorAdded = True Then
                 cmd.CommandText = "select item_name from Query_Items_Vendors where vendor_id = " & VendorID.SelectedValue
-                dr = cmd.ExecuteReader
-                Do While Not dr.Read = False
-                    ItemName.Items.Add(dr("Item_Name"))
-                Loop
-                dr.Close()
+             Dim items As New DataTable()
+                da.SelectCommand = cmd
+                da.Fill(items)
+                ItemName.DataSource = items
             End If
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
@@ -995,5 +992,32 @@ TotalBill.Text & ",N'" & DiscountType.Text & "'," & DiscountValue.Value & "," & 
         CalculateTotalBill()
     End Sub
 
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click, MenuTotal.Click
+        PayedValue.Focus()
+        PayedValue.Select(0, PayedValue.Text.Length)
+    End Sub
 
+    Private Sub DataGridView1_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellEndEdit
+        Try
+            If DataGridView1.Rows.Count <> 0 Then
+                Select Case DataGridView1.Rows(RowID).Cells("Discount_Type").Value
+                    Case "„»·€ À«» "
+                        DataGridView1.Rows(RowID).Cells("Price").Value = DataGridView1.Rows(RowID).Cells("Price").Value - DataGridView1.Rows(RowID).Cells("Discount_Value").Value
+                    Case "‰”»… „∆ÊÌ…"
+                        DataGridView1.Rows(RowID).Cells("Price").Value = (DataGridView1.Rows(RowID).Cells("Price").Value - (DataGridView1.Rows(RowID).Cells("Price").Value * (DataGridView1.Rows(RowID).Cells("Discount_Value").Value / 100)))
+                    Case "·« ÌÊÃœ"
+                        DataGridView1.Rows(RowID).Cells("Price").Value = DataGridView1.Rows(RowID).Cells("Price").Value
+                End Select
+                DataGridView1.Rows(RowID).Cells("Total_Item").Value = DataGridView1.Rows(RowID).Cells("Price").Value * DataGridView1.Rows(RowID).Cells("Quantity").Value
+                CalculateTotalBill()
+
+            End If
+        Catch ex As Exception
+            cls.WriteError(ex.Message, TName)
+        End Try
+    End Sub
+
+    Private Sub PayedValue_ValueChanged(sender As Object, e As EventArgs) Handles PayedValue.ValueChanged
+        CalculateTotalBill()
+    End Sub
 End Class

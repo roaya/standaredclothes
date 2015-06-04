@@ -23,11 +23,11 @@ Partial Class SalesOrderNormal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SalesOrderNormal))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SalesOrderNormal))
         Me.NavigationBar = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.OrderByCombo = New System.Windows.Forms.ToolStripComboBox()
@@ -39,15 +39,36 @@ Partial Class SalesOrderNormal
         Me.card = New System.Windows.Forms.TextBox()
         Me.EmployeeID = New System.Windows.Forms.ComboBox()
         Me.BtnSchedule = New System.Windows.Forms.Button()
+        Me.GeneralLabel24 = New StandardClothes.GeneralLabel()
         Me.RemainingValue = New System.Windows.Forms.Label()
+        Me.GeneralLabel22 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel23 = New StandardClothes.GeneralLabel()
         Me.PayedValue = New System.Windows.Forms.NumericUpDown()
         Me.CardValue = New System.Windows.Forms.Label()
+        Me.GeneralLabel21 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel20 = New StandardClothes.GeneralLabel()
         Me.StockID = New System.Windows.Forms.Label()
+        Me.GeneralLabel19 = New StandardClothes.GeneralLabel()
         Me.OrderType = New System.Windows.Forms.ComboBox()
         Me.PeriodID = New System.Windows.Forms.Label()
+        Me.GeneralLabel18 = New StandardClothes.GeneralLabel()
         Me.BtnNewCustomer = New System.Windows.Forms.Button()
+        Me.GeneralLabel17 = New StandardClothes.GeneralLabel()
         Me.BillID = New System.Windows.Forms.Label()
         Me.TotalBill = New System.Windows.Forms.Label()
+        Me.GeneralLabel10 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel11 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel12 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel7 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel8 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel9 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel6 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel5 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel4 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel3 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel2 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel1 = New StandardClothes.GeneralLabel()
+        Me.Comments = New StandardClothes.GeneralTextBox()
         Me.CustomerID = New System.Windows.Forms.ComboBox()
         Me.DiscountValue = New System.Windows.Forms.NumericUpDown()
         Me.CreditValue = New System.Windows.Forms.NumericUpDown()
@@ -59,8 +80,12 @@ Partial Class SalesOrderNormal
         Me.GroupItems = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.DiscountTypeItem = New System.Windows.Forms.ComboBox()
+        Me.GeneralLabel15 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel16 = New StandardClothes.GeneralLabel()
         Me.DiscountValueItem = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GeneralLabel13 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel14 = New StandardClothes.GeneralLabel()
         Me.Quantity = New System.Windows.Forms.NumericUpDown()
         Me.Price = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -97,31 +122,6 @@ Partial Class SalesOrderNormal
         Me.BtnExit = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.GeneralLabel24 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel22 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel23 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel21 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel20 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel19 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel18 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel17 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel10 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel11 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel12 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel7 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel8 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel9 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel6 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel5 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel4 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel3 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel2 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel1 = New StandardClothes.GeneralLabel()
-        Me.Comments = New StandardClothes.GeneralTextBox()
-        Me.GeneralLabel15 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel16 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel13 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel14 = New StandardClothes.GeneralLabel()
         Me.NavigationBar.SuspendLayout()
         Me.ContentPanel.SuspendLayout()
         Me.GroupHeader.SuspendLayout()
@@ -279,6 +279,21 @@ Partial Class SalesOrderNormal
         Me.BtnSchedule.Text = "جدولة مواعيد السداد"
         Me.BtnSchedule.UseVisualStyleBackColor = True
         '
+        'GeneralLabel24
+        '
+        Me.GeneralLabel24.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel24.BackgroundImage = CType(resources.GetObject("GeneralLabel24.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel24.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel24.IsRequired = False
+        Me.GeneralLabel24.Location = New System.Drawing.Point(423, 91)
+        Me.GeneralLabel24.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel24.Name = "GeneralLabel24"
+        Me.GeneralLabel24.SetLabelTxt = "تاريخ دفع الآجل :"
+        Me.GeneralLabel24.Size = New System.Drawing.Size(129, 25)
+        Me.GeneralLabel24.TabIndex = 120
+        '
         'RemainingValue
         '
         Me.RemainingValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -289,6 +304,36 @@ Partial Class SalesOrderNormal
         Me.RemainingValue.TabIndex = 118
         Me.RemainingValue.Text = "0"
         Me.RemainingValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'GeneralLabel22
+        '
+        Me.GeneralLabel22.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel22.BackgroundImage = CType(resources.GetObject("GeneralLabel22.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel22.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel22.IsRequired = False
+        Me.GeneralLabel22.Location = New System.Drawing.Point(154, 155)
+        Me.GeneralLabel22.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel22.Name = "GeneralLabel22"
+        Me.GeneralLabel22.SetLabelTxt = "المبلغ المتبقي :"
+        Me.GeneralLabel22.Size = New System.Drawing.Size(132, 25)
+        Me.GeneralLabel22.TabIndex = 117
+        '
+        'GeneralLabel23
+        '
+        Me.GeneralLabel23.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel23.BackgroundImage = CType(resources.GetObject("GeneralLabel23.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel23.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel23.IsRequired = False
+        Me.GeneralLabel23.Location = New System.Drawing.Point(154, 123)
+        Me.GeneralLabel23.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel23.Name = "GeneralLabel23"
+        Me.GeneralLabel23.SetLabelTxt = "اجمالي المدفوع :"
+        Me.GeneralLabel23.Size = New System.Drawing.Size(132, 25)
+        Me.GeneralLabel23.TabIndex = 116
         '
         'PayedValue
         '
@@ -311,6 +356,36 @@ Partial Class SalesOrderNormal
         Me.CardValue.Text = "0"
         Me.CardValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'GeneralLabel21
+        '
+        Me.GeneralLabel21.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel21.BackgroundImage = CType(resources.GetObject("GeneralLabel21.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel21.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel21.IsRequired = False
+        Me.GeneralLabel21.Location = New System.Drawing.Point(423, 123)
+        Me.GeneralLabel21.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel21.Name = "GeneralLabel21"
+        Me.GeneralLabel21.SetLabelTxt = "قيمة الكوبون :"
+        Me.GeneralLabel21.Size = New System.Drawing.Size(129, 25)
+        Me.GeneralLabel21.TabIndex = 112
+        '
+        'GeneralLabel20
+        '
+        Me.GeneralLabel20.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel20.BackgroundImage = CType(resources.GetObject("GeneralLabel20.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel20.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel20.IsRequired = False
+        Me.GeneralLabel20.Location = New System.Drawing.Point(714, 123)
+        Me.GeneralLabel20.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel20.Name = "GeneralLabel20"
+        Me.GeneralLabel20.SetLabelTxt = "كوبون الخصم :"
+        Me.GeneralLabel20.Size = New System.Drawing.Size(115, 25)
+        Me.GeneralLabel20.TabIndex = 110
+        '
         'StockID
         '
         Me.StockID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -321,6 +396,21 @@ Partial Class SalesOrderNormal
         Me.StockID.TabIndex = 108
         Me.StockID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.StockID.Visible = False
+        '
+        'GeneralLabel19
+        '
+        Me.GeneralLabel19.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel19.BackgroundImage = CType(resources.GetObject("GeneralLabel19.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel19.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel19.IsRequired = False
+        Me.GeneralLabel19.Location = New System.Drawing.Point(984, 91)
+        Me.GeneralLabel19.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel19.Name = "GeneralLabel19"
+        Me.GeneralLabel19.SetLabelTxt = "نوع الفاتورة :"
+        Me.GeneralLabel19.Size = New System.Drawing.Size(111, 25)
+        Me.GeneralLabel19.TabIndex = 107
         '
         'OrderType
         '
@@ -343,6 +433,22 @@ Partial Class SalesOrderNormal
         Me.PeriodID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.PeriodID.Visible = False
         '
+        'GeneralLabel18
+        '
+        Me.GeneralLabel18.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel18.BackgroundImage = CType(resources.GetObject("GeneralLabel18.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel18.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel18.IsRequired = False
+        Me.GeneralLabel18.Location = New System.Drawing.Point(984, 154)
+        Me.GeneralLabel18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel18.Name = "GeneralLabel18"
+        Me.GeneralLabel18.SetLabelTxt = "الوردية :"
+        Me.GeneralLabel18.Size = New System.Drawing.Size(111, 25)
+        Me.GeneralLabel18.TabIndex = 104
+        Me.GeneralLabel18.Visible = False
+        '
         'BtnNewCustomer
         '
         Me.BtnNewCustomer.BackgroundImage = Global.StandardClothes.My.Resources.Resources.group_add_256
@@ -352,6 +458,22 @@ Partial Class SalesOrderNormal
         Me.BtnNewCustomer.Size = New System.Drawing.Size(27, 26)
         Me.BtnNewCustomer.TabIndex = 21
         Me.BtnNewCustomer.UseVisualStyleBackColor = True
+        '
+        'GeneralLabel17
+        '
+        Me.GeneralLabel17.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel17.BackgroundImage = CType(resources.GetObject("GeneralLabel17.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel17.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel17.IsRequired = False
+        Me.GeneralLabel17.Location = New System.Drawing.Point(984, 124)
+        Me.GeneralLabel17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel17.Name = "GeneralLabel17"
+        Me.GeneralLabel17.SetLabelTxt = "اسم المحل :"
+        Me.GeneralLabel17.Size = New System.Drawing.Size(111, 25)
+        Me.GeneralLabel17.TabIndex = 103
+        Me.GeneralLabel17.Visible = False
         '
         'BillID
         '
@@ -373,6 +495,199 @@ Partial Class SalesOrderNormal
         Me.TotalBill.TabIndex = 100
         Me.TotalBill.Text = "0"
         Me.TotalBill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'GeneralLabel10
+        '
+        Me.GeneralLabel10.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel10.BackgroundImage = CType(resources.GetObject("GeneralLabel10.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel10.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel10.IsRequired = False
+        Me.GeneralLabel10.Location = New System.Drawing.Point(154, 91)
+        Me.GeneralLabel10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel10.Name = "GeneralLabel10"
+        Me.GeneralLabel10.SetLabelTxt = "قيمة الآجل :"
+        Me.GeneralLabel10.Size = New System.Drawing.Size(132, 25)
+        Me.GeneralLabel10.TabIndex = 99
+        '
+        'GeneralLabel11
+        '
+        Me.GeneralLabel11.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel11.BackgroundImage = CType(resources.GetObject("GeneralLabel11.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel11.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel11.IsRequired = False
+        Me.GeneralLabel11.Location = New System.Drawing.Point(154, 58)
+        Me.GeneralLabel11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel11.Name = "GeneralLabel11"
+        Me.GeneralLabel11.SetLabelTxt = "قيمة النقدي :"
+        Me.GeneralLabel11.Size = New System.Drawing.Size(132, 25)
+        Me.GeneralLabel11.TabIndex = 98
+        '
+        'GeneralLabel12
+        '
+        Me.GeneralLabel12.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel12.BackgroundImage = CType(resources.GetObject("GeneralLabel12.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel12.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel12.IsRequired = False
+        Me.GeneralLabel12.Location = New System.Drawing.Point(154, 26)
+        Me.GeneralLabel12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel12.Name = "GeneralLabel12"
+        Me.GeneralLabel12.SetLabelTxt = "طريقة الدفع :"
+        Me.GeneralLabel12.Size = New System.Drawing.Size(132, 25)
+        Me.GeneralLabel12.TabIndex = 97
+        '
+        'GeneralLabel7
+        '
+        Me.GeneralLabel7.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel7.BackgroundImage = CType(resources.GetObject("GeneralLabel7.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel7.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel7.IsRequired = False
+        Me.GeneralLabel7.Location = New System.Drawing.Point(423, 58)
+        Me.GeneralLabel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel7.Name = "GeneralLabel7"
+        Me.GeneralLabel7.SetLabelTxt = "ملاحظات :"
+        Me.GeneralLabel7.Size = New System.Drawing.Size(129, 25)
+        Me.GeneralLabel7.TabIndex = 96
+        '
+        'GeneralLabel8
+        '
+        Me.GeneralLabel8.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel8.BackgroundImage = CType(resources.GetObject("GeneralLabel8.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel8.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel8.IsRequired = False
+        Me.GeneralLabel8.Location = New System.Drawing.Point(984, 124)
+        Me.GeneralLabel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel8.Name = "GeneralLabel8"
+        Me.GeneralLabel8.SetLabelTxt = "اسم الموظف :"
+        Me.GeneralLabel8.Size = New System.Drawing.Size(111, 25)
+        Me.GeneralLabel8.TabIndex = 95
+        Me.GeneralLabel8.Visible = False
+        '
+        'GeneralLabel9
+        '
+        Me.GeneralLabel9.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel9.BackgroundImage = CType(resources.GetObject("GeneralLabel9.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel9.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel9.IsRequired = False
+        Me.GeneralLabel9.Location = New System.Drawing.Point(423, 27)
+        Me.GeneralLabel9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel9.Name = "GeneralLabel9"
+        Me.GeneralLabel9.SetLabelTxt = "اجمالي الفاتورة :"
+        Me.GeneralLabel9.Size = New System.Drawing.Size(129, 25)
+        Me.GeneralLabel9.TabIndex = 94
+        '
+        'GeneralLabel6
+        '
+        Me.GeneralLabel6.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel6.BackgroundImage = CType(resources.GetObject("GeneralLabel6.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel6.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel6.IsRequired = False
+        Me.GeneralLabel6.Location = New System.Drawing.Point(714, 91)
+        Me.GeneralLabel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel6.Name = "GeneralLabel6"
+        Me.GeneralLabel6.SetLabelTxt = "نوع الخصم :"
+        Me.GeneralLabel6.Size = New System.Drawing.Size(115, 25)
+        Me.GeneralLabel6.TabIndex = 93
+        '
+        'GeneralLabel5
+        '
+        Me.GeneralLabel5.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel5.BackgroundImage = CType(resources.GetObject("GeneralLabel5.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel5.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel5.IsRequired = False
+        Me.GeneralLabel5.Location = New System.Drawing.Point(714, 58)
+        Me.GeneralLabel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel5.Name = "GeneralLabel5"
+        Me.GeneralLabel5.SetLabelTxt = "قيمة الخصم :"
+        Me.GeneralLabel5.Size = New System.Drawing.Size(115, 25)
+        Me.GeneralLabel5.TabIndex = 92
+        '
+        'GeneralLabel4
+        '
+        Me.GeneralLabel4.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel4.BackgroundImage = CType(resources.GetObject("GeneralLabel4.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel4.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel4.IsRequired = False
+        Me.GeneralLabel4.Location = New System.Drawing.Point(714, 26)
+        Me.GeneralLabel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel4.Name = "GeneralLabel4"
+        Me.GeneralLabel4.SetLabelTxt = "اسم العميل :"
+        Me.GeneralLabel4.Size = New System.Drawing.Size(115, 25)
+        Me.GeneralLabel4.TabIndex = 91
+        '
+        'GeneralLabel3
+        '
+        Me.GeneralLabel3.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel3.BackgroundImage = CType(resources.GetObject("GeneralLabel3.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel3.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel3.IsRequired = False
+        Me.GeneralLabel3.Location = New System.Drawing.Point(984, 123)
+        Me.GeneralLabel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel3.Name = "GeneralLabel3"
+        Me.GeneralLabel3.SetLabelTxt = "وقت الفاتورة :"
+        Me.GeneralLabel3.Size = New System.Drawing.Size(111, 25)
+        Me.GeneralLabel3.TabIndex = 90
+        Me.GeneralLabel3.Visible = False
+        '
+        'GeneralLabel2
+        '
+        Me.GeneralLabel2.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel2.BackgroundImage = CType(resources.GetObject("GeneralLabel2.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel2.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel2.IsRequired = False
+        Me.GeneralLabel2.Location = New System.Drawing.Point(984, 59)
+        Me.GeneralLabel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel2.Name = "GeneralLabel2"
+        Me.GeneralLabel2.SetLabelTxt = "تاريخ الفاتورة :"
+        Me.GeneralLabel2.Size = New System.Drawing.Size(111, 25)
+        Me.GeneralLabel2.TabIndex = 89
+        '
+        'GeneralLabel1
+        '
+        Me.GeneralLabel1.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel1.BackgroundImage = CType(resources.GetObject("GeneralLabel1.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel1.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel1.IsRequired = False
+        Me.GeneralLabel1.Location = New System.Drawing.Point(984, 27)
+        Me.GeneralLabel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel1.Name = "GeneralLabel1"
+        Me.GeneralLabel1.SetLabelTxt = "رقم الفاتورة :"
+        Me.GeneralLabel1.Size = New System.Drawing.Size(111, 25)
+        Me.GeneralLabel1.TabIndex = 88
+        '
+        'Comments
+        '
+        Me.Comments.IsEmail = False
+        Me.Comments.IsNum = False
+        Me.Comments.IsRequired = False
+        Me.Comments.Location = New System.Drawing.Point(292, 57)
+        Me.Comments.Name = "Comments"
+        Me.Comments.SetLeaveColor = System.Drawing.Color.Red
+        Me.Comments.Size = New System.Drawing.Size(124, 25)
+        Me.Comments.TabIndex = 87
         '
         'CustomerID
         '
@@ -492,6 +807,36 @@ Partial Class SalesOrderNormal
         Me.DiscountTypeItem.Size = New System.Drawing.Size(144, 26)
         Me.DiscountTypeItem.TabIndex = 74
         '
+        'GeneralLabel15
+        '
+        Me.GeneralLabel15.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel15.BackgroundImage = CType(resources.GetObject("GeneralLabel15.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel15.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel15.IsRequired = False
+        Me.GeneralLabel15.Location = New System.Drawing.Point(174, 66)
+        Me.GeneralLabel15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel15.Name = "GeneralLabel15"
+        Me.GeneralLabel15.SetLabelTxt = "نوع الخصم :"
+        Me.GeneralLabel15.Size = New System.Drawing.Size(127, 26)
+        Me.GeneralLabel15.TabIndex = 73
+        '
+        'GeneralLabel16
+        '
+        Me.GeneralLabel16.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel16.BackgroundImage = CType(resources.GetObject("GeneralLabel16.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel16.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel16.IsRequired = False
+        Me.GeneralLabel16.Location = New System.Drawing.Point(174, 35)
+        Me.GeneralLabel16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel16.Name = "GeneralLabel16"
+        Me.GeneralLabel16.SetLabelTxt = "قيمة الخصم :"
+        Me.GeneralLabel16.Size = New System.Drawing.Size(127, 26)
+        Me.GeneralLabel16.TabIndex = 72
+        '
         'DiscountValueItem
         '
         Me.DiscountValueItem.DecimalPlaces = 2
@@ -514,6 +859,36 @@ Partial Class SalesOrderNormal
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "بيانات الأصناف المشتراة"
+        '
+        'GeneralLabel13
+        '
+        Me.GeneralLabel13.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel13.BackgroundImage = CType(resources.GetObject("GeneralLabel13.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel13.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel13.IsRequired = False
+        Me.GeneralLabel13.Location = New System.Drawing.Point(157, 65)
+        Me.GeneralLabel13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel13.Name = "GeneralLabel13"
+        Me.GeneralLabel13.SetLabelTxt = "العدد :"
+        Me.GeneralLabel13.Size = New System.Drawing.Size(113, 26)
+        Me.GeneralLabel13.TabIndex = 71
+        '
+        'GeneralLabel14
+        '
+        Me.GeneralLabel14.BackColor = System.Drawing.SystemColors.Control
+        Me.GeneralLabel14.BackgroundImage = CType(resources.GetObject("GeneralLabel14.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel14.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel14.IsRequired = False
+        Me.GeneralLabel14.Location = New System.Drawing.Point(158, 34)
+        Me.GeneralLabel14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel14.Name = "GeneralLabel14"
+        Me.GeneralLabel14.SetLabelTxt = "سعر الصنف :"
+        Me.GeneralLabel14.Size = New System.Drawing.Size(112, 26)
+        Me.GeneralLabel14.TabIndex = 70
         '
         'Quantity
         '
@@ -848,381 +1223,6 @@ Partial Class SalesOrderNormal
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(150, 35)
         Me.ToolStripButton1.Text = "الإجمالي F7"
-        '
-        'GeneralLabel24
-        '
-        Me.GeneralLabel24.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel24.BackgroundImage = CType(resources.GetObject("GeneralLabel24.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel24.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel24.IsRequired = False
-        Me.GeneralLabel24.Location = New System.Drawing.Point(423, 91)
-        Me.GeneralLabel24.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel24.Name = "GeneralLabel24"
-        Me.GeneralLabel24.SetLabelTxt = "تاريخ دفع الآجل :"
-        Me.GeneralLabel24.Size = New System.Drawing.Size(129, 25)
-        Me.GeneralLabel24.TabIndex = 120
-        '
-        'GeneralLabel22
-        '
-        Me.GeneralLabel22.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel22.BackgroundImage = CType(resources.GetObject("GeneralLabel22.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel22.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel22.IsRequired = False
-        Me.GeneralLabel22.Location = New System.Drawing.Point(154, 155)
-        Me.GeneralLabel22.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel22.Name = "GeneralLabel22"
-        Me.GeneralLabel22.SetLabelTxt = "المبلغ المتبقي :"
-        Me.GeneralLabel22.Size = New System.Drawing.Size(132, 25)
-        Me.GeneralLabel22.TabIndex = 117
-        '
-        'GeneralLabel23
-        '
-        Me.GeneralLabel23.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel23.BackgroundImage = CType(resources.GetObject("GeneralLabel23.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel23.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel23.IsRequired = False
-        Me.GeneralLabel23.Location = New System.Drawing.Point(154, 123)
-        Me.GeneralLabel23.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel23.Name = "GeneralLabel23"
-        Me.GeneralLabel23.SetLabelTxt = "اجمالي المدفوع :"
-        Me.GeneralLabel23.Size = New System.Drawing.Size(132, 25)
-        Me.GeneralLabel23.TabIndex = 116
-        '
-        'GeneralLabel21
-        '
-        Me.GeneralLabel21.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel21.BackgroundImage = CType(resources.GetObject("GeneralLabel21.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel21.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel21.IsRequired = False
-        Me.GeneralLabel21.Location = New System.Drawing.Point(423, 123)
-        Me.GeneralLabel21.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel21.Name = "GeneralLabel21"
-        Me.GeneralLabel21.SetLabelTxt = "قيمة الكوبون :"
-        Me.GeneralLabel21.Size = New System.Drawing.Size(129, 25)
-        Me.GeneralLabel21.TabIndex = 112
-        '
-        'GeneralLabel20
-        '
-        Me.GeneralLabel20.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel20.BackgroundImage = CType(resources.GetObject("GeneralLabel20.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel20.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel20.IsRequired = False
-        Me.GeneralLabel20.Location = New System.Drawing.Point(714, 123)
-        Me.GeneralLabel20.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel20.Name = "GeneralLabel20"
-        Me.GeneralLabel20.SetLabelTxt = "كوبون الخصم :"
-        Me.GeneralLabel20.Size = New System.Drawing.Size(115, 25)
-        Me.GeneralLabel20.TabIndex = 110
-        '
-        'GeneralLabel19
-        '
-        Me.GeneralLabel19.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel19.BackgroundImage = CType(resources.GetObject("GeneralLabel19.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel19.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel19.IsRequired = False
-        Me.GeneralLabel19.Location = New System.Drawing.Point(984, 91)
-        Me.GeneralLabel19.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel19.Name = "GeneralLabel19"
-        Me.GeneralLabel19.SetLabelTxt = "نوع الفاتورة :"
-        Me.GeneralLabel19.Size = New System.Drawing.Size(111, 25)
-        Me.GeneralLabel19.TabIndex = 107
-        '
-        'GeneralLabel18
-        '
-        Me.GeneralLabel18.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel18.BackgroundImage = CType(resources.GetObject("GeneralLabel18.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel18.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel18.IsRequired = False
-        Me.GeneralLabel18.Location = New System.Drawing.Point(984, 154)
-        Me.GeneralLabel18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel18.Name = "GeneralLabel18"
-        Me.GeneralLabel18.SetLabelTxt = "الوردية :"
-        Me.GeneralLabel18.Size = New System.Drawing.Size(111, 25)
-        Me.GeneralLabel18.TabIndex = 104
-        Me.GeneralLabel18.Visible = False
-        '
-        'GeneralLabel17
-        '
-        Me.GeneralLabel17.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel17.BackgroundImage = CType(resources.GetObject("GeneralLabel17.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel17.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel17.IsRequired = False
-        Me.GeneralLabel17.Location = New System.Drawing.Point(984, 124)
-        Me.GeneralLabel17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel17.Name = "GeneralLabel17"
-        Me.GeneralLabel17.SetLabelTxt = "اسم المحل :"
-        Me.GeneralLabel17.Size = New System.Drawing.Size(111, 25)
-        Me.GeneralLabel17.TabIndex = 103
-        Me.GeneralLabel17.Visible = False
-        '
-        'GeneralLabel10
-        '
-        Me.GeneralLabel10.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel10.BackgroundImage = CType(resources.GetObject("GeneralLabel10.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel10.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel10.IsRequired = False
-        Me.GeneralLabel10.Location = New System.Drawing.Point(154, 91)
-        Me.GeneralLabel10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel10.Name = "GeneralLabel10"
-        Me.GeneralLabel10.SetLabelTxt = "قيمة الآجل :"
-        Me.GeneralLabel10.Size = New System.Drawing.Size(132, 25)
-        Me.GeneralLabel10.TabIndex = 99
-        '
-        'GeneralLabel11
-        '
-        Me.GeneralLabel11.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel11.BackgroundImage = CType(resources.GetObject("GeneralLabel11.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel11.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel11.IsRequired = False
-        Me.GeneralLabel11.Location = New System.Drawing.Point(154, 58)
-        Me.GeneralLabel11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel11.Name = "GeneralLabel11"
-        Me.GeneralLabel11.SetLabelTxt = "قيمة النقدي :"
-        Me.GeneralLabel11.Size = New System.Drawing.Size(132, 25)
-        Me.GeneralLabel11.TabIndex = 98
-        '
-        'GeneralLabel12
-        '
-        Me.GeneralLabel12.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel12.BackgroundImage = CType(resources.GetObject("GeneralLabel12.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel12.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel12.IsRequired = False
-        Me.GeneralLabel12.Location = New System.Drawing.Point(154, 26)
-        Me.GeneralLabel12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel12.Name = "GeneralLabel12"
-        Me.GeneralLabel12.SetLabelTxt = "طريقة الدفع :"
-        Me.GeneralLabel12.Size = New System.Drawing.Size(132, 25)
-        Me.GeneralLabel12.TabIndex = 97
-        '
-        'GeneralLabel7
-        '
-        Me.GeneralLabel7.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel7.BackgroundImage = CType(resources.GetObject("GeneralLabel7.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel7.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel7.IsRequired = False
-        Me.GeneralLabel7.Location = New System.Drawing.Point(423, 58)
-        Me.GeneralLabel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel7.Name = "GeneralLabel7"
-        Me.GeneralLabel7.SetLabelTxt = "ملاحظات :"
-        Me.GeneralLabel7.Size = New System.Drawing.Size(129, 25)
-        Me.GeneralLabel7.TabIndex = 96
-        '
-        'GeneralLabel8
-        '
-        Me.GeneralLabel8.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel8.BackgroundImage = CType(resources.GetObject("GeneralLabel8.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel8.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel8.IsRequired = False
-        Me.GeneralLabel8.Location = New System.Drawing.Point(984, 124)
-        Me.GeneralLabel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel8.Name = "GeneralLabel8"
-        Me.GeneralLabel8.SetLabelTxt = "اسم الموظف :"
-        Me.GeneralLabel8.Size = New System.Drawing.Size(111, 25)
-        Me.GeneralLabel8.TabIndex = 95
-        Me.GeneralLabel8.Visible = False
-        '
-        'GeneralLabel9
-        '
-        Me.GeneralLabel9.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel9.BackgroundImage = CType(resources.GetObject("GeneralLabel9.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel9.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel9.IsRequired = False
-        Me.GeneralLabel9.Location = New System.Drawing.Point(423, 27)
-        Me.GeneralLabel9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel9.Name = "GeneralLabel9"
-        Me.GeneralLabel9.SetLabelTxt = "اجمالي الفاتورة :"
-        Me.GeneralLabel9.Size = New System.Drawing.Size(129, 25)
-        Me.GeneralLabel9.TabIndex = 94
-        '
-        'GeneralLabel6
-        '
-        Me.GeneralLabel6.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel6.BackgroundImage = CType(resources.GetObject("GeneralLabel6.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel6.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel6.IsRequired = False
-        Me.GeneralLabel6.Location = New System.Drawing.Point(714, 91)
-        Me.GeneralLabel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel6.Name = "GeneralLabel6"
-        Me.GeneralLabel6.SetLabelTxt = "نوع الخصم :"
-        Me.GeneralLabel6.Size = New System.Drawing.Size(115, 25)
-        Me.GeneralLabel6.TabIndex = 93
-        '
-        'GeneralLabel5
-        '
-        Me.GeneralLabel5.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel5.BackgroundImage = CType(resources.GetObject("GeneralLabel5.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel5.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel5.IsRequired = False
-        Me.GeneralLabel5.Location = New System.Drawing.Point(714, 58)
-        Me.GeneralLabel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel5.Name = "GeneralLabel5"
-        Me.GeneralLabel5.SetLabelTxt = "قيمة الخصم :"
-        Me.GeneralLabel5.Size = New System.Drawing.Size(115, 25)
-        Me.GeneralLabel5.TabIndex = 92
-        '
-        'GeneralLabel4
-        '
-        Me.GeneralLabel4.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel4.BackgroundImage = CType(resources.GetObject("GeneralLabel4.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel4.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel4.IsRequired = False
-        Me.GeneralLabel4.Location = New System.Drawing.Point(714, 26)
-        Me.GeneralLabel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel4.Name = "GeneralLabel4"
-        Me.GeneralLabel4.SetLabelTxt = "اسم العميل :"
-        Me.GeneralLabel4.Size = New System.Drawing.Size(115, 25)
-        Me.GeneralLabel4.TabIndex = 91
-        '
-        'GeneralLabel3
-        '
-        Me.GeneralLabel3.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel3.BackgroundImage = CType(resources.GetObject("GeneralLabel3.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel3.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel3.IsRequired = False
-        Me.GeneralLabel3.Location = New System.Drawing.Point(984, 123)
-        Me.GeneralLabel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel3.Name = "GeneralLabel3"
-        Me.GeneralLabel3.SetLabelTxt = "وقت الفاتورة :"
-        Me.GeneralLabel3.Size = New System.Drawing.Size(111, 25)
-        Me.GeneralLabel3.TabIndex = 90
-        Me.GeneralLabel3.Visible = False
-        '
-        'GeneralLabel2
-        '
-        Me.GeneralLabel2.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel2.BackgroundImage = CType(resources.GetObject("GeneralLabel2.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel2.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel2.IsRequired = False
-        Me.GeneralLabel2.Location = New System.Drawing.Point(984, 59)
-        Me.GeneralLabel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel2.Name = "GeneralLabel2"
-        Me.GeneralLabel2.SetLabelTxt = "تاريخ الفاتورة :"
-        Me.GeneralLabel2.Size = New System.Drawing.Size(111, 25)
-        Me.GeneralLabel2.TabIndex = 89
-        '
-        'GeneralLabel1
-        '
-        Me.GeneralLabel1.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel1.BackgroundImage = CType(resources.GetObject("GeneralLabel1.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel1.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel1.IsRequired = False
-        Me.GeneralLabel1.Location = New System.Drawing.Point(984, 27)
-        Me.GeneralLabel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel1.Name = "GeneralLabel1"
-        Me.GeneralLabel1.SetLabelTxt = "رقم الفاتورة :"
-        Me.GeneralLabel1.Size = New System.Drawing.Size(111, 25)
-        Me.GeneralLabel1.TabIndex = 88
-        '
-        'Comments
-        '
-        Me.Comments.IsEmail = False
-        Me.Comments.IsNum = False
-        Me.Comments.IsRequired = False
-        Me.Comments.Location = New System.Drawing.Point(292, 57)
-        Me.Comments.Name = "Comments"
-        Me.Comments.SetLeaveColor = System.Drawing.Color.Red
-        Me.Comments.Size = New System.Drawing.Size(124, 25)
-        Me.Comments.TabIndex = 87
-        '
-        'GeneralLabel15
-        '
-        Me.GeneralLabel15.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel15.BackgroundImage = CType(resources.GetObject("GeneralLabel15.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel15.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel15.IsRequired = False
-        Me.GeneralLabel15.Location = New System.Drawing.Point(174, 66)
-        Me.GeneralLabel15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel15.Name = "GeneralLabel15"
-        Me.GeneralLabel15.SetLabelTxt = "نوع الخصم :"
-        Me.GeneralLabel15.Size = New System.Drawing.Size(127, 26)
-        Me.GeneralLabel15.TabIndex = 73
-        '
-        'GeneralLabel16
-        '
-        Me.GeneralLabel16.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel16.BackgroundImage = CType(resources.GetObject("GeneralLabel16.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel16.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel16.IsRequired = False
-        Me.GeneralLabel16.Location = New System.Drawing.Point(174, 35)
-        Me.GeneralLabel16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel16.Name = "GeneralLabel16"
-        Me.GeneralLabel16.SetLabelTxt = "قيمة الخصم :"
-        Me.GeneralLabel16.Size = New System.Drawing.Size(127, 26)
-        Me.GeneralLabel16.TabIndex = 72
-        '
-        'GeneralLabel13
-        '
-        Me.GeneralLabel13.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel13.BackgroundImage = CType(resources.GetObject("GeneralLabel13.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel13.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel13.IsRequired = False
-        Me.GeneralLabel13.Location = New System.Drawing.Point(157, 65)
-        Me.GeneralLabel13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel13.Name = "GeneralLabel13"
-        Me.GeneralLabel13.SetLabelTxt = "العدد :"
-        Me.GeneralLabel13.Size = New System.Drawing.Size(113, 26)
-        Me.GeneralLabel13.TabIndex = 71
-        '
-        'GeneralLabel14
-        '
-        Me.GeneralLabel14.BackColor = System.Drawing.SystemColors.Control
-        Me.GeneralLabel14.BackgroundImage = CType(resources.GetObject("GeneralLabel14.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel14.Font = New System.Drawing.Font("Tahoma", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel14.IsRequired = False
-        Me.GeneralLabel14.Location = New System.Drawing.Point(158, 34)
-        Me.GeneralLabel14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel14.Name = "GeneralLabel14"
-        Me.GeneralLabel14.SetLabelTxt = "سعر الصنف :"
-        Me.GeneralLabel14.Size = New System.Drawing.Size(112, 26)
-        Me.GeneralLabel14.TabIndex = 70
         '
         'SalesOrderNormal
         '

@@ -249,7 +249,6 @@
                 B_EndLoad = False
                 CardValue.Text = 0
             Else
-                ItemName.Items.Clear()
                 CustomerID.Enabled = True
                 OrderType.Enabled = True
                 BtnNewCustomer.Enabled = True
@@ -536,14 +535,13 @@
             TblSalesDetails.Columns("Bill_ID").DefaultValue = BillID.Text
             ResetOrder(True)
             B_Edited = True
-            ItemName.Items.Clear()
             If B_EndLoad = True Then
                 cmd.CommandText = "select distinct item_name from Query_Items_Stocks where stock_id = " & ProjectSettings.CurrentStockID
-                dr = cmd.ExecuteReader
-                Do While Not dr.Read = False
-                    ItemName.Items.Add(dr("Item_Name"))
-                Loop
-                dr.Close()
+                Dim items As New DataTable()
+                da.SelectCommand = cmd
+                da.Fill(items)
+                ItemName.DataSource = items
+
             End If
 
             If MyDs.Tables("App_Preferences").Rows(0).Item("Sal_Def_Sch") = "الاسم" Then
@@ -1194,5 +1192,28 @@
         Delete_Form()
     End Sub
 
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click, MenuTotal.Click
+        PayedValue.Focus()
+        PayedValue.Select(0, PayedValue.Text.Length)
+    End Sub
 
+    Private Sub PayedValue_ValueChanged(sender As Object, e As EventArgs) Handles PayedValue.ValueChanged
+        CalculateTotalBill()
+    End Sub
+
+    Private Sub DataGridView1_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellEndEdit
+        If DataGridView1.Rows.Count <> 0 Then
+            Select Case DataGridView1.Rows(RowID).Cells("Discount_Type").Value
+                Case "مبلغ ثابت"
+                    DataGridView1.Rows(RowID).Cells("Price").Value = DataGridView1.Rows(RowID).Cells("Price").Value - DataGridView1.Rows(RowID).Cells("Discount_Value").Value
+                Case "نسبة مئوية"
+                    DataGridView1.Rows(RowID).Cells("Price").Value = (DataGridView1.Rows(RowID).Cells("Price").Value - (DataGridView1.Rows(RowID).Cells("Price").Value * (DataGridView1.Rows(RowID).Cells("Discount_Value").Value / 100)))
+                Case "لا يوجد"
+                    DataGridView1.Rows(RowID).Cells("Price").Value = DataGridView1.Rows(RowID).Cells("Price").Value
+            End Select
+            DataGridView1.Rows(RowID).Cells("Total_Item").Value = DataGridView1.Rows(RowID).Cells("Price").Value * DataGridView1.Rows(RowID).Cells("Quantity").Value
+
+        End If
+        CalculateTotalBill()
+    End Sub
 End Class

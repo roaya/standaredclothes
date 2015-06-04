@@ -34,6 +34,7 @@ Partial Class PurchaseOrderNormal
         Me.BtnDelete = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnExit = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.NavigationBar = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.OrderByCombo = New System.Windows.Forms.ToolStripComboBox()
@@ -101,6 +102,7 @@ Partial Class PurchaseOrderNormal
         Me.SAvePrint = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuTotal = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1.SuspendLayout()
         Me.NavigationBar.SuspendLayout()
         Me.ContentPanel.SuspendLayout()
@@ -127,7 +129,7 @@ Partial Class PurchaseOrderNormal
         Me.ToolStrip1.AutoSize = False
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNew, Me.ToolStripSeparator2, Me.BtnSave, Me.ToolStripSeparator1, Me.BtnSavePrint, Me.ToolStripSeparator3, Me.BtnDelete, Me.ToolStripSeparator5, Me.BtnExit})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnNew, Me.ToolStripSeparator2, Me.BtnSave, Me.ToolStripSeparator1, Me.BtnSavePrint, Me.ToolStripSeparator3, Me.BtnDelete, Me.ToolStripSeparator5, Me.BtnExit, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
@@ -208,6 +210,16 @@ Partial Class PurchaseOrderNormal
         Me.BtnExit.Size = New System.Drawing.Size(150, 35)
         Me.BtnExit.Text = "        Œ—ÊÃ       F6"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.AutoSize = False
+        Me.ToolStripButton1.BackgroundImage = Global.StandardClothes.My.Resources.Resources.save_2_18
+        Me.ToolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(150, 35)
+        Me.ToolStripButton1.Text = "«·≈Ã„«·Ì F7"
+        '
         'NavigationBar
         '
         Me.NavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -223,7 +235,7 @@ Partial Class PurchaseOrderNormal
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(39, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(41, 22)
         Me.ToolStripLabel1.Text = "«· — Ì»"
         '
         'OrderByCombo
@@ -241,13 +253,13 @@ Partial Class PurchaseOrderNormal
         '
         Me.ToolStripLabel2.Image = Global.StandardClothes.My.Resources.Resources.rar_256
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(86, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(93, 22)
         Me.ToolStripLabel2.Text = "⁄œœ «·”Ã·«  :"
         '
         'CountRecords
         '
         Me.CountRecords.Name = "CountRecords"
-        Me.CountRecords.Size = New System.Drawing.Size(13, 22)
+        Me.CountRecords.Size = New System.Drawing.Size(12, 22)
         Me.CountRecords.Text = "0"
         '
         'ContentPanel
@@ -877,12 +889,14 @@ Partial Class PurchaseOrderNormal
         '
         Me.ItemName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.ItemName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ItemName.DisplayMember = "item_name"
         Me.ItemName.Enabled = False
         Me.ItemName.FormattingEnabled = True
         Me.ItemName.Location = New System.Drawing.Point(21, 32)
         Me.ItemName.Name = "ItemName"
         Me.ItemName.Size = New System.Drawing.Size(162, 26)
         Me.ItemName.TabIndex = 4
+        Me.ItemName.ValueMember = "item_name"
         '
         'BarCode
         '
@@ -968,6 +982,7 @@ Partial Class PurchaseOrderNormal
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Silver
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1110, 205)
         Me.DataGridView1.TabIndex = 0
         '
@@ -983,7 +998,7 @@ Partial Class PurchaseOrderNormal
         '
         'MenuAllCommands
         '
-        Me.MenuAllCommands.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuNew, Me.MenuSave, Me.SAvePrint, Me.MenuDelete, Me.MenuExit})
+        Me.MenuAllCommands.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuNew, Me.MenuSave, Me.SAvePrint, Me.MenuDelete, Me.MenuExit, Me.MenuTotal})
         Me.MenuAllCommands.Name = "MenuAllCommands"
         Me.MenuAllCommands.Size = New System.Drawing.Size(84, 20)
         Me.MenuAllCommands.Text = "AllComands"
@@ -992,36 +1007,43 @@ Partial Class PurchaseOrderNormal
         '
         Me.MenuNew.Name = "MenuNew"
         Me.MenuNew.ShortcutKeys = System.Windows.Forms.Keys.F2
-        Me.MenuNew.Size = New System.Drawing.Size(126, 22)
+        Me.MenuNew.Size = New System.Drawing.Size(151, 22)
         Me.MenuNew.Text = "New"
         '
         'MenuSave
         '
         Me.MenuSave.Name = "MenuSave"
         Me.MenuSave.ShortcutKeys = System.Windows.Forms.Keys.F3
-        Me.MenuSave.Size = New System.Drawing.Size(126, 22)
+        Me.MenuSave.Size = New System.Drawing.Size(151, 22)
         Me.MenuSave.Text = "Save"
         '
         'SAvePrint
         '
         Me.SAvePrint.Name = "SAvePrint"
         Me.SAvePrint.ShortcutKeys = System.Windows.Forms.Keys.F4
-        Me.SAvePrint.Size = New System.Drawing.Size(126, 22)
+        Me.SAvePrint.Size = New System.Drawing.Size(151, 22)
         Me.SAvePrint.Text = "Edit"
         '
         'MenuDelete
         '
         Me.MenuDelete.Name = "MenuDelete"
         Me.MenuDelete.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.MenuDelete.Size = New System.Drawing.Size(126, 22)
+        Me.MenuDelete.Size = New System.Drawing.Size(151, 22)
         Me.MenuDelete.Text = "Delete"
         '
         'MenuExit
         '
         Me.MenuExit.Name = "MenuExit"
         Me.MenuExit.ShortcutKeys = System.Windows.Forms.Keys.F6
-        Me.MenuExit.Size = New System.Drawing.Size(126, 22)
+        Me.MenuExit.Size = New System.Drawing.Size(151, 22)
         Me.MenuExit.Text = "Exit"
+        '
+        'MenuTotal
+        '
+        Me.MenuTotal.Name = "MenuTotal"
+        Me.MenuTotal.ShortcutKeys = System.Windows.Forms.Keys.F7
+        Me.MenuTotal.Size = New System.Drawing.Size(151, 22)
+        Me.MenuTotal.Text = "MenuTotal"
         '
         'PurchaseOrderNormal
         '
@@ -1145,4 +1167,6 @@ Partial Class PurchaseOrderNormal
     Friend WithEvents SAvePrint As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuDelete As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuExit As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents MenuTotal As System.Windows.Forms.ToolStripMenuItem
 End Class

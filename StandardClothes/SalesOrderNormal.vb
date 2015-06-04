@@ -1328,6 +1328,7 @@
         Commit_Form()
     End Sub
 
+
     Private Sub MenuBtnSavePrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuBtnSavePrint.Click
         CommitPrint()
     End Sub
@@ -1394,6 +1395,7 @@
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click, MenuTotal.Click
         PayedValue.Focus()
+        PayedValue.Select(0, PayedValue.Text.Length)
     End Sub
 
     Private Sub PayedValue_ValueChanged(sender As Object, e As EventArgs) Handles PayedValue.ValueChanged
