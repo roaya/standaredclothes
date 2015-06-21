@@ -265,7 +265,7 @@ Public Class PurchaseOrderNormal
             BarCode.Text = ""
             ItemName.Text = ""
             B_EndLoad = False
-        Else            
+        Else
             VendorID.Enabled = True
             BtnNewVendor.Enabled = True
             CashValue.Value = 0
@@ -362,7 +362,7 @@ Public Class PurchaseOrderNormal
             cls.MsgExclamation("«œŒ· ﬁÌ„… «·„œ›Ê⁄")
         ElseIf CashValue.Value + CreditValue.Value <> TotalBill.Text Then
             cls.MsgExclamation("ÌÃ» «‰   ”«ÊÌ ﬁÌ„… «·„œ›Ê⁄ „⁄ «Ã„«·Ì «·›« Ê—…")
-       
+
         ElseIf PayedValue.Value = 0 Then
             cls.MsgExclamation("«œŒ· ﬁÌ„… «·„œ›Ê⁄")
         ElseIf PayedValue.Value < TotalBill.Text Then
@@ -409,7 +409,7 @@ Public Class PurchaseOrderNormal
                 End If
 
                 ''''''''''''''''''''''''''''''''''''''''
-              
+
                 ''''''''''''''''''''''''''''''''''''''''
 
                 BDate = BillDate.Text
@@ -645,12 +645,10 @@ Public Class PurchaseOrderNormal
         Try
             If e.KeyCode = Keys.Enter Then
                 If BarCode.Text <> "" Then
-                    cmd.CommandText = "select dbo.Is_Item_Attached(0 , 'None' , '" & BarCode.Text & "' , " & StockID.SelectedValue & ")"
-                    If cmd.ExecuteScalar = 0 Then
-                        cls.MsgExclamation("Â–« «·’‰› €Ì— „ÊÃÊœ »Â–« «·„Õ·")
-                        Exit Sub
-                    Else
-                        cmd.CommandText = "select Purchase_price,Item_ID,item_name from items where Barcode = N'" & BarCode.Text & "'"
+                    Dim itemId As Object = chkItem(BarCode.Text)
+
+                    If itemId <> Nothing Then
+                        cmd.CommandText = "select Purchase_price,Item_ID,item_name from items where Item_ID = N'" & itemId & "'"
                         dr = cmd.ExecuteReader
                         Do While Not dr.Read = False
                             Price.Value = dr("Purchase_Price")
@@ -674,43 +672,37 @@ Public Class PurchaseOrderNormal
     Private Sub BarCode_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles BarCode.Leave
         Try
             If BarCode.Text <> "" Then
+                Dim itemId As Object = chkItem(BarCode.Text)
 
-                cmd.CommandText = "select dbo.Is_Item_Attached(0 , 'None' , '" & BarCode.Text & "' , " & StockID.SelectedValue & ")"
-                If cmd.ExecuteScalar = 0 Then
-                    cls.MsgExclamation("Â–« «·’‰› €Ì— „ÊÃÊœ »Â–« «·„Õ·")
-                    BarCode.Focus()
-                    Exit Sub
+                If itemId <> Nothing Then
+                    cmd.CommandText = "select Purchase_price,Item_ID,item_Name from items where barcode = N'" & BarCode.Text & "'"
+                    dr = cmd.ExecuteReader
+
+                    Do While Not dr.Read = False
+                        Price.Value = dr("Purchase_Price")
+                        BarCde = BarCode.Text
+                        ItmName = dr("Item_Name")
+                        ItmID = dr("Item_ID")
+                    Loop
+                    dr.Close()
                 End If
-                cmd.CommandText = "select dbo.Checked_Vendor_Items(" & VendorID.SelectedValue & ",0,'" & BarCode.Text & "')"
-                If cmd.ExecuteScalar = 0 Then
-                    cls.MsgExclamation("Â–« «·’‰› €Ì— „— »ÿ »Â–« «·„Ê—œ")
-                    Exit Sub
-                End If
+            Else
+                cls.MsgExclamation("«œŒ· ﬂÊœ «·’‰›")
             End If
 
-            cmd.CommandText = "select Purchase_price,Item_ID,item_Name from items where barcode = N'" & BarCode.Text & "'"
-            dr = cmd.ExecuteReader
-
-            Do While Not dr.Read = False
-                Price.Value = dr("Purchase_Price")
-                BarCde = BarCode.Text
-                ItmName = dr("Item_Name")
-                ItmID = dr("Item_ID")
-            Loop
-            dr.Close()
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
         End Try
     End Sub
 
     Private Sub VendorID_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendorID.SelectedIndexChanged
-        Fill_Items()        
+        Fill_Items()
     End Sub
     Private Sub Fill_Items()
-        Try          
+        Try
             If B_EndLoad = True And IsVendorAdded = True Then
                 cmd.CommandText = "select item_name from Query_Items_Vendors where vendor_id = " & VendorID.SelectedValue
-             Dim items As New DataTable()
+                Dim items As New DataTable()
                 da.SelectCommand = cmd
                 da.Fill(items)
                 ItemName.DataSource = items
@@ -815,7 +807,6 @@ Public Class PurchaseOrderNormal
         Dim m As New Vendors
         m.ShowDialog()
     End Sub
-
 
     Private Sub DiscountTypeItem_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DiscountTypeItem.TextChanged
         DiscountChangeTypes(False)
@@ -1020,4 +1011,38 @@ TotalBill.Text & ",N'" & DiscountType.Text & "'," & DiscountValue.Value & "," & 
     Private Sub PayedValue_ValueChanged(sender As Object, e As EventArgs) Handles PayedValue.ValueChanged
         CalculateTotalBill()
     End Sub
+    Private Function getItem(barcode As String) As Object
+        cmd.CommandText = "select item_id from items where barcode = '" & barcode & "'"
+        Dim itemid As Object = cmd.ExecuteScalar()
+        If itemid <> Nothing Then
+            Return itemid
+        Else
+            cmd.CommandText = "select bar_item_id from barcodes where bar_code = '" & barcode & "'"
+            itemid = cmd.ExecuteScalar()
+            If itemid <> Nothing Then
+                Return itemid
+            Else
+                Return ""
+            End If
+        End If
+    End Function
+
+    Private Function chkItem(barcode As String) As Object
+        Dim itemId As Object = Nothing
+        itemId = getItem(barcode)
+        If (itemId <> Nothing) Then
+            cmd.CommandText = "select dbo.Is_Item_Attached(" & itemId & " , 'None' , 'None' , " & StockID.Tag & ")"
+            If cmd.ExecuteScalar = 0 Then
+                cls.MsgExclamation("Â–« «·’‰› €Ì— „ÊÃÊœ »Â–« «·„Õ·")
+            End If
+            cmd.CommandText = "select dbo.Checked_Vendor_Items(" & VendorID.SelectedValue & "," & itemId & ",'Noue')"
+            If cmd.ExecuteScalar = 0 Then
+                cls.MsgExclamation("Â–« «·’‰› €Ì— „— »ÿ »Â–« «·„Ê—œ")
+            End If
+        Else
+            cls.MsgExclamation("Â–« «·ﬂÊœ €Ì— „”Ã·")
+        End If
+        Return itemId
+
+    End Function
 End Class

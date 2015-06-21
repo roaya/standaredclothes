@@ -107,6 +107,7 @@ Partial Class simpleSalesOrderNormal
         Me.BillTime = New System.Windows.Forms.Label()
         Me.CreditValue = New System.Windows.Forms.NumericUpDown()
         Me.ContentPanel = New System.Windows.Forms.Panel()
+        Me.MenuBtnDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupDetails.SuspendLayout()
@@ -209,7 +210,7 @@ Partial Class simpleSalesOrderNormal
         Me.BtnExit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.Size = New System.Drawing.Size(130, 35)
-        Me.BtnExit.Text = "خروج"
+        Me.BtnExit.Text = "خروج F6"
         '
         'ToolStripButton1
         '
@@ -226,14 +227,14 @@ Partial Class simpleSalesOrderNormal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1023, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(679, 24)
         Me.MenuStrip1.TabIndex = 24
         Me.MenuStrip1.Text = "MenuStrip1"
         Me.MenuStrip1.Visible = False
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuBtnNew, Me.MenuBtnSave, Me.MenuBtnSavePrint, Me.MenuBtnExit, Me.MenuTotal})
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuBtnNew, Me.MenuBtnSave, Me.MenuBtnSavePrint, Me.MenuBtnDelete, Me.MenuBtnExit, Me.MenuTotal})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(128, 20)
         Me.ToolStripMenuItem1.Text = "ToolStripMenuItem1"
@@ -262,7 +263,7 @@ Partial Class simpleSalesOrderNormal
         'MenuBtnExit
         '
         Me.MenuBtnExit.Name = "MenuBtnExit"
-        Me.MenuBtnExit.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.MenuBtnExit.ShortcutKeys = System.Windows.Forms.Keys.F6
         Me.MenuBtnExit.Size = New System.Drawing.Size(202, 22)
         Me.MenuBtnExit.Text = "TestDelete"
         '
@@ -1132,6 +1133,13 @@ Partial Class simpleSalesOrderNormal
         Me.ContentPanel.Size = New System.Drawing.Size(679, 522)
         Me.ContentPanel.TabIndex = 23
         '
+        'MenuBtnDelete
+        '
+        Me.MenuBtnDelete.Name = "MenuBtnDelete"
+        Me.MenuBtnDelete.ShortcutKeys = System.Windows.Forms.Keys.F5
+        Me.MenuBtnDelete.Size = New System.Drawing.Size(202, 22)
+        Me.MenuBtnDelete.Text = "MenuBtnDelete"
+        '
         'simpleSalesOrderNormal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1256,4 +1264,5 @@ Partial Class simpleSalesOrderNormal
     Friend WithEvents BtnExit As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents MenuTotal As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MenuBtnDelete As System.Windows.Forms.ToolStripMenuItem
 End Class

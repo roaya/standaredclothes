@@ -58,6 +58,7 @@ Public Class Items
             SalePrice.DataBindings.Add("Value", BSourceItems, "Sale_Price")
             SaleTotalPrice.DataBindings.Add("Value", BSourceItems, "Sale_Total_Price")
             PurchasePrice.DataBindings.Add("Value", BSourceItems, "Purchase_Price")
+            SinglePrice.DataBindings.Add("Value", BSourceItems, "Single_Price", True)
             AlertBalance.DataBindings.Add("Value", BSourceItems, "Alert_Balance")
             OrderBalance.DataBindings.Add("Value", BSourceItems, "Order_Balance")
             'MinOrder.DataBindings.Add("Value", BSourceItems, "Min_Order")
@@ -433,5 +434,10 @@ l:
 
     Private Sub OrderBalance_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles OrderBalance.Leave
         OrderBalance.BackColor = Color.White
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Dim M As New Barcodes
+        M.ShowDialog()
     End Sub
 End Class

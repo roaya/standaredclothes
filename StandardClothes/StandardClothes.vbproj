@@ -897,6 +897,12 @@
     <Compile Include="ItemsDep.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Barcodes.designer.vb">
+      <DependentUpon>Barcodes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barcodes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ItemSizes.designer.vb">
       <DependentUpon>ItemSizes.vb</DependentUpon>
     </Compile>
@@ -1799,6 +1805,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemsDep.resx">
       <DependentUpon>ItemsDep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barcodes.resx">
+      <DependentUpon>Barcodes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemSizes.resx">
       <DependentUpon>ItemSizes.vb</DependentUpon>

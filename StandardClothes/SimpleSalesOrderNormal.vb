@@ -575,7 +575,7 @@
         End If
     End Sub
 
-    Private Sub BtnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDelete.Click
+    Private Sub BtnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDelete.Click, MenuBtnDelete.Click
         Delete_Form()
     End Sub
 
@@ -703,50 +703,28 @@
         End If
     End Sub
 
-    Private Sub BarCode_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles BarCode.KeyDown
+Private Sub BarCode_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles BarCode.KeyDown
         If e.KeyCode = Keys.Enter Then
             Try
                 If BarCode.Text <> "" Then
-                    Quantity.Value = MyDs.Tables("App_Preferences").Rows(0).Item("Sal_Def_Qty")
-                    BarCde = BarCode.Text
-                    If BarCde.Length < MyDs.Tables("App_Preferences").Rows(0).Item("Start_From") Then
-                        cmd.CommandText = "select dbo.Is_Item_Attached(0 , 'None' , '" & BarCode.Text & "' , " & StockID.Tag & ")"
-                        If cmd.ExecuteScalar = 0 Then
-                            cls.MsgExclamation("هذا الصنف غير موجود بهذا المحل")
-                            Exit Sub
-                        End If
 
-                    Else
-                        cmd.CommandText = "select dbo.Is_Item_Attached(0 , 'None' , '" & BarCde.Substring(0, MyDs.Tables("App_Preferences").Rows(0).Item("Start_From")) & "' , " & StockID.Tag & ")"
-                        If cmd.ExecuteScalar = 0 Then
-                            cmd.CommandText = "select dbo.Is_Item_Attached(0 , 'None' , '" & BarCode.Text & "' , " & StockID.Tag & ")"
-                            If cmd.ExecuteScalar = 0 Then
-                                cls.MsgExclamation("هذا الصنف غير موجود بهذا المحل")
-                                Exit Sub
+                    Dim itemId As Object = chkItem(BarCode.Text)
+                    If (itemId <> Nothing) Then
+                        cmd.CommandText = "select Sale_Total_Price,Sale_price,Item_ID,item_name from items where item_ID = N'" & itemId & "'"
+                        dr = cmd.ExecuteReader
+                        Do While Not dr.Read = False
+                            If OrderType.Text = "جملة" Then
+                                Price.Value = dr("Sale_Total_Price")
+                            Else
+                                Price.Value = dr("Sale_Price")
                             End If
-                        Else
-                            BarCde = BarCde.Substring(0, MyDs.Tables("App_Preferences").Rows(0).Item("Start_From"))
-                            Quantity.Value = CDbl(BarCode.Text.Substring(MyDs.Tables("App_Preferences").Rows(0).Item("Start_From"), BarCode.Text.Length - MyDs.Tables("App_Preferences").Rows(0).Item("Start_From"))) / 1000
-                        End If
+                            ItmName = dr("Item_Name")
+                            ItmID = dr("Item_ID")
+                        Loop
+                        dr.Close()
+
+                        AddItem()
                     End If
-
-
-                    cmd.CommandText = "select Sale_Total_Price,Sale_price,Item_ID,item_name from items where Barcode = N'" & BarCde & "'"
-                    dr = cmd.ExecuteReader
-                    Do While Not dr.Read = False
-                        If OrderType.Text = "جملة" Then
-                            Price.Value = dr("Sale_Total_Price")
-                        Else
-                            Price.Value = dr("Sale_Price")
-                        End If
-                        'BarCde = BarCode.Text
-                        ItmName = dr("Item_Name")
-                        ItmID = dr("Item_ID")
-                    Loop
-                    dr.Close()
-
-                    AddItem()
-
                 Else
                     cls.MsgExclamation("ادخل كود الصنف")
                 End If
@@ -760,39 +738,31 @@
     Private Sub BarCode_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles BarCode.Leave
         Try
             If BarCode.Text <> "" Then
+                Dim itemId As Object = chkItem(BarCode.Text)
+                If (itemId <> Nothing) Then
+                    cmd.CommandText = "select Sale_Total_Price,Sale_price,Item_ID,item_Name from items where item_Id = N'" & itemId & "'"
+                    dr = cmd.ExecuteReader
 
-                cmd.CommandText = "select dbo.Is_Item_Attached(0 , 'None' , '" & BarCode.Text & "' , " & StockID.Tag & ")"
-                If cmd.ExecuteScalar = 0 Then
-                    cls.MsgExclamation("هذا الصنف غير موجود بهذا المحل")
-                    BarCode.Focus()
-                    Exit Sub
+                    Do While Not dr.Read = False
+                        If OrderType.Text = "جملة" Then
+                            Price.Value = dr("Sale_Total_Price")
+                        Else
+                            Price.Value = dr("Sale_Price")
+                        End If
+                        BarCde = BarCode.Text
+                        ItmName = dr("Item_Name")
+                        ItmID = dr("Item_ID")
+                    Loop
+                    dr.Close()
                 End If
-                'cmd.CommandText = "select dbo.Checked_Customer_Items(" & CustomerID.SelectedValue & ",0,'" & BarCode.Text & "')"
-                'If cmd.ExecuteScalar = 0 Then
-                '    cls.MsgExclamation("هذا الصنف غير مرتبط بهذا المورد")
-                '    Exit Sub
-                'End If
+
+            Else
+                cls.MsgExclamation("ادخل كود الصنف")
             End If
-
-            cmd.CommandText = "select Sale_Total_Price,Sale_price,Item_ID,item_Name from items where barcode = N'" & BarCode.Text & "'"
-            dr = cmd.ExecuteReader
-
-            Do While Not dr.Read = False
-                If OrderType.Text = "جملة" Then
-                    Price.Value = dr("Sale_Total_Price")
-                Else
-                    Price.Value = dr("Sale_Price")
-                End If
-                BarCde = BarCode.Text
-                ItmName = dr("Item_Name")
-                ItmID = dr("Item_ID")
-            Loop
-            dr.Close()
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
         End Try
     End Sub
-
     'Private Sub CustomerID_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CustomerID.SelectedIndexChanged
     '    If B_EndLoad = True And IsCustomerAdded = True Then
     '        cmd.CommandText = "select item_name from Query_Items_Customers where Customer_id = " & CustomerID.SelectedValue
@@ -928,7 +898,7 @@
         End Try
     End Sub
 
-    Private Sub BtnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExit.Click
+    Private Sub BtnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExit.Click, MenuBtnExit.Click
         Me.Close()
     End Sub
 
@@ -1188,10 +1158,6 @@
         CommitPrint()
     End Sub
 
-    Private Sub MenuBtnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuBtnExit.Click
-        Delete_Form()
-    End Sub
-
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click, MenuTotal.Click
         PayedValue.Focus()
         PayedValue.Select(0, PayedValue.Text.Length)
@@ -1216,4 +1182,46 @@
         End If
         CalculateTotalBill()
     End Sub
+    Private Function getItem(barcode As String) As Object
+        cmd.CommandText = "select item_id from items where barcode = '" & barcode & "'"
+        Dim itemid As Object = cmd.ExecuteScalar()
+        If itemid <> Nothing Then
+            Return itemid
+        Else
+            cmd.CommandText = "select bar_item_id from barcodes where bar_code = '" & barcode & "'"
+            itemid = cmd.ExecuteScalar()
+            If itemid <> Nothing Then
+                Return itemid
+            Else
+                Return ""
+            End If
+        End If
+    End Function
+
+    Private Function chkItem(barcode As String) As Object
+        Quantity.Value = MyDs.Tables("App_Preferences").Rows(0).Item("Sal_Def_Qty")
+
+        Dim itemId As Object = Nothing
+        If barcode.Length < MyDs.Tables("App_Preferences").Rows(0).Item("Start_From") Then
+            itemId = getItem(barcode)
+        Else
+            itemId = getItem(barcode.Substring(0, MyDs.Tables("App_Preferences").Rows(0).Item("Start_From")))
+            If (itemId = Nothing) Then
+                itemId = getItem(barcode)
+            Else
+                barcode = barcode.Substring(0, MyDs.Tables("App_Preferences").Rows(0).Item("Start_From"))
+                Quantity.Value = CDbl(barcode.Substring(MyDs.Tables("App_Preferences").Rows(0).Item("Start_From"), (barcode.Length - MyDs.Tables("App_Preferences").Rows(0).Item("Start_From")) - 1)) / 1000
+            End If
+        End If
+        If (itemId <> Nothing) Then
+            cmd.CommandText = "select dbo.Is_Item_Attached(" & itemId & " , 'None' , 'None' , " & StockID.Tag & ")"
+            If cmd.ExecuteScalar = 0 Then
+                cls.MsgExclamation("هذا الصنف غير موجود بهذا المحل")
+            End If
+        Else
+            cls.MsgExclamation("هذا الكود غير مسجل")
+        End If
+        Return itemId
+
+    End Function
 End Class

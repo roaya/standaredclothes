@@ -21,6 +21,8 @@ Partial Class Items
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Items))
         Me.ContentPanel = New System.Windows.Forms.Panel()
+        Me.GeneralLabel14 = New StandardClothes.GeneralLabel()
+        Me.SinglePrice = New System.Windows.Forms.NumericUpDown()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -96,7 +98,9 @@ Partial Class Items
         Me.MenuSearch = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button13 = New System.Windows.Forms.Button()
         Me.ContentPanel.SuspendLayout()
+        CType(Me.SinglePrice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -117,6 +121,8 @@ Partial Class Items
         Me.ContentPanel.BackColor = System.Drawing.Color.Transparent
         Me.ContentPanel.BackgroundImage = Global.StandardClothes.My.Resources.Resources.conatin_box_03
         Me.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ContentPanel.Controls.Add(Me.GeneralLabel14)
+        Me.ContentPanel.Controls.Add(Me.SinglePrice)
         Me.ContentPanel.Controls.Add(Me.TabControl1)
         Me.ContentPanel.Controls.Add(Me.GeneralLabel16)
         Me.ContentPanel.Controls.Add(Me.SaleTotalPrice)
@@ -149,8 +155,37 @@ Partial Class Items
         Me.ContentPanel.Controls.Add(Me.MasterField1)
         Me.ContentPanel.Location = New System.Drawing.Point(18, 81)
         Me.ContentPanel.Name = "ContentPanel"
-        Me.ContentPanel.Size = New System.Drawing.Size(884, 522)
+        Me.ContentPanel.Size = New System.Drawing.Size(883, 546)
         Me.ContentPanel.TabIndex = 20
+        '
+        'GeneralLabel14
+        '
+        Me.GeneralLabel14.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel14.BackgroundImage = CType(resources.GetObject("GeneralLabel14.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel14.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel14.IsRequired = False
+        Me.GeneralLabel14.Location = New System.Drawing.Point(725, 160)
+        Me.GeneralLabel14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel14.Name = "GeneralLabel14"
+        Me.GeneralLabel14.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel14.SetLabelTxt = "”⁄— »Ì⁄ «·ﬁÿ«⁄Ì :"
+        Me.GeneralLabel14.Size = New System.Drawing.Size(135, 27)
+        Me.GeneralLabel14.TabIndex = 111
+        Me.GeneralLabel14.TabStop = False
+        '
+        'SinglePrice
+        '
+        Me.SinglePrice.DecimalPlaces = 2
+        Me.SinglePrice.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SinglePrice.Location = New System.Drawing.Point(439, 161)
+        Me.SinglePrice.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
+        Me.SinglePrice.Name = "SinglePrice"
+        Me.SinglePrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.SinglePrice.Size = New System.Drawing.Size(283, 26)
+        Me.SinglePrice.TabIndex = 110
+        Me.SinglePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TabControl1
         '
@@ -163,7 +198,7 @@ Partial Class Items
         Me.TabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.TabControl1.RightToLeftLayout = True
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(205, 474)
+        Me.TabControl1.Size = New System.Drawing.Size(205, 504)
         Me.TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
         Me.TabControl1.TabIndex = 109
         Me.TabControl1.TabStop = False
@@ -171,6 +206,7 @@ Partial Class Items
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage1.Controls.Add(Me.Button13)
         Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.Button5)
         Me.TabPage1.Controls.Add(Me.Button9)
@@ -183,7 +219,7 @@ Partial Class Items
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(197, 448)
+        Me.TabPage1.Size = New System.Drawing.Size(197, 478)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "«·‰Ê«›–"
         '
@@ -367,7 +403,7 @@ Partial Class Items
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(197, 448)
+        Me.TabPage2.Size = New System.Drawing.Size(197, 478)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "«· ﬁ«—Ì—"
         '
@@ -475,7 +511,7 @@ Partial Class Items
         Me.GeneralLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel13.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel13.IsRequired = False
-        Me.GeneralLabel13.Location = New System.Drawing.Point(725, 231)
+        Me.GeneralLabel13.Location = New System.Drawing.Point(725, 265)
         Me.GeneralLabel13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel13.Name = "GeneralLabel13"
         Me.GeneralLabel13.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -487,7 +523,7 @@ Partial Class Items
         'OrderBalance
         '
         Me.OrderBalance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OrderBalance.Location = New System.Drawing.Point(438, 232)
+        Me.OrderBalance.Location = New System.Drawing.Point(438, 266)
         Me.OrderBalance.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
         Me.OrderBalance.Name = "OrderBalance"
         Me.OrderBalance.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -503,7 +539,7 @@ Partial Class Items
         Me.Panel1.Controls.Add(Me.ToolStrip2)
         Me.Panel1.Location = New System.Drawing.Point(233, 25)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(197, 473)
+        Me.Panel1.Size = New System.Drawing.Size(197, 503)
         Me.Panel1.TabIndex = 106
         '
         'Photo
@@ -514,7 +550,7 @@ Partial Class Items
         Me.Photo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Photo.Location = New System.Drawing.Point(0, 0)
         Me.Photo.Name = "Photo"
-        Me.Photo.Size = New System.Drawing.Size(169, 469)
+        Me.Photo.Size = New System.Drawing.Size(169, 499)
         Me.Photo.TabIndex = 1
         Me.Photo.TabStop = False
         '
@@ -525,7 +561,7 @@ Partial Class Items
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2})
         Me.ToolStrip2.Location = New System.Drawing.Point(169, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(24, 469)
+        Me.ToolStrip2.Size = New System.Drawing.Size(24, 499)
         Me.ToolStrip2.TabIndex = 0
         Me.ToolStrip2.Text = "ToolStrip2"
         '
@@ -555,7 +591,7 @@ Partial Class Items
         Me.GeneralLabel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel12.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel12.IsRequired = True
-        Me.GeneralLabel12.Location = New System.Drawing.Point(725, 471)
+        Me.GeneralLabel12.Location = New System.Drawing.Point(725, 502)
         Me.GeneralLabel12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel12.Name = "GeneralLabel12"
         Me.GeneralLabel12.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -570,7 +606,7 @@ Partial Class Items
         Me.SeasonType.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SeasonType.FormattingEnabled = True
         Me.SeasonType.Items.AddRange(New Object() {"‘ ÊÌ", "’Ì›Ì", "—»Ì⁄Ì", "Œ—Ì›Ì"})
-        Me.SeasonType.Location = New System.Drawing.Point(438, 472)
+        Me.SeasonType.Location = New System.Drawing.Point(438, 503)
         Me.SeasonType.Name = "SeasonType"
         Me.SeasonType.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.SeasonType.Size = New System.Drawing.Size(283, 26)
@@ -584,7 +620,7 @@ Partial Class Items
         Me.GeneralLabel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel11.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel11.IsRequired = True
-        Me.GeneralLabel11.Location = New System.Drawing.Point(725, 437)
+        Me.GeneralLabel11.Location = New System.Drawing.Point(725, 468)
         Me.GeneralLabel11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel11.Name = "GeneralLabel11"
         Me.GeneralLabel11.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -598,7 +634,7 @@ Partial Class Items
         Me.GenderID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.GenderID.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GenderID.FormattingEnabled = True
-        Me.GenderID.Location = New System.Drawing.Point(438, 437)
+        Me.GenderID.Location = New System.Drawing.Point(438, 468)
         Me.GenderID.Name = "GenderID"
         Me.GenderID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GenderID.Size = New System.Drawing.Size(283, 26)
@@ -612,7 +648,7 @@ Partial Class Items
         Me.GeneralLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel10.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel10.IsRequired = True
-        Me.GeneralLabel10.Location = New System.Drawing.Point(725, 404)
+        Me.GeneralLabel10.Location = New System.Drawing.Point(725, 435)
         Me.GeneralLabel10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel10.Name = "GeneralLabel10"
         Me.GeneralLabel10.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -626,7 +662,7 @@ Partial Class Items
         Me.AgeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.AgeID.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AgeID.FormattingEnabled = True
-        Me.AgeID.Location = New System.Drawing.Point(438, 405)
+        Me.AgeID.Location = New System.Drawing.Point(438, 436)
         Me.AgeID.Name = "AgeID"
         Me.AgeID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.AgeID.Size = New System.Drawing.Size(283, 26)
@@ -640,7 +676,7 @@ Partial Class Items
         Me.GeneralLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel8.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel8.IsRequired = True
-        Me.GeneralLabel8.Location = New System.Drawing.Point(725, 369)
+        Me.GeneralLabel8.Location = New System.Drawing.Point(725, 400)
         Me.GeneralLabel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel8.Name = "GeneralLabel8"
         Me.GeneralLabel8.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -654,7 +690,7 @@ Partial Class Items
         Me.CorporationID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CorporationID.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CorporationID.FormattingEnabled = True
-        Me.CorporationID.Location = New System.Drawing.Point(438, 370)
+        Me.CorporationID.Location = New System.Drawing.Point(438, 401)
         Me.CorporationID.Name = "CorporationID"
         Me.CorporationID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.CorporationID.Size = New System.Drawing.Size(283, 26)
@@ -668,7 +704,7 @@ Partial Class Items
         Me.GeneralLabel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel9.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel9.IsRequired = True
-        Me.GeneralLabel9.Location = New System.Drawing.Point(725, 334)
+        Me.GeneralLabel9.Location = New System.Drawing.Point(725, 365)
         Me.GeneralLabel9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel9.Name = "GeneralLabel9"
         Me.GeneralLabel9.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -682,7 +718,7 @@ Partial Class Items
         Me.TypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.TypeID.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TypeID.FormattingEnabled = True
-        Me.TypeID.Location = New System.Drawing.Point(438, 335)
+        Me.TypeID.Location = New System.Drawing.Point(438, 366)
         Me.TypeID.Name = "TypeID"
         Me.TypeID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.TypeID.Size = New System.Drawing.Size(283, 26)
@@ -696,7 +732,7 @@ Partial Class Items
         Me.GeneralLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel7.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel7.IsRequired = True
-        Me.GeneralLabel7.Location = New System.Drawing.Point(725, 301)
+        Me.GeneralLabel7.Location = New System.Drawing.Point(725, 332)
         Me.GeneralLabel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel7.Name = "GeneralLabel7"
         Me.GeneralLabel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -710,7 +746,7 @@ Partial Class Items
         Me.SizeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SizeID.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SizeID.FormattingEnabled = True
-        Me.SizeID.Location = New System.Drawing.Point(438, 301)
+        Me.SizeID.Location = New System.Drawing.Point(438, 332)
         Me.SizeID.Name = "SizeID"
         Me.SizeID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.SizeID.Size = New System.Drawing.Size(283, 26)
@@ -724,7 +760,7 @@ Partial Class Items
         Me.GeneralLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel6.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel6.IsRequired = True
-        Me.GeneralLabel6.Location = New System.Drawing.Point(725, 266)
+        Me.GeneralLabel6.Location = New System.Drawing.Point(725, 297)
         Me.GeneralLabel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel6.Name = "GeneralLabel6"
         Me.GeneralLabel6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -738,7 +774,7 @@ Partial Class Items
         Me.CategoryID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CategoryID.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CategoryID.FormattingEnabled = True
-        Me.CategoryID.Location = New System.Drawing.Point(438, 267)
+        Me.CategoryID.Location = New System.Drawing.Point(438, 298)
         Me.CategoryID.Name = "CategoryID"
         Me.CategoryID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.CategoryID.Size = New System.Drawing.Size(283, 26)
@@ -752,7 +788,7 @@ Partial Class Items
         Me.GeneralLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel5.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel5.IsRequired = False
-        Me.GeneralLabel5.Location = New System.Drawing.Point(725, 196)
+        Me.GeneralLabel5.Location = New System.Drawing.Point(725, 230)
         Me.GeneralLabel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel5.Name = "GeneralLabel5"
         Me.GeneralLabel5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -764,7 +800,7 @@ Partial Class Items
         'AlertBalance
         '
         Me.AlertBalance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AlertBalance.Location = New System.Drawing.Point(438, 196)
+        Me.AlertBalance.Location = New System.Drawing.Point(438, 230)
         Me.AlertBalance.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
         Me.AlertBalance.Name = "AlertBalance"
         Me.AlertBalance.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -780,7 +816,7 @@ Partial Class Items
         Me.GeneralLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel4.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel4.IsRequired = False
-        Me.GeneralLabel4.Location = New System.Drawing.Point(725, 161)
+        Me.GeneralLabel4.Location = New System.Drawing.Point(725, 195)
         Me.GeneralLabel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel4.Name = "GeneralLabel4"
         Me.GeneralLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -793,7 +829,7 @@ Partial Class Items
         '
         Me.PurchasePrice.DecimalPlaces = 2
         Me.PurchasePrice.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PurchasePrice.Location = New System.Drawing.Point(438, 162)
+        Me.PurchasePrice.Location = New System.Drawing.Point(438, 196)
         Me.PurchasePrice.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
         Me.PurchasePrice.Name = "PurchasePrice"
         Me.PurchasePrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -985,7 +1021,7 @@ Partial Class Items
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(235, 611)
+        Me.Label1.Location = New System.Drawing.Point(235, 638)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label1.Size = New System.Drawing.Size(111, 19)
@@ -1002,7 +1038,7 @@ Partial Class Items
         Me.BtnLast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLast.Location = New System.Drawing.Point(370, 614)
+        Me.BtnLast.Location = New System.Drawing.Point(370, 641)
         Me.BtnLast.Name = "BtnLast"
         Me.BtnLast.Size = New System.Drawing.Size(16, 16)
         Me.BtnLast.TabIndex = 102
@@ -1019,7 +1055,7 @@ Partial Class Items
         Me.BtnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNext.Location = New System.Drawing.Point(404, 614)
+        Me.BtnNext.Location = New System.Drawing.Point(404, 641)
         Me.BtnNext.Name = "BtnNext"
         Me.BtnNext.Size = New System.Drawing.Size(16, 16)
         Me.BtnNext.TabIndex = 101
@@ -1032,7 +1068,7 @@ Partial Class Items
         Me.OrderByCombo.BackColor = System.Drawing.Color.Gainsboro
         Me.OrderByCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.OrderByCombo.FormattingEnabled = True
-        Me.OrderByCombo.Location = New System.Drawing.Point(433, 613)
+        Me.OrderByCombo.Location = New System.Drawing.Point(433, 640)
         Me.OrderByCombo.Name = "OrderByCombo"
         Me.OrderByCombo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.OrderByCombo.Size = New System.Drawing.Size(151, 21)
@@ -1046,7 +1082,7 @@ Partial Class Items
         Me.UsernameLabel.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsernameLabel.ForeColor = System.Drawing.Color.White
         Me.UsernameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.UsernameLabel.Location = New System.Drawing.Point(590, 611)
+        Me.UsernameLabel.Location = New System.Drawing.Point(590, 638)
         Me.UsernameLabel.Name = "UsernameLabel"
         Me.UsernameLabel.Size = New System.Drawing.Size(56, 19)
         Me.UsernameLabel.TabIndex = 99
@@ -1062,7 +1098,7 @@ Partial Class Items
         Me.BtnPrevious.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnPrevious.Location = New System.Drawing.Point(652, 614)
+        Me.BtnPrevious.Location = New System.Drawing.Point(652, 641)
         Me.BtnPrevious.Name = "BtnPrevious"
         Me.BtnPrevious.Size = New System.Drawing.Size(16, 16)
         Me.BtnPrevious.TabIndex = 98
@@ -1079,7 +1115,7 @@ Partial Class Items
         Me.BtnFirst.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnFirst.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnFirst.Location = New System.Drawing.Point(686, 614)
+        Me.BtnFirst.Location = New System.Drawing.Point(686, 641)
         Me.BtnFirst.Name = "BtnFirst"
         Me.BtnFirst.Size = New System.Drawing.Size(16, 16)
         Me.BtnFirst.TabIndex = 97
@@ -1093,7 +1129,7 @@ Partial Class Items
         Me.CountRecords.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CountRecords.ForeColor = System.Drawing.Color.White
         Me.CountRecords.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.CountRecords.Location = New System.Drawing.Point(180, 611)
+        Me.CountRecords.Location = New System.Drawing.Point(180, 638)
         Me.CountRecords.Name = "CountRecords"
         Me.CountRecords.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.CountRecords.Size = New System.Drawing.Size(59, 19)
@@ -1258,6 +1294,25 @@ Partial Class Items
         Me.MenuExit.Size = New System.Drawing.Size(126, 22)
         Me.MenuExit.Text = "Exit"
         '
+        'Button13
+        '
+        Me.Button13.BackgroundImage = Global.StandardClothes.My.Resources.Resources.aaa
+        Me.Button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button13.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button13.FlatAppearance.BorderSize = 0
+        Me.Button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.Button13.ForeColor = System.Drawing.Color.White
+        Me.Button13.Location = New System.Drawing.Point(3, 255)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(191, 28)
+        Me.Button13.TabIndex = 52
+        Me.Button13.TabStop = False
+        Me.Button13.Text = "«·»«—ﬂÊœ"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
         'Items
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1265,7 +1320,7 @@ Partial Class Items
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BackgroundImage = Global.StandardClothes.My.Resources.Resources.Bigbg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1058, 646)
+        Me.ClientSize = New System.Drawing.Size(1058, 677)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.ContentPanel)
         Me.Controls.Add(Me.BtnCancelSerach)
@@ -1295,6 +1350,7 @@ Partial Class Items
         Me.Text = "«·„œÌ‰…"
         Me.ContentPanel.ResumeLayout(False)
         Me.ContentPanel.PerformLayout()
+        CType(Me.SinglePrice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
@@ -1391,4 +1447,7 @@ Partial Class Items
     Friend WithEvents MenuSearch As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuDelete As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuExit As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GeneralLabel14 As StandardClothes.GeneralLabel
+    Friend WithEvents SinglePrice As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Button13 As System.Windows.Forms.Button
 End Class
