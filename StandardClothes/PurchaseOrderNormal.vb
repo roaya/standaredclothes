@@ -686,8 +686,8 @@ Public Class PurchaseOrderNormal
                     Loop
                     dr.Close()
                 End If
-            Else
-                cls.MsgExclamation("«œŒ· ﬂÊœ «·’‰›")
+                'Else
+                '    cls.MsgExclamation("«œŒ· ﬂÊœ «·’‰›")
             End If
 
         Catch ex As Exception
@@ -1031,11 +1031,11 @@ TotalBill.Text & ",N'" & DiscountType.Text & "'," & DiscountValue.Value & "," & 
         Dim itemId As Object = Nothing
         itemId = getItem(barcode)
         If (itemId <> Nothing) Then
-            cmd.CommandText = "select dbo.Is_Item_Attached(" & itemId & " , 'None' , 'None' , " & StockID.Tag & ")"
+            cmd.CommandText = "select dbo.Is_Item_Attached(" & itemId & " , 'None' , 'None' , " & StockID.SelectedValue & ")"
             If cmd.ExecuteScalar = 0 Then
                 cls.MsgExclamation("Â–« «·’‰› €Ì— „ÊÃÊœ »Â–« «·„Õ·")
             End If
-            cmd.CommandText = "select dbo.Checked_Vendor_Items(" & VendorID.SelectedValue & "," & itemId & ",'Noue')"
+            cmd.CommandText = "select dbo.Checked_Vendor_Items(" & VendorID.SelectedValue & "," & itemId & ",'None')"
             If cmd.ExecuteScalar = 0 Then
                 cls.MsgExclamation("Â–« «·’‰› €Ì— „— »ÿ »Â–« «·„Ê—œ")
             End If

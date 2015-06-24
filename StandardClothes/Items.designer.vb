@@ -25,6 +25,7 @@ Partial Class Items
         Me.SinglePrice = New System.Windows.Forms.NumericUpDown()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button13 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
@@ -98,7 +99,7 @@ Partial Class Items
         Me.MenuSearch = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button13 = New System.Windows.Forms.Button()
+        Me.MasterField2 = New StandardClothes.MasterField()
         Me.ContentPanel.SuspendLayout()
         CType(Me.SinglePrice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -121,6 +122,7 @@ Partial Class Items
         Me.ContentPanel.BackColor = System.Drawing.Color.Transparent
         Me.ContentPanel.BackgroundImage = Global.StandardClothes.My.Resources.Resources.conatin_box_03
         Me.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ContentPanel.Controls.Add(Me.MasterField2)
         Me.ContentPanel.Controls.Add(Me.GeneralLabel14)
         Me.ContentPanel.Controls.Add(Me.SinglePrice)
         Me.ContentPanel.Controls.Add(Me.TabControl1)
@@ -222,6 +224,25 @@ Partial Class Items
         Me.TabPage1.Size = New System.Drawing.Size(197, 478)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "«·‰Ê«›–"
+        '
+        'Button13
+        '
+        Me.Button13.BackgroundImage = Global.StandardClothes.My.Resources.Resources.aaa
+        Me.Button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button13.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button13.FlatAppearance.BorderSize = 0
+        Me.Button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.Button13.ForeColor = System.Drawing.Color.White
+        Me.Button13.Location = New System.Drawing.Point(3, 255)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(191, 28)
+        Me.Button13.TabIndex = 52
+        Me.Button13.TabStop = False
+        Me.Button13.Text = "«·»«—ﬂÊœ"
+        Me.Button13.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -1294,24 +1315,24 @@ Partial Class Items
         Me.MenuExit.Size = New System.Drawing.Size(126, 22)
         Me.MenuExit.Text = "Exit"
         '
-        'Button13
+        'MasterField2
         '
-        Me.Button13.BackgroundImage = Global.StandardClothes.My.Resources.Resources.aaa
-        Me.Button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button13.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button13.FlatAppearance.BorderSize = 0
-        Me.Button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.Button13.ForeColor = System.Drawing.Color.White
-        Me.Button13.Location = New System.Drawing.Point(3, 255)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(191, 28)
-        Me.Button13.TabIndex = 52
-        Me.Button13.TabStop = False
-        Me.Button13.Text = "«·»«—ﬂÊœ"
-        Me.Button13.UseVisualStyleBackColor = True
+        Me.MasterField2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.MasterField2.EnableField = False
+        Me.MasterField2.EnableLockup = True
+        Me.MasterField2.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MasterField2.IsNum = False
+        Me.MasterField2.IsRequired = True
+        Me.MasterField2.Location = New System.Drawing.Point(439, 99)
+        Me.MasterField2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MasterField2.Name = "MasterField2"
+        Me.MasterField2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.MasterField2.SetDisplayMember = "Items.Item_Name"
+        Me.MasterField2.SetLeaveColor = System.Drawing.Color.Red
+        Me.MasterField2.SetLockupImage = Nothing
+        Me.MasterField2.SetValueMember = "Items.Item_ID"
+        Me.MasterField2.Size = New System.Drawing.Size(283, 54)
+        Me.MasterField2.TabIndex = 112
         '
         'Items
         '
@@ -1450,4 +1471,5 @@ Partial Class Items
     Friend WithEvents GeneralLabel14 As StandardClothes.GeneralLabel
     Friend WithEvents SinglePrice As System.Windows.Forms.NumericUpDown
     Friend WithEvents Button13 As System.Windows.Forms.Button
+    Friend WithEvents MasterField2 As StandardClothes.MasterField
 End Class

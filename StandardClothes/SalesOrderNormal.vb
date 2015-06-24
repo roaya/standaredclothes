@@ -860,8 +860,8 @@
                     dr.Close()
                 End If
 
-            Else
-                cls.MsgExclamation("ادخل كود الصنف")
+                'Else
+                '    cls.MsgExclamation("ادخل كود الصنف")
             End If
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)

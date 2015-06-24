@@ -440,4 +440,8 @@ l:
         Dim M As New Barcodes
         M.ShowDialog()
     End Sub
+
+    Private Sub BarCode_TextChanged(sender As Object, e As EventArgs) Handles BarCode.TextChanged
+
+    End Sub
 End Class
