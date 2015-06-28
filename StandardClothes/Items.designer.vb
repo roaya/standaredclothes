@@ -21,7 +21,6 @@ Partial Class Items
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Items))
         Me.ContentPanel = New System.Windows.Forms.Panel()
-        Me.GeneralLabel14 = New StandardClothes.GeneralLabel()
         Me.SinglePrice = New System.Windows.Forms.NumericUpDown()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -39,39 +38,24 @@ Partial Class Items
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.GeneralLabel16 = New StandardClothes.GeneralLabel()
         Me.SaleTotalPrice = New System.Windows.Forms.NumericUpDown()
         Me.BarCode = New System.Windows.Forms.TextBox()
-        Me.GeneralLabel13 = New StandardClothes.GeneralLabel()
         Me.OrderBalance = New System.Windows.Forms.NumericUpDown()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Photo = New System.Windows.Forms.PictureBox()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.GeneralLabel12 = New StandardClothes.GeneralLabel()
         Me.SeasonType = New System.Windows.Forms.ComboBox()
-        Me.GeneralLabel11 = New StandardClothes.GeneralLabel()
         Me.GenderID = New System.Windows.Forms.ComboBox()
-        Me.GeneralLabel10 = New StandardClothes.GeneralLabel()
         Me.AgeID = New System.Windows.Forms.ComboBox()
-        Me.GeneralLabel8 = New StandardClothes.GeneralLabel()
         Me.CorporationID = New System.Windows.Forms.ComboBox()
-        Me.GeneralLabel9 = New StandardClothes.GeneralLabel()
         Me.TypeID = New System.Windows.Forms.ComboBox()
-        Me.GeneralLabel7 = New StandardClothes.GeneralLabel()
         Me.SizeID = New System.Windows.Forms.ComboBox()
-        Me.GeneralLabel6 = New StandardClothes.GeneralLabel()
         Me.CategoryID = New System.Windows.Forms.ComboBox()
-        Me.GeneralLabel5 = New StandardClothes.GeneralLabel()
         Me.AlertBalance = New System.Windows.Forms.NumericUpDown()
-        Me.GeneralLabel4 = New StandardClothes.GeneralLabel()
         Me.PurchasePrice = New System.Windows.Forms.NumericUpDown()
-        Me.GeneralLabel3 = New StandardClothes.GeneralLabel()
         Me.SalePrice = New System.Windows.Forms.NumericUpDown()
-        Me.GeneralLabel1 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel2 = New StandardClothes.GeneralLabel()
-        Me.MasterField1 = New StandardClothes.MasterField()
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.BtnSearch = New System.Windows.Forms.Button()
         Me.BtnSave = New System.Windows.Forms.Button()
@@ -99,7 +83,24 @@ Partial Class Items
         Me.MenuSearch = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MasterField2 = New StandardClothes.MasterField()
+        Me.GeneralLabel14 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel16 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel13 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel12 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel11 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel10 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel8 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel9 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel7 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel6 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel5 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel4 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel3 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel1 = New StandardClothes.GeneralLabel()
+        Me.GeneralLabel2 = New StandardClothes.GeneralLabel()
+        Me.MasterField1 = New StandardClothes.MasterField()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.ContentPanel.SuspendLayout()
         CType(Me.SinglePrice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -115,6 +116,7 @@ Partial Class Items
         CType(Me.SalePrice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ContentPanel
@@ -122,13 +124,12 @@ Partial Class Items
         Me.ContentPanel.BackColor = System.Drawing.Color.Transparent
         Me.ContentPanel.BackgroundImage = Global.StandardClothes.My.Resources.Resources.conatin_box_03
         Me.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ContentPanel.Controls.Add(Me.MasterField2)
+        Me.ContentPanel.Controls.Add(Me.Panel2)
         Me.ContentPanel.Controls.Add(Me.GeneralLabel14)
         Me.ContentPanel.Controls.Add(Me.SinglePrice)
         Me.ContentPanel.Controls.Add(Me.TabControl1)
         Me.ContentPanel.Controls.Add(Me.GeneralLabel16)
         Me.ContentPanel.Controls.Add(Me.SaleTotalPrice)
-        Me.ContentPanel.Controls.Add(Me.BarCode)
         Me.ContentPanel.Controls.Add(Me.GeneralLabel13)
         Me.ContentPanel.Controls.Add(Me.OrderBalance)
         Me.ContentPanel.Controls.Add(Me.Panel1)
@@ -159,23 +160,6 @@ Partial Class Items
         Me.ContentPanel.Name = "ContentPanel"
         Me.ContentPanel.Size = New System.Drawing.Size(883, 546)
         Me.ContentPanel.TabIndex = 20
-        '
-        'GeneralLabel14
-        '
-        Me.GeneralLabel14.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel14.BackgroundImage = CType(resources.GetObject("GeneralLabel14.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel14.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel14.IsRequired = False
-        Me.GeneralLabel14.Location = New System.Drawing.Point(725, 160)
-        Me.GeneralLabel14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel14.Name = "GeneralLabel14"
-        Me.GeneralLabel14.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel14.SetLabelTxt = "”⁄— »Ì⁄ «·ﬁÿ«⁄Ì :"
-        Me.GeneralLabel14.Size = New System.Drawing.Size(135, 27)
-        Me.GeneralLabel14.TabIndex = 111
-        Me.GeneralLabel14.TabStop = False
         '
         'SinglePrice
         '
@@ -485,23 +469,6 @@ Partial Class Items
         Me.Button8.Text = "«” ⁄·«„ »Ì«‰«  «·«’‰«›"
         Me.Button8.UseVisualStyleBackColor = True
         '
-        'GeneralLabel16
-        '
-        Me.GeneralLabel16.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel16.BackgroundImage = CType(resources.GetObject("GeneralLabel16.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel16.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel16.IsRequired = False
-        Me.GeneralLabel16.Location = New System.Drawing.Point(725, 126)
-        Me.GeneralLabel16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel16.Name = "GeneralLabel16"
-        Me.GeneralLabel16.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel16.SetLabelTxt = "”⁄— »Ì⁄ «·Ã„·… :"
-        Me.GeneralLabel16.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel16.TabIndex = 108
-        Me.GeneralLabel16.TabStop = False
-        '
         'SaleTotalPrice
         '
         Me.SaleTotalPrice.DecimalPlaces = 2
@@ -517,29 +484,12 @@ Partial Class Items
         'BarCode
         '
         Me.BarCode.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BarCode.Location = New System.Drawing.Point(438, 60)
+        Me.BarCode.Location = New System.Drawing.Point(46, 1)
         Me.BarCode.MaxLength = 50
         Me.BarCode.Name = "BarCode"
         Me.BarCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.BarCode.Size = New System.Drawing.Size(283, 26)
+        Me.BarCode.Size = New System.Drawing.Size(236, 26)
         Me.BarCode.TabIndex = 2
-        '
-        'GeneralLabel13
-        '
-        Me.GeneralLabel13.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel13.BackgroundImage = CType(resources.GetObject("GeneralLabel13.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel13.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel13.IsRequired = False
-        Me.GeneralLabel13.Location = New System.Drawing.Point(725, 265)
-        Me.GeneralLabel13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel13.Name = "GeneralLabel13"
-        Me.GeneralLabel13.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel13.SetLabelTxt = "Õœ «⁄«œ… «·ÿ·» :"
-        Me.GeneralLabel13.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel13.TabIndex = 107
-        Me.GeneralLabel13.TabStop = False
         '
         'OrderBalance
         '
@@ -604,23 +554,6 @@ Partial Class Items
         Me.ToolStripButton2.Size = New System.Drawing.Size(21, 20)
         Me.ToolStripButton2.Text = "ToolStripButton2"
         '
-        'GeneralLabel12
-        '
-        Me.GeneralLabel12.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel12.BackgroundImage = CType(resources.GetObject("GeneralLabel12.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel12.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel12.IsRequired = True
-        Me.GeneralLabel12.Location = New System.Drawing.Point(725, 502)
-        Me.GeneralLabel12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel12.Name = "GeneralLabel12"
-        Me.GeneralLabel12.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel12.SetLabelTxt = "«·› —… «·„Ê”„Ì… :"
-        Me.GeneralLabel12.Size = New System.Drawing.Size(134, 26)
-        Me.GeneralLabel12.TabIndex = 105
-        Me.GeneralLabel12.TabStop = False
-        '
         'SeasonType
         '
         Me.SeasonType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -633,23 +566,6 @@ Partial Class Items
         Me.SeasonType.Size = New System.Drawing.Size(283, 26)
         Me.SeasonType.TabIndex = 14
         '
-        'GeneralLabel11
-        '
-        Me.GeneralLabel11.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel11.BackgroundImage = CType(resources.GetObject("GeneralLabel11.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel11.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel11.IsRequired = True
-        Me.GeneralLabel11.Location = New System.Drawing.Point(725, 468)
-        Me.GeneralLabel11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel11.Name = "GeneralLabel11"
-        Me.GeneralLabel11.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel11.SetLabelTxt = "«·‰Ê⁄ :"
-        Me.GeneralLabel11.Size = New System.Drawing.Size(134, 26)
-        Me.GeneralLabel11.TabIndex = 104
-        Me.GeneralLabel11.TabStop = False
-        '
         'GenderID
         '
         Me.GenderID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -660,23 +576,6 @@ Partial Class Items
         Me.GenderID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GenderID.Size = New System.Drawing.Size(283, 26)
         Me.GenderID.TabIndex = 13
-        '
-        'GeneralLabel10
-        '
-        Me.GeneralLabel10.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel10.BackgroundImage = CType(resources.GetObject("GeneralLabel10.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel10.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel10.IsRequired = True
-        Me.GeneralLabel10.Location = New System.Drawing.Point(725, 435)
-        Me.GeneralLabel10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel10.Name = "GeneralLabel10"
-        Me.GeneralLabel10.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel10.SetLabelTxt = "«·› —… «·⁄„—Ì… :"
-        Me.GeneralLabel10.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel10.TabIndex = 103
-        Me.GeneralLabel10.TabStop = False
         '
         'AgeID
         '
@@ -689,23 +588,6 @@ Partial Class Items
         Me.AgeID.Size = New System.Drawing.Size(283, 26)
         Me.AgeID.TabIndex = 12
         '
-        'GeneralLabel8
-        '
-        Me.GeneralLabel8.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel8.BackgroundImage = CType(resources.GetObject("GeneralLabel8.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel8.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel8.IsRequired = True
-        Me.GeneralLabel8.Location = New System.Drawing.Point(725, 400)
-        Me.GeneralLabel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel8.Name = "GeneralLabel8"
-        Me.GeneralLabel8.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel8.SetLabelTxt = "«·‘—ﬂ… «·„’‰⁄… :"
-        Me.GeneralLabel8.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel8.TabIndex = 102
-        Me.GeneralLabel8.TabStop = False
-        '
         'CorporationID
         '
         Me.CorporationID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -716,23 +598,6 @@ Partial Class Items
         Me.CorporationID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.CorporationID.Size = New System.Drawing.Size(283, 26)
         Me.CorporationID.TabIndex = 11
-        '
-        'GeneralLabel9
-        '
-        Me.GeneralLabel9.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel9.BackgroundImage = CType(resources.GetObject("GeneralLabel9.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel9.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel9.IsRequired = True
-        Me.GeneralLabel9.Location = New System.Drawing.Point(725, 365)
-        Me.GeneralLabel9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel9.Name = "GeneralLabel9"
-        Me.GeneralLabel9.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel9.SetLabelTxt = "«·›∆… :"
-        Me.GeneralLabel9.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel9.TabIndex = 101
-        Me.GeneralLabel9.TabStop = False
         '
         'TypeID
         '
@@ -745,23 +610,6 @@ Partial Class Items
         Me.TypeID.Size = New System.Drawing.Size(283, 26)
         Me.TypeID.TabIndex = 10
         '
-        'GeneralLabel7
-        '
-        Me.GeneralLabel7.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel7.BackgroundImage = CType(resources.GetObject("GeneralLabel7.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel7.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel7.IsRequired = True
-        Me.GeneralLabel7.Location = New System.Drawing.Point(725, 332)
-        Me.GeneralLabel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel7.Name = "GeneralLabel7"
-        Me.GeneralLabel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel7.SetLabelTxt = "«·„ﬁ«” :"
-        Me.GeneralLabel7.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel7.TabIndex = 100
-        Me.GeneralLabel7.TabStop = False
-        '
         'SizeID
         '
         Me.SizeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -772,23 +620,6 @@ Partial Class Items
         Me.SizeID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.SizeID.Size = New System.Drawing.Size(283, 26)
         Me.SizeID.TabIndex = 9
-        '
-        'GeneralLabel6
-        '
-        Me.GeneralLabel6.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel6.BackgroundImage = CType(resources.GetObject("GeneralLabel6.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel6.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel6.IsRequired = True
-        Me.GeneralLabel6.Location = New System.Drawing.Point(725, 297)
-        Me.GeneralLabel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel6.Name = "GeneralLabel6"
-        Me.GeneralLabel6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel6.SetLabelTxt = "«”„ «·»‰œ :"
-        Me.GeneralLabel6.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel6.TabIndex = 99
-        Me.GeneralLabel6.TabStop = False
         '
         'CategoryID
         '
@@ -801,23 +632,6 @@ Partial Class Items
         Me.CategoryID.Size = New System.Drawing.Size(283, 26)
         Me.CategoryID.TabIndex = 8
         '
-        'GeneralLabel5
-        '
-        Me.GeneralLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel5.BackgroundImage = CType(resources.GetObject("GeneralLabel5.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel5.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel5.IsRequired = False
-        Me.GeneralLabel5.Location = New System.Drawing.Point(725, 230)
-        Me.GeneralLabel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel5.Name = "GeneralLabel5"
-        Me.GeneralLabel5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel5.SetLabelTxt = "Õœ «· Õ–Ì— :"
-        Me.GeneralLabel5.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel5.TabIndex = 98
-        Me.GeneralLabel5.TabStop = False
-        '
         'AlertBalance
         '
         Me.AlertBalance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -828,23 +642,6 @@ Partial Class Items
         Me.AlertBalance.Size = New System.Drawing.Size(283, 26)
         Me.AlertBalance.TabIndex = 6
         Me.AlertBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GeneralLabel4
-        '
-        Me.GeneralLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel4.BackgroundImage = CType(resources.GetObject("GeneralLabel4.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel4.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel4.IsRequired = False
-        Me.GeneralLabel4.Location = New System.Drawing.Point(725, 195)
-        Me.GeneralLabel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel4.Name = "GeneralLabel4"
-        Me.GeneralLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel4.SetLabelTxt = "”⁄— «·‘—«¡ :"
-        Me.GeneralLabel4.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel4.TabIndex = 97
-        Me.GeneralLabel4.TabStop = False
         '
         'PurchasePrice
         '
@@ -858,23 +655,6 @@ Partial Class Items
         Me.PurchasePrice.TabIndex = 5
         Me.PurchasePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'GeneralLabel3
-        '
-        Me.GeneralLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel3.BackgroundImage = CType(resources.GetObject("GeneralLabel3.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel3.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel3.IsRequired = False
-        Me.GeneralLabel3.Location = New System.Drawing.Point(725, 92)
-        Me.GeneralLabel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel3.Name = "GeneralLabel3"
-        Me.GeneralLabel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel3.SetLabelTxt = "”⁄— «·»Ì⁄ :"
-        Me.GeneralLabel3.Size = New System.Drawing.Size(134, 26)
-        Me.GeneralLabel3.TabIndex = 96
-        Me.GeneralLabel3.TabStop = False
-        '
         'SalePrice
         '
         Me.SalePrice.DecimalPlaces = 2
@@ -886,59 +666,6 @@ Partial Class Items
         Me.SalePrice.Size = New System.Drawing.Size(283, 26)
         Me.SalePrice.TabIndex = 3
         Me.SalePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'GeneralLabel1
-        '
-        Me.GeneralLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel1.BackgroundImage = CType(resources.GetObject("GeneralLabel1.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel1.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel1.IsRequired = True
-        Me.GeneralLabel1.Location = New System.Drawing.Point(725, 26)
-        Me.GeneralLabel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel1.Name = "GeneralLabel1"
-        Me.GeneralLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel1.SetLabelTxt = "«”„ «·’‰› :"
-        Me.GeneralLabel1.Size = New System.Drawing.Size(134, 27)
-        Me.GeneralLabel1.TabIndex = 86
-        Me.GeneralLabel1.TabStop = False
-        '
-        'GeneralLabel2
-        '
-        Me.GeneralLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel2.BackgroundImage = CType(resources.GetObject("GeneralLabel2.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel2.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel2.IsRequired = True
-        Me.GeneralLabel2.Location = New System.Drawing.Point(725, 60)
-        Me.GeneralLabel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel2.Name = "GeneralLabel2"
-        Me.GeneralLabel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel2.SetLabelTxt = "«·»«—ﬂÊœ :"
-        Me.GeneralLabel2.Size = New System.Drawing.Size(134, 26)
-        Me.GeneralLabel2.TabIndex = 84
-        Me.GeneralLabel2.TabStop = False
-        '
-        'MasterField1
-        '
-        Me.MasterField1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.MasterField1.EnableField = False
-        Me.MasterField1.EnableLockup = True
-        Me.MasterField1.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MasterField1.IsNum = False
-        Me.MasterField1.IsRequired = True
-        Me.MasterField1.Location = New System.Drawing.Point(438, 25)
-        Me.MasterField1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.MasterField1.Name = "MasterField1"
-        Me.MasterField1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.MasterField1.SetDisplayMember = "Items.Item_Name"
-        Me.MasterField1.SetLeaveColor = System.Drawing.Color.Red
-        Me.MasterField1.SetLockupImage = Nothing
-        Me.MasterField1.SetValueMember = "Items.Item_ID"
-        Me.MasterField1.Size = New System.Drawing.Size(283, 28)
-        Me.MasterField1.TabIndex = 1
         '
         'BtnExit
         '
@@ -1315,24 +1042,299 @@ Partial Class Items
         Me.MenuExit.Size = New System.Drawing.Size(126, 22)
         Me.MenuExit.Text = "Exit"
         '
-        'MasterField2
+        'GeneralLabel14
         '
-        Me.MasterField2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.MasterField2.EnableField = False
-        Me.MasterField2.EnableLockup = True
-        Me.MasterField2.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MasterField2.IsNum = False
-        Me.MasterField2.IsRequired = True
-        Me.MasterField2.Location = New System.Drawing.Point(439, 99)
-        Me.MasterField2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.MasterField2.Name = "MasterField2"
-        Me.MasterField2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.MasterField2.SetDisplayMember = "Items.Item_Name"
-        Me.MasterField2.SetLeaveColor = System.Drawing.Color.Red
-        Me.MasterField2.SetLockupImage = Nothing
-        Me.MasterField2.SetValueMember = "Items.Item_ID"
-        Me.MasterField2.Size = New System.Drawing.Size(283, 54)
-        Me.MasterField2.TabIndex = 112
+        Me.GeneralLabel14.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel14.BackgroundImage = CType(resources.GetObject("GeneralLabel14.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel14.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel14.IsRequired = False
+        Me.GeneralLabel14.Location = New System.Drawing.Point(725, 160)
+        Me.GeneralLabel14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel14.Name = "GeneralLabel14"
+        Me.GeneralLabel14.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel14.SetLabelTxt = "”⁄— »Ì⁄ «·ﬁÿ«⁄Ì :"
+        Me.GeneralLabel14.Size = New System.Drawing.Size(135, 27)
+        Me.GeneralLabel14.TabIndex = 111
+        Me.GeneralLabel14.TabStop = False
+        '
+        'GeneralLabel16
+        '
+        Me.GeneralLabel16.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel16.BackgroundImage = CType(resources.GetObject("GeneralLabel16.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel16.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel16.IsRequired = False
+        Me.GeneralLabel16.Location = New System.Drawing.Point(725, 126)
+        Me.GeneralLabel16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel16.Name = "GeneralLabel16"
+        Me.GeneralLabel16.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel16.SetLabelTxt = "”⁄— »Ì⁄ «·Ã„·… :"
+        Me.GeneralLabel16.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel16.TabIndex = 108
+        Me.GeneralLabel16.TabStop = False
+        '
+        'GeneralLabel13
+        '
+        Me.GeneralLabel13.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel13.BackgroundImage = CType(resources.GetObject("GeneralLabel13.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel13.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel13.IsRequired = False
+        Me.GeneralLabel13.Location = New System.Drawing.Point(725, 265)
+        Me.GeneralLabel13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel13.Name = "GeneralLabel13"
+        Me.GeneralLabel13.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel13.SetLabelTxt = "Õœ «⁄«œ… «·ÿ·» :"
+        Me.GeneralLabel13.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel13.TabIndex = 107
+        Me.GeneralLabel13.TabStop = False
+        '
+        'GeneralLabel12
+        '
+        Me.GeneralLabel12.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel12.BackgroundImage = CType(resources.GetObject("GeneralLabel12.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel12.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel12.IsRequired = True
+        Me.GeneralLabel12.Location = New System.Drawing.Point(725, 502)
+        Me.GeneralLabel12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel12.Name = "GeneralLabel12"
+        Me.GeneralLabel12.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel12.SetLabelTxt = "«·› —… «·„Ê”„Ì… :"
+        Me.GeneralLabel12.Size = New System.Drawing.Size(134, 26)
+        Me.GeneralLabel12.TabIndex = 105
+        Me.GeneralLabel12.TabStop = False
+        '
+        'GeneralLabel11
+        '
+        Me.GeneralLabel11.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel11.BackgroundImage = CType(resources.GetObject("GeneralLabel11.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel11.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel11.IsRequired = True
+        Me.GeneralLabel11.Location = New System.Drawing.Point(725, 468)
+        Me.GeneralLabel11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel11.Name = "GeneralLabel11"
+        Me.GeneralLabel11.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel11.SetLabelTxt = "«·‰Ê⁄ :"
+        Me.GeneralLabel11.Size = New System.Drawing.Size(134, 26)
+        Me.GeneralLabel11.TabIndex = 104
+        Me.GeneralLabel11.TabStop = False
+        '
+        'GeneralLabel10
+        '
+        Me.GeneralLabel10.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel10.BackgroundImage = CType(resources.GetObject("GeneralLabel10.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel10.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel10.IsRequired = True
+        Me.GeneralLabel10.Location = New System.Drawing.Point(725, 435)
+        Me.GeneralLabel10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel10.Name = "GeneralLabel10"
+        Me.GeneralLabel10.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel10.SetLabelTxt = "«·› —… «·⁄„—Ì… :"
+        Me.GeneralLabel10.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel10.TabIndex = 103
+        Me.GeneralLabel10.TabStop = False
+        '
+        'GeneralLabel8
+        '
+        Me.GeneralLabel8.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel8.BackgroundImage = CType(resources.GetObject("GeneralLabel8.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel8.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel8.IsRequired = True
+        Me.GeneralLabel8.Location = New System.Drawing.Point(725, 400)
+        Me.GeneralLabel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel8.Name = "GeneralLabel8"
+        Me.GeneralLabel8.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel8.SetLabelTxt = "«·‘—ﬂ… «·„’‰⁄… :"
+        Me.GeneralLabel8.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel8.TabIndex = 102
+        Me.GeneralLabel8.TabStop = False
+        '
+        'GeneralLabel9
+        '
+        Me.GeneralLabel9.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel9.BackgroundImage = CType(resources.GetObject("GeneralLabel9.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel9.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel9.IsRequired = True
+        Me.GeneralLabel9.Location = New System.Drawing.Point(725, 365)
+        Me.GeneralLabel9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel9.Name = "GeneralLabel9"
+        Me.GeneralLabel9.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel9.SetLabelTxt = "«·›∆… :"
+        Me.GeneralLabel9.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel9.TabIndex = 101
+        Me.GeneralLabel9.TabStop = False
+        '
+        'GeneralLabel7
+        '
+        Me.GeneralLabel7.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel7.BackgroundImage = CType(resources.GetObject("GeneralLabel7.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel7.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel7.IsRequired = True
+        Me.GeneralLabel7.Location = New System.Drawing.Point(725, 332)
+        Me.GeneralLabel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel7.Name = "GeneralLabel7"
+        Me.GeneralLabel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel7.SetLabelTxt = "«·„ﬁ«” :"
+        Me.GeneralLabel7.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel7.TabIndex = 100
+        Me.GeneralLabel7.TabStop = False
+        '
+        'GeneralLabel6
+        '
+        Me.GeneralLabel6.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel6.BackgroundImage = CType(resources.GetObject("GeneralLabel6.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel6.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel6.IsRequired = True
+        Me.GeneralLabel6.Location = New System.Drawing.Point(725, 297)
+        Me.GeneralLabel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel6.Name = "GeneralLabel6"
+        Me.GeneralLabel6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel6.SetLabelTxt = "«”„ «·»‰œ :"
+        Me.GeneralLabel6.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel6.TabIndex = 99
+        Me.GeneralLabel6.TabStop = False
+        '
+        'GeneralLabel5
+        '
+        Me.GeneralLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel5.BackgroundImage = CType(resources.GetObject("GeneralLabel5.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel5.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel5.IsRequired = False
+        Me.GeneralLabel5.Location = New System.Drawing.Point(725, 230)
+        Me.GeneralLabel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel5.Name = "GeneralLabel5"
+        Me.GeneralLabel5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel5.SetLabelTxt = "Õœ «· Õ–Ì— :"
+        Me.GeneralLabel5.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel5.TabIndex = 98
+        Me.GeneralLabel5.TabStop = False
+        '
+        'GeneralLabel4
+        '
+        Me.GeneralLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel4.BackgroundImage = CType(resources.GetObject("GeneralLabel4.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel4.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel4.IsRequired = False
+        Me.GeneralLabel4.Location = New System.Drawing.Point(725, 195)
+        Me.GeneralLabel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel4.Name = "GeneralLabel4"
+        Me.GeneralLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel4.SetLabelTxt = "”⁄— «·‘—«¡ :"
+        Me.GeneralLabel4.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel4.TabIndex = 97
+        Me.GeneralLabel4.TabStop = False
+        '
+        'GeneralLabel3
+        '
+        Me.GeneralLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel3.BackgroundImage = CType(resources.GetObject("GeneralLabel3.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel3.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel3.IsRequired = False
+        Me.GeneralLabel3.Location = New System.Drawing.Point(725, 92)
+        Me.GeneralLabel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel3.Name = "GeneralLabel3"
+        Me.GeneralLabel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel3.SetLabelTxt = "”⁄— «·»Ì⁄ :"
+        Me.GeneralLabel3.Size = New System.Drawing.Size(134, 26)
+        Me.GeneralLabel3.TabIndex = 96
+        Me.GeneralLabel3.TabStop = False
+        '
+        'GeneralLabel1
+        '
+        Me.GeneralLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel1.BackgroundImage = CType(resources.GetObject("GeneralLabel1.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel1.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel1.IsRequired = True
+        Me.GeneralLabel1.Location = New System.Drawing.Point(725, 26)
+        Me.GeneralLabel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel1.Name = "GeneralLabel1"
+        Me.GeneralLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel1.SetLabelTxt = "«”„ «·’‰› :"
+        Me.GeneralLabel1.Size = New System.Drawing.Size(134, 27)
+        Me.GeneralLabel1.TabIndex = 86
+        Me.GeneralLabel1.TabStop = False
+        '
+        'GeneralLabel2
+        '
+        Me.GeneralLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.GeneralLabel2.BackgroundImage = CType(resources.GetObject("GeneralLabel2.BackgroundImage"), System.Drawing.Image)
+        Me.GeneralLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GeneralLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GeneralLabel2.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GeneralLabel2.IsRequired = True
+        Me.GeneralLabel2.Location = New System.Drawing.Point(725, 60)
+        Me.GeneralLabel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GeneralLabel2.Name = "GeneralLabel2"
+        Me.GeneralLabel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GeneralLabel2.SetLabelTxt = "«·»«—ﬂÊœ :"
+        Me.GeneralLabel2.Size = New System.Drawing.Size(134, 26)
+        Me.GeneralLabel2.TabIndex = 84
+        Me.GeneralLabel2.TabStop = False
+        '
+        'MasterField1
+        '
+        Me.MasterField1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.MasterField1.EnableField = False
+        Me.MasterField1.EnableLockup = True
+        Me.MasterField1.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MasterField1.IsNum = False
+        Me.MasterField1.IsRequired = True
+        Me.MasterField1.Location = New System.Drawing.Point(438, 25)
+        Me.MasterField1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MasterField1.Name = "MasterField1"
+        Me.MasterField1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.MasterField1.SetDisplayMember = "Items.Item_Name"
+        Me.MasterField1.SetLeaveColor = System.Drawing.Color.Red
+        Me.MasterField1.SetLockupImage = Nothing
+        Me.MasterField1.SetValueMember = "Items.Item_ID"
+        Me.MasterField1.Size = New System.Drawing.Size(283, 28)
+        Me.MasterField1.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Button14)
+        Me.Panel2.Controls.Add(Me.BarCode)
+        Me.Panel2.Location = New System.Drawing.Point(438, 60)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(283, 28)
+        Me.Panel2.TabIndex = 112
+        '
+        'Button14
+        '
+        Me.Button14.BackgroundImage = Global.StandardClothes.My.Resources.Resources.Symbol_Add
+        Me.Button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button14.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Button14.Location = New System.Drawing.Point(0, 0)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(47, 28)
+        Me.Button14.TabIndex = 3
+        Me.Button14.UseVisualStyleBackColor = True
         '
         'Items
         '
@@ -1370,7 +1372,6 @@ Partial Class Items
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "«·„œÌ‰…"
         Me.ContentPanel.ResumeLayout(False)
-        Me.ContentPanel.PerformLayout()
         CType(Me.SinglePrice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -1388,6 +1389,8 @@ Partial Class Items
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1471,5 +1474,6 @@ Partial Class Items
     Friend WithEvents GeneralLabel14 As StandardClothes.GeneralLabel
     Friend WithEvents SinglePrice As System.Windows.Forms.NumericUpDown
     Friend WithEvents Button13 As System.Windows.Forms.Button
-    Friend WithEvents MasterField2 As StandardClothes.MasterField
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Button14 As System.Windows.Forms.Button
 End Class

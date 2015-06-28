@@ -2,20 +2,30 @@ Public Class Barcodes
 
     Dim Gcls As GeneralSp.NewMasterForms
     Dim B_EndLoad As Boolean = False
-    Dim BSourceItem_Barcodes As New BindingSource
+    Dim BSourceBarCodes As New BindingSource
     '-------------------------------
     'Set The Data Table Name
-    Dim TName As String = "Barcodes"
+    Dim TName As String = "BarCodes"
+    Dim Item As Object
     '-------------------------------
+    Sub New(ByVal item As Object)
+        Me.Item = item
+        ' This call is required by the designer.
+        InitializeComponent()
 
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
 
     Private Sub Categories_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        BSourceBarCodes.RemoveFilter()
         Gcls.ExitForm()
     End Sub
 
     Private Sub Customers_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-           
+
+            cls.RefreshData(TName)
 
             Dim B As New BindingSource
             B.DataSource = MyDs
@@ -29,23 +39,21 @@ Public Class Barcodes
             'Must Specify Data Table Name
             '-------------------------------
 
-            Gcls = New GeneralSp.NewMasterForms(TName, BSourceItem_Barcodes, BtnNew, BtnSave, BtnDelete, BtnSearch, BtnExit, BtnReload, BtnCancelSerach, BtnFirst, BtnPrevious, BtnNext, BtnLast, BtnFile, BtnData, BtnHelp, OrderByCombo, ContentPanel, Nothing, CountRecords, MenuNew, MenuSave, MenuDelete, MenuSearch, MenuExit)
+            Gcls = New GeneralSp.NewMasterForms(TName, BSourceBarCodes, BtnNew, BtnSave, BtnDelete, BtnSearch, BtnExit, BtnReload, BtnCancelSerach, BtnFirst, BtnPrevious, BtnNext, BtnLast, BtnFile, BtnData, BtnHelp, OrderByCombo, ContentPanel, Nothing, CountRecords, MenuNew, MenuSave, MenuDelete, MenuSearch, MenuExit)
             '-------------------------------
             'Must Specify Window Title 
             '-------------------------------
+            BSourceBarCodes.Filter = "Bar_Item_Id = " & Item
 
-            Gcls.SetWTitle = "„ﬁ«”«  «·„·«»”"
+            CountRecords.Text = BSourceBarCodes.Count
+
+            Gcls.SetWTitle = "«·»«—ﬂÊœ"
             Me.Text = Gcls.SetWTitle
 
-            ItemID.DataBindings.Add("SelectedValue", BSourceItem_Barcodes, "bar_item_ID")
-            BarCode.DataBindings.Add("Text", BSourceItem_Barcodes, "Bar_Code")
+            BarCode.DataBindings.Add("Text", BSourceBarCodes, "Bar_Code")
 
-            SSource = BSourceItem_Barcodes
-            cmd.CommandText = "select item_Id,Item_Name from items "
-            Dim items As New DataTable()
-            da.SelectCommand = cmd
-            da.Fill(items)
-            ItemID.DataSource = items
+            SSource = BSourceBarCodes
+        
 
 
             '-------------------------------
@@ -64,7 +72,9 @@ Public Class Barcodes
     Private Sub BtnNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnNew.Click, MenuNew.Click
         Try
             Gcls.NewRecord()
-            ItemID.Focus()
+            CountRecords.Text = BSourceBarCodes.Count
+            CType(BSourceBarCodes.Current, DataRowView).Item("bar_item_id") = Item
+            BarCode.Focus()
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
         End Try
@@ -72,16 +82,14 @@ Public Class Barcodes
 
     Private Sub BtnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSave.Click, MenuSave.Click
         Try
-            If ItemID.SelectedIndex = -1 Then
-                cls.MsgComplete()
-                ItemID.Focus()
-                ItemID.BackColor = Color.Red
-            ElseIf BarCode.Text = "" Then
+           If BarCode.Text = "" Then
                 cls.MsgComplete()
                 BarCode.Focus()
                 BarCode.BackColor = Color.Red
             Else
                 Gcls.SaveRecord()
+                BSourceBarCodes.Filter = "Bar_Item_Id = " & Item
+                CountRecords.Text = BSourceBarCodes.Count
             End If
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
@@ -91,6 +99,8 @@ Public Class Barcodes
     Private Sub BtnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDelete.Click, MenuDelete.Click
         Try
             Gcls.DeleteRecord()
+            BSourceBarCodes.Filter = "Bar_Item_Id = " & Item
+            CountRecords.Text = BSourceBarCodes.Count
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
         End Try
@@ -166,7 +176,7 @@ Public Class Barcodes
     Private Sub OrderByCombo_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles OrderByCombo.SelectedIndexChanged
         Try
             If B_EndLoad = True Then
-                Gcls.SortData(BSourceItem_Barcodes, OrderByCombo.SelectedValue)
+                Gcls.SortData(BSourceBarCodes, OrderByCombo.SelectedValue)
             End If
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
@@ -177,6 +187,7 @@ Public Class Barcodes
 
     Private Sub BtnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExit.Click, MenuExit.Click
         Try
+            BSourceBarCodes.RemoveFilter()
             Gcls.ExitForm()
             Me.Close()
         Catch ex As Exception
@@ -198,7 +209,7 @@ Public Class Barcodes
 
     Private Sub BtnCancelSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancelSerach.Click
         Try
-            BSourceItem_Barcodes.RemoveFilter()
+            BSourceBarCodes.RemoveFilter()
         Catch ex As Exception
             cls.WriteError(ex.Message, TName)
         End Try

@@ -22,9 +22,7 @@ Partial Class Barcodes
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Barcodes))
         Me.ContentPanel = New System.Windows.Forms.Panel()
         Me.BarCode = New System.Windows.Forms.TextBox()
-        Me.ItemID = New System.Windows.Forms.ComboBox()
         Me.GeneralLabel3 = New StandardClothes.GeneralLabel()
-        Me.GeneralLabel1 = New StandardClothes.GeneralLabel()
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.BtnSearch = New System.Windows.Forms.Button()
         Me.BtnSave = New System.Windows.Forms.Button()
@@ -62,9 +60,7 @@ Partial Class Barcodes
         Me.ContentPanel.BackgroundImage = Global.StandardClothes.My.Resources.Resources.conatin_box_03
         Me.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ContentPanel.Controls.Add(Me.BarCode)
-        Me.ContentPanel.Controls.Add(Me.ItemID)
         Me.ContentPanel.Controls.Add(Me.GeneralLabel3)
-        Me.ContentPanel.Controls.Add(Me.GeneralLabel1)
         Me.ContentPanel.Location = New System.Drawing.Point(31, 81)
         Me.ContentPanel.Name = "ContentPanel"
         Me.ContentPanel.Size = New System.Drawing.Size(682, 337)
@@ -73,25 +69,12 @@ Partial Class Barcodes
         'BarCode
         '
         Me.BarCode.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BarCode.Location = New System.Drawing.Point(252, 86)
+        Me.BarCode.Location = New System.Drawing.Point(252, 24)
         Me.BarCode.MaxLength = 50
         Me.BarCode.Name = "BarCode"
         Me.BarCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.BarCode.Size = New System.Drawing.Size(283, 26)
         Me.BarCode.TabIndex = 79
-        '
-        'ItemID
-        '
-        Me.ItemID.DisplayMember = "item_Name"
-        Me.ItemID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ItemID.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ItemID.FormattingEnabled = True
-        Me.ItemID.Location = New System.Drawing.Point(252, 23)
-        Me.ItemID.Name = "ItemID"
-        Me.ItemID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.ItemID.Size = New System.Drawing.Size(283, 26)
-        Me.ItemID.TabIndex = 80
-        Me.ItemID.ValueMember = "item_id"
         '
         'GeneralLabel3
         '
@@ -101,7 +84,7 @@ Partial Class Barcodes
         Me.GeneralLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.GeneralLabel3.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GeneralLabel3.IsRequired = True
-        Me.GeneralLabel3.Location = New System.Drawing.Point(549, 86)
+        Me.GeneralLabel3.Location = New System.Drawing.Point(549, 23)
         Me.GeneralLabel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GeneralLabel3.Name = "GeneralLabel3"
         Me.GeneralLabel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -109,23 +92,6 @@ Partial Class Barcodes
         Me.GeneralLabel3.Size = New System.Drawing.Size(104, 27)
         Me.GeneralLabel3.TabIndex = 78
         Me.GeneralLabel3.TabStop = False
-        '
-        'GeneralLabel1
-        '
-        Me.GeneralLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.GeneralLabel1.BackgroundImage = CType(resources.GetObject("GeneralLabel1.BackgroundImage"), System.Drawing.Image)
-        Me.GeneralLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GeneralLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GeneralLabel1.Font = New System.Drawing.Font("Tahoma", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GeneralLabel1.IsRequired = True
-        Me.GeneralLabel1.Location = New System.Drawing.Point(549, 23)
-        Me.GeneralLabel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GeneralLabel1.Name = "GeneralLabel1"
-        Me.GeneralLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GeneralLabel1.SetLabelTxt = "«·’‰› :"
-        Me.GeneralLabel1.Size = New System.Drawing.Size(104, 27)
-        Me.GeneralLabel1.TabIndex = 13
-        Me.GeneralLabel1.TabStop = False
         '
         'BtnExit
         '
@@ -562,7 +528,6 @@ Partial Class Barcodes
     Friend WithEvents BtnHelp As System.Windows.Forms.Button
     Friend WithEvents BtnReload As System.Windows.Forms.Button
     Friend WithEvents BtnCancelSerach As System.Windows.Forms.Button
-    Friend WithEvents GeneralLabel1 As StandardClothes.GeneralLabel
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents MenuAllCommands As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuNew As System.Windows.Forms.ToolStripMenuItem
@@ -572,5 +537,4 @@ Partial Class Barcodes
     Friend WithEvents MenuExit As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GeneralLabel3 As StandardClothes.GeneralLabel
     Friend WithEvents BarCode As System.Windows.Forms.TextBox
-    Friend WithEvents ItemID As System.Windows.Forms.ComboBox
 End Class

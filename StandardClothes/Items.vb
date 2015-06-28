@@ -437,11 +437,13 @@ l:
     End Sub
 
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        Dim M As New Barcodes
+        Dim M As New Barcodes(CType(BSourceItems.Current, DataRowView).Item(0))
         M.ShowDialog()
     End Sub
 
-    Private Sub BarCode_TextChanged(sender As Object, e As EventArgs) Handles BarCode.TextChanged
 
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        Dim M As New Barcodes(CType(BSourceItems.Current, DataRowView).Item(0))
+        M.ShowDialog()
     End Sub
 End Class

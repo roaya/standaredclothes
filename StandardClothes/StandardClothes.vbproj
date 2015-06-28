@@ -2052,7 +2052,6 @@
     <None Include="GeneralDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GeneralDataSet.Designer.vb</LastGenOutput>
     </None>
     <None Include="GeneralDataSet.xss">
       <DependentUpon>GeneralDataSet.xsd</DependentUpon>
