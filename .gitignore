@@ -219,3 +219,5 @@ pip-log.txt
 data/
 StandardClothes/app.config
 StandardClothes/LoginForm.vb
+StandardClothes_log.ldf
+data.7z
