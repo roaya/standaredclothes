@@ -67,6 +67,7 @@ Partial Class FrmUserPreferences
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.CustPriceCB = New System.Windows.Forms.CheckBox()
         Me.SalChkShowDate = New System.Windows.Forms.CheckBox()
         Me.SalChkShowEmpID = New System.Windows.Forms.CheckBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -655,6 +656,7 @@ Partial Class FrmUserPreferences
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.CustPriceCB)
         Me.GroupBox7.Controls.Add(Me.SalChkShowDate)
         Me.GroupBox7.Controls.Add(Me.SalChkShowEmpID)
         Me.GroupBox7.Location = New System.Drawing.Point(22, 245)
@@ -664,10 +666,20 @@ Partial Class FrmUserPreferences
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "بيانات اخري"
         '
+        'CustPriceCB
+        '
+        Me.CustPriceCB.AutoSize = True
+        Me.CustPriceCB.Location = New System.Drawing.Point(140, 92)
+        Me.CustPriceCB.Name = "CustPriceCB"
+        Me.CustPriceCB.Size = New System.Drawing.Size(143, 20)
+        Me.CustPriceCB.TabIndex = 121
+        Me.CustPriceCB.Text = "إظهار سعر المستهلك"
+        Me.CustPriceCB.UseVisualStyleBackColor = True
+        '
         'SalChkShowDate
         '
         Me.SalChkShowDate.AutoSize = True
-        Me.SalChkShowDate.Location = New System.Drawing.Point(74, 81)
+        Me.SalChkShowDate.Location = New System.Drawing.Point(74, 66)
         Me.SalChkShowDate.Name = "SalChkShowDate"
         Me.SalChkShowDate.Size = New System.Drawing.Size(209, 20)
         Me.SalChkShowDate.TabIndex = 120
@@ -1678,4 +1690,5 @@ Partial Class FrmUserPreferences
     Friend WithEvents P_HeaderReport As System.Windows.Forms.TextBox
     Friend WithEvents Label33 As System.Windows.Forms.Label
     Friend WithEvents Cat As System.Windows.Forms.ComboBox
+    Friend WithEvents CustPriceCB As System.Windows.Forms.CheckBox
 End Class

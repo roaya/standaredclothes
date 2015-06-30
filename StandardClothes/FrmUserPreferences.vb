@@ -88,6 +88,7 @@ Public Class FrmUserPreferences
             GenChkShowBefPrint.DataBindings.Add("Checked", BSourceAppPref, "Gen_View_Before_Print", True)
             SalChkShowEmpID.DataBindings.Add("Checked", BSourceAppPref, "Sal_Edit_Emp_ID", True)
             SalChkShowDate.DataBindings.Add("Checked", BSourceAppPref, "Sal_Edit_Date", True)
+            CustPriceCB.DataBindings.Add("Checked", BSourceAppPref, "Show_Cust_Price", True)
             GenPhotoDefBackGrd.DataBindings.Add("backgroundImage", BSourceAppPref, "Gen_Back_Photo", True)
             Cat.DataBindings.Add("selectedvalue", BSourceAppPref, "Category")
 
@@ -574,6 +575,7 @@ l:
 
 
     End Sub
+
 
 
 End Class

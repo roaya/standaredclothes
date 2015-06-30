@@ -14,7 +14,7 @@
     Dim BDate As Date
     Dim d As Date
     Dim RptPur As New Report_Sales_Order
-    Dim RptChk As New RptSalBill
+    Dim RptChk As New CrystalDecisions.CrystalReports.Engine.ReportClass
     Dim B_ID As Integer
     Private TblCustomers As New GeneralDataSet.CustomersDataTable
     Private TblSalesDetails As New GeneralDataSet.Sales_DetailsDataTable
@@ -1126,6 +1126,11 @@ Private Sub BarCode_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Fo
         " FROM dbo.Sales_Header INNER JOIN dbo.Sales_Details ON dbo.Sales_Header.Bill_ID = dbo.Sales_Details.Bill_ID INNER JOIN dbo.Items ON dbo.Sales_Details.Item_ID = dbo.Items.Item_ID INNER JOIN dbo.Customers ON dbo.Sales_Header.Customer_ID = dbo.Customers.Customer_ID INNER JOIN dbo.Employees ON dbo.Sales_Header.Employee_ID = dbo.Employees.Employee_ID INNER JOIN dbo.Periods ON dbo.Sales_Header.Period_ID = dbo.Periods.Period_ID INNER JOIN dbo.Stocks ON dbo.Sales_Header.Stock_ID = dbo.Stocks.Stock_ID and sales_header.bill_id = " & B_ID
                     da.SelectCommand = cmd
                     da.Fill(MyDs.Tables("Report_Sales_Order"))
+                    If (MyDs.Tables("App_Preferences").Rows(0).Item("Show_Cust_Price")) Then
+                        RptChk = New RptSalBillSP
+                    Else
+                        RptChk = New RptSalBill
+                    End If
                     RptChk.SetDataSource(MyDs.Tables("Report_Sales_Order"))
 
                     If MyDs.Tables("App_Preferences").Rows(0).Item("Gen_View_Before_Print") = False Then

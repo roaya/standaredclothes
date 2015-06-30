@@ -2,7 +2,7 @@
 
     Dim RptPur As New Report_Sales_Order
     Dim b As Boolean = False
-    Dim RptChk As New RptSalBillSP
+    Dim RptChk As New CrystalDecisions.CrystalReports.Engine.ReportClass
     Dim tbl1 As New GeneralDataSet.EmployeesDataTable
     Dim tbl2 As New GeneralDataSet.CustomersDataTable
     Dim tbl3 As New GeneralDataSet.StocksDataTable
@@ -289,6 +289,11 @@
         " FROM dbo.Sales_Header INNER JOIN dbo.Sales_Details ON dbo.Sales_Header.Bill_ID = dbo.Sales_Details.Bill_ID INNER JOIN dbo.Items ON dbo.Sales_Details.Item_ID = dbo.Items.Item_ID INNER JOIN dbo.Customers ON dbo.Sales_Header.Customer_ID = dbo.Customers.Customer_ID INNER JOIN dbo.Employees ON dbo.Sales_Header.Employee_ID = dbo.Employees.Employee_ID INNER JOIN dbo.Periods ON dbo.Sales_Header.Period_ID = dbo.Periods.Period_ID INNER JOIN dbo.Stocks ON dbo.Sales_Header.Stock_ID = dbo.Stocks.Stock_ID and sales_header.bill_id = " & BillID.Text
                     da.SelectCommand = cmd
                     da.Fill(MyDs.Tables("Report_Sales_Order"))
+                    If (MyDs.Tables("App_Preferences").Rows(0).Item("Show_Cust_Price")) Then
+                        RptChk = New RptSalBillSP
+                    Else
+                        RptChk = New RptSalBill
+                    End If
                     RptChk.SetDataSource(MyDs.Tables("Report_Sales_Order"))
                     Dim m As New ShowAllReports
                     m.CrystalReportViewer1.ReportSource = RptChk
