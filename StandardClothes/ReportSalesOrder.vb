@@ -2,7 +2,7 @@
 
     Dim RptPur As New Report_Sales_Order
     Dim b As Boolean = False
-    Dim RptChk As New RptSalBill
+    Dim RptChk As New RptSalBillSP
     Dim tbl1 As New GeneralDataSet.EmployeesDataTable
     Dim tbl2 As New GeneralDataSet.CustomersDataTable
     Dim tbl3 As New GeneralDataSet.StocksDataTable
@@ -285,7 +285,7 @@
                 Else
                     MyDs.Tables("Report_Sales_Order").Rows.Clear()
                     cmd.CommandText = "SELECT dbo.Sales_Header.Bill_ID, dbo.Sales_Header.Bill_Date, dbo.Sales_Header.Bill_Time, dbo.Stocks.Stock_Name,dbo.Stocks.Logo, dbo.Customers.Customer_Name,dbo.Employees.Employee_Name, dbo.Sales_Header.Total_Bill, dbo.Sales_Header.Discount_Type, dbo.Sales_Header.Discount_Value,dbo.Sales_Header.Cash_Value, dbo.Sales_Header.Credit_Value, dbo.Sales_Header.Pay_Type, dbo.Sales_Header.Comments, dbo.Sales_Header.Footer," & _
-        " dbo.Items.Item_Name, dbo.Items.Barcode, dbo.Sales_Details.Quantity, dbo.Sales_Details.Price, dbo.Sales_Details.Discount_Type AS Item_Discount_Type,dbo.Sales_Details.Discount_Value AS Item_Discount_Value, dbo.Periods.Period_Name, dbo.Sales_Header.Order_Type, dbo.Sales_Details.Total_Item" & _
+        " dbo.Items.Item_Name, dbo.Items.Barcode, dbo.Sales_Details.Quantity, dbo.Sales_Details.Price, dbo.Sales_Details.Discount_Type AS Item_Discount_Type,dbo.Sales_Details.Discount_Value AS Item_Discount_Value, dbo.Periods.Period_Name, dbo.Sales_Header.Order_Type, dbo.Sales_Details.Total_Item, dbo.Items.Single_Price" & _
         " FROM dbo.Sales_Header INNER JOIN dbo.Sales_Details ON dbo.Sales_Header.Bill_ID = dbo.Sales_Details.Bill_ID INNER JOIN dbo.Items ON dbo.Sales_Details.Item_ID = dbo.Items.Item_ID INNER JOIN dbo.Customers ON dbo.Sales_Header.Customer_ID = dbo.Customers.Customer_ID INNER JOIN dbo.Employees ON dbo.Sales_Header.Employee_ID = dbo.Employees.Employee_ID INNER JOIN dbo.Periods ON dbo.Sales_Header.Period_ID = dbo.Periods.Period_ID INNER JOIN dbo.Stocks ON dbo.Sales_Header.Stock_ID = dbo.Stocks.Stock_ID and sales_header.bill_id = " & BillID.Text
                     da.SelectCommand = cmd
                     da.Fill(MyDs.Tables("Report_Sales_Order"))

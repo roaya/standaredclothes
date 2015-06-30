@@ -185,12 +185,6 @@
     <Compile Include="BarcodeShow.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bin\Debug\RptSalBillSP.vb">
-      <DependentUpon>RptSalBillSP.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="bin\Debug\CustVenPay.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -442,6 +436,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RptMaxOrder.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\RptSalBillSP.vb">
+      <DependentUpon>RptSalBillSP.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="bin\Debug\RptSalBill.vb">
       <AutoGen>True</AutoGen>
@@ -864,11 +864,6 @@
       <DependentUpon>GeneralDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="GeneralDataSet.vb">
-      <DependentUpon>GeneralDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="GeneralDataSet2.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>GeneralDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="GeneralLabel.designer.vb">
@@ -1399,10 +1394,6 @@
     <EmbeddedResource Include="BarcodeShow.resx">
       <DependentUpon>BarcodeShow.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\RptSalBillSP.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RptSalBillSP.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\CustVenPay.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CustVenPay.vb</LastGenOutput>
@@ -1570,6 +1561,10 @@
     <EmbeddedResource Include="bin\Debug\RptMaxOrder.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptMaxOrder.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\RptSalBillSP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptSalBillSP.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\RptSalBill.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -2067,7 +2062,7 @@
     <None Include="GeneralDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GeneralDataSet2.Designer.vb</LastGenOutput>
+      <LastGenOutput>GeneralDataSet.Designer.vb</LastGenOutput>
     </None>
     <None Include="GeneralDataSet.xss">
       <DependentUpon>GeneralDataSet.xsd</DependentUpon>
