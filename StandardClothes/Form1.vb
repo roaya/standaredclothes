@@ -12,6 +12,8 @@ Public Class Main
     Dim searchWin As New GeneralSearch
     Dim STable As New GeneralDataSet.SearchTableDataTable
     Dim DtlTbl As New DataTable
+    Dim Reset As New Reset
+
     Private Property BtnItemsSlideShow As Object
     Dim TblItems As New GeneralDataSet.ItemsDataTable
     Dim TblCusts As New GeneralDataSet.CustomersDataTable
@@ -2059,114 +2061,115 @@ Public Class Main
     End Sub
 
     Private Sub MenuSetDefault_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuSetDefault.Click
-        Try
-            PwdDefault = InputBox("√œŒ· ﬂ·„… «·”— «·Œ«’… »«·‰Ÿ«„", ProjectTitle)
-            If PwdDefault = "osloup123" Then
-                cls.MsgInfo("»—Ã«¡ «·«‰ Ÿ«— Õ Ì Ì „ «·«‰ Â«¡")
-                Me.Cursor = Cursors.WaitCursor
-                cmd.CommandText = "DELETE FROM Adjustment_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Purchase_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Request_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Return_C_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Return_V_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Sales_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Dep_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Vendors_Payments"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Customers_Payments"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Customer_Discount_Level"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Customer_Levels"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Attendance"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Check_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Check_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM Sales_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Purchase_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Request_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Return_C_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Return_V_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM Adjustment_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Dep_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Discount_Cards"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Employees_Discounts"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Discount_Categories"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Employees_Added_Hours"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Employees_Rewards"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Employees_Tasks"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Employees_Vacations"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Expenses_Details"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Expenses_Header"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Items_Stocks"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Items_Vendors"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Pay_Salary"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Vendors"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Customers"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Items"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Ages"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Gender"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Item_Sizes"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Categories"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Items_Types"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Discount_Categories"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Corporations"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Rewards_Categories"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "DELETE FROM dbo.Stocks"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "UPDATE Security_Group_Details SET Granted =1"
-                cmd.ExecuteNonQuery()
-                cmd.CommandText = "UPDATE Seq_Table SET Curr_Val = 1"
-                cmd.ExecuteNonQuery()
-                Me.Cursor = Cursors.Default
-                cls.MsgInfo(" „ «⁄«œ… «·‰Ÿ«„ ··Ê÷⁄ «·«› —«÷Ì »—Ã«¡ «⁄«œ… «· ‘€Ì·")
-                End
-            Else
-                cls.MsgCritical("Œÿ√ ›Ì «œŒ«· ﬂ·„… «·”— «·Œ«’… »«·‰Ÿ«„")
-            End If
-        Catch ex As Exception
-            cls.MsgCritical("Œÿ√ ›Ì «œŒ«· ﬂ·„… «·”— «·Œ«’… »«·‰Ÿ«„")
-        End Try
+        Reset.ResetApp()
+        'Try
+        '    PwdDefault = InputBox("√œŒ· ﬂ·„… «·”— «·Œ«’… »«·‰Ÿ«„", ProjectTitle)
+        '    If PwdDefault = "osloup123" Then
+        '        cls.MsgInfo("»—Ã«¡ «·«‰ Ÿ«— Õ Ì Ì „ «·«‰ Â«¡")
+        '        Me.Cursor = Cursors.WaitCursor
+        '        cmd.CommandText = "DELETE FROM Adjustment_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Purchase_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Request_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Return_C_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Return_V_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Sales_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Dep_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Vendors_Payments"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Customers_Payments"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Customer_Discount_Level"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Customer_Levels"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Attendance"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Check_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Check_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM Sales_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Purchase_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Request_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Return_C_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Return_V_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM Adjustment_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Dep_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Discount_Cards"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Employees_Discounts"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Discount_Categories"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Employees_Added_Hours"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Employees_Rewards"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Employees_Tasks"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Employees_Vacations"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Expenses_Details"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Expenses_Header"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Items_Stocks"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Items_Vendors"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Pay_Salary"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Vendors"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Customers"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Items"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Ages"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Gender"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Item_Sizes"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Categories"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Items_Types"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Discount_Categories"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Corporations"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Rewards_Categories"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "DELETE FROM dbo.Stocks"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "UPDATE Security_Group_Details SET Granted =1"
+        '        cmd.ExecuteNonQuery()
+        '        cmd.CommandText = "UPDATE Seq_Table SET Curr_Val = 1"
+        '        cmd.ExecuteNonQuery()
+        '        Me.Cursor = Cursors.Default
+        '        cls.MsgInfo(" „ «⁄«œ… «·‰Ÿ«„ ··Ê÷⁄ «·«› —«÷Ì »—Ã«¡ «⁄«œ… «· ‘€Ì·")
+        '        End
+        '    Else
+        '        cls.MsgCritical("Œÿ√ ›Ì «œŒ«· ﬂ·„… «·”— «·Œ«’… »«·‰Ÿ«„")
+        '    End If
+        'Catch ex As Exception
+        '    cls.MsgCritical("Œÿ√ ›Ì «œŒ«· ﬂ·„… «·”— «·Œ«’… »«·‰Ÿ«„")
+        'End Try
     End Sub
 
     Private Sub SystemCommands_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SystemCommands.Click

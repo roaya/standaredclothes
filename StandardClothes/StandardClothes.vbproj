@@ -1224,6 +1224,7 @@
     <Compile Include="ReScheduling.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reset.vb" />
     <Compile Include="ReturnsCustomers.designer.vb">
       <DependentUpon>ReturnsCustomers.vb</DependentUpon>
     </Compile>
