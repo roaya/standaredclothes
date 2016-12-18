@@ -20,7 +20,7 @@ Public Class LoginForm
 
             Try
                 If cn.State = ConnectionState.Closed Then
-                    cls.OpenConn("StandardClothes", ServerNameTextBox.Text, "sa", "pass@word1", False)
+                    cls.OpenConn("StandardClothes", ServerNameTextBox.Text, "sa", "pass@word1", True)
                 End If
             Catch ex As Exception
                 cls.MsgCritical("Â‰«ﬂ Œÿ√ ›Ì «·« ’«· »«·”—›— »—Ã«¡ «· √ﬂœ „‰ „⁄·Ê„«  «·« ’«·")

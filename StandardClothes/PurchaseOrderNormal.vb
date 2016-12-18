@@ -415,7 +415,7 @@ Public Class PurchaseOrderNormal
                 BDate = BillDate.Text
                 cmd.CommandText = "Exec Commit_Purchase_Order_Header " & BillID.Text & ", '" & BDate.ToString("MM/dd/yyyy") & "' ,'" & BillTime.Text & "'," & VendorID.SelectedValue & "," & _
         TotalBill.Text & ",N'" & DiscountType.Text & "'," & DiscountValue.Value & "," & EmpIDVar & "," & CashValue.Value & "," & CreditValue.Value & ",N'" & PayType.Text & "',N'" & _
-                Comments.TextBox1.Text & "',N'" & PurFooter & "'," & StockID.SelectedValue & "," & CurrentShiftID
+                Comments.TextBox1.Text & "',N'" & PurFooter & "'," & StockID.SelectedValue & "," & CurrentShiftID '& " , " & PayedValue.Value
                 cmd.ExecuteNonQuery()
 
                 For i As Integer = 0 To DataGridView1.Rows.Count - 1

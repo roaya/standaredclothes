@@ -10,7 +10,7 @@ COMMIT
 BEGIN TRANSACTION
 GO
 ALTER TABLE dbo.Items ADD
-	Single_Price decimal(18, 5) NULL
+	Single_Price decimal(18, 2) NULL
 GO
 ALTER TABLE dbo.Items SET (LOCK_ESCALATION = TABLE)
 GO
